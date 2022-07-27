@@ -6,5 +6,10 @@
   --ds-banner-background-gradient-width: 300px;
   --ds-home-news-link-color: #{$green};
   --ds-home-news-link-hover-color: #{darken($green, 15%)};
+  // override DSpace navbar link colors (note the special variable syntax here)
+  --ds-navbar-link-color: #{$brand-primary};
+  --ds-navbar-link-color-hover: #{$brand-primary};
+  // override DSpace search, language, and login colors
+  --ds-header-icon-color: #{$brand-primary};
 }
 
