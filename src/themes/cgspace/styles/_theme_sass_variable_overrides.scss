@@ -30,6 +30,9 @@ $brand-primary: #427730 !default;
 // CGIAR light green
 $brand-secondary: #7AB800 !default;
 
+// CGIAR gray (not sure where it actually comes from though)
+$cgiar-gray: #636363 !default;
+
 $cgiar-white: #fcfcfc !default;
 
 $navbar-dark-color: #FFFFFF;
@@ -52,7 +55,3 @@ $table-accent-bg: $gray-100 !default;   // Bootstrap $gray-100
 $table-hover-bg: $gray-400 !default;   // Bootstrap $gray-400
 
 $yiq-contrasted-threshold:  170 !default;
-
-a:link, a:visited {
-    color: $brand-primary;
-}
