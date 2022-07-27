@@ -14,7 +14,7 @@
   }
 
   .badge-secondary {
-    background-color: var(--bs-primary);
+    background-color: var($brand-primary);
   }
 
   h5 {
@@ -39,16 +39,20 @@ body {
   line-height: 1.3;
 }
 
-.page-item.active .page-link {
+li.page-item.active a.page-link {
   background-color: $brand-primary;
   border-color: $brand-primary;
   color: $cgiar-white;
 }
 
-.page-link:hover {
-  background-color: $brand-secondary;
-  border-color: $brand-secondary;
-  color: $cgiar-white;
+a.page-link {
+  color: #636363;
+
+  @include hover {
+    background-color: $brand-secondary;
+    border-color: $brand-secondary;
+    color: $cgiar-white;
+  }
 }
 
 .btn-primary {
@@ -65,10 +69,10 @@ body {
   }
 }
 
-// temporary hack to reset lead class on community/collection list. It would
-// better if I could override app/shared/object-list/community-list-element to
-// remove the lead class properly though...
-ds-community-list-element a.lead {
+// temporary hack to reset the `lead` class on community/collection/item list.
+// It would be better to override app/shared/object-list/community-list-element
+// and remove the lead class properly though...
+a.lead {
   font-weight: 400;
   font-size: inherit;
 }
@@ -77,4 +81,12 @@ ds-community-list-element a.lead {
 // remove the text-white class
 footer div.text-white {
   color: $cgiar-white;
+}
+
+a {
+  color: $brand-primary;
+
+  @include hover {
+    color: darken($brand-primary, 10%);
+  }
 }
