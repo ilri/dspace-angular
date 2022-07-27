@@ -57,9 +57,9 @@ body {
   color: $cgiar-white;
 
   // override default blue hover
-  // TODO: make some visual indication of hover state
+  // TODO: fix active/clicked state
   @include hover {
-    background-color: $brand-primary;
+    background-color: darken($brand-primary, 10%);
     border-color: $brand-primary;
     color: $cgiar-white;
   }
@@ -71,4 +71,10 @@ body {
 ds-community-list-element a.lead {
   font-weight: 400;
   font-size: inherit;
+}
+
+// temporary hack until I can figure out how to override the entire footer and
+// remove the text-white class
+footer div.text-white {
+  color: $cgiar-white;
 }
