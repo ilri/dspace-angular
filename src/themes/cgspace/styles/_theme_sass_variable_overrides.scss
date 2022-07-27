@@ -9,6 +9,13 @@
 $font-family-headings:  'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $font-family-sans-serif: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
+// CGIAR dark green
+$brand-primary: #427730 !default;
+
+// CGIAR light green
+$brand-secondary: #7AB800 !default;
+
+$cgiar-white: #fcfcfc !default;
 
 $navbar-dark-color: #FFFFFF;
 
@@ -33,4 +40,8 @@ $yiq-contrasted-threshold:  170 !default;
 
 h1, h2, h3, h4, h5 {
     font-family: $font-family-headings;
+}
+
+a:link, a:visited {
+    color: $brand-primary;
 }
