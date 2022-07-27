@@ -64,3 +64,11 @@ body {
     color: $cgiar-white;
   }
 }
+
+// temporary hack to reset lead class on community/collection list. It would
+// better if I could override app/shared/object-list/community-list-element to
+// remove the lead class properly though...
+ds-community-list-element a.lead {
+  font-weight: 400;
+  font-size: inherit;
+}
