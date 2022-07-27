@@ -31,3 +31,22 @@ header {
     height: 100%;
   }
 }
+
+body {
+  background-color: $cgiar-white;
+  color: #636363;
+  // override DSpace's default line-height of 1.5
+  line-height: 1.3;
+}
+
+.page-item.active .page-link {
+  background-color: $brand-primary;
+  border-color: $brand-primary;
+  color: $cgiar-white;
+}
+
+.page-link:hover {
+  background-color: $brand-secondary;
+  border-color: $brand-secondary;
+  color: $cgiar-white;
+}
