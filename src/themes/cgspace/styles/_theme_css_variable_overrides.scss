@@ -2,7 +2,7 @@
 
 :root {
   --ds-header-logo-height: 40px;
-  --ds-banner-text-background: rgba(0, 0, 0, 0.45);
+  --ds-banner-text-background: $white;
   --ds-banner-background-gradient-width: 300px;
   --ds-home-news-link-color: #{$brand-primary};
   --ds-home-news-link-hover-color: #{darken($brand-primary, 10%)};
@@ -17,5 +17,7 @@
   --ds-footer-bg: #{$brand-primary};
   // override DSpace header trail text color
   --ds-breadcrumb-link-active-color: #{$cgiar-gray};
+  --cgiar-white: #{$cgiar-white};
+  --cgiar-gray: #{$cgiar-gray};
 }
 
