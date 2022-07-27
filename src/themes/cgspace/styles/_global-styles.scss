@@ -13,7 +13,7 @@
     padding-bottom: 0.5rem !important;
   }
 
-  .badge-secondary, {
+  .badge-secondary {
     background-color: var($brand-primary);
   }
 
@@ -70,7 +70,7 @@ a.page-link {
   }
 }
 
-.btn-outline-primary, .btn-outline-secondary, {
+.btn-outline-primary, .btn-outline-secondary {
   background-color: $brand-primary;
   border-color: $brand-primary;
   color: $cgiar-white;
