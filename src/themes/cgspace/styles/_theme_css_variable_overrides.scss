@@ -15,5 +15,7 @@
   --ds-header-bg: #{$brand-primary};
   // override DSpace footer background color
   --ds-footer-bg: #{$brand-primary};
+  // override DSpace header trail text color
+  --ds-breadcrumb-link-active-color: #{$cgiar-gray};
 }
 
