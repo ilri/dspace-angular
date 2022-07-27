@@ -13,7 +13,7 @@
     padding-bottom: 0.5rem !important;
   }
 
-  .badge-secondary {
+  .badge-secondary, {
     background-color: var($brand-primary);
   }
 
@@ -55,7 +55,22 @@ a.page-link {
   }
 }
 
+// buttons
 .btn-primary {
+  background-color: $brand-primary;
+  border-color: $brand-primary;
+  color: $cgiar-white;
+
+  // override default blue hover
+  // TODO: fix active/clicked state
+  @include hover {
+    background-color: darken($brand-primary, 10%);
+    border-color: $brand-primary;
+    color: $cgiar-white;
+  }
+}
+
+.btn-outline-primary, .btn-outline-secondary, {
   background-color: $brand-primary;
   border-color: $brand-primary;
   color: $cgiar-white;
@@ -89,4 +104,10 @@ a {
   @include hover {
     color: darken($brand-primary, 10%);
   }
+}
+
+.badge-info {
+  background-color: $brand-primary;
+  border-color: $brand-primary;
+  color: $cgiar-white;
 }
