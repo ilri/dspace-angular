@@ -50,3 +50,17 @@ body {
   border-color: $brand-secondary;
   color: $cgiar-white;
 }
+
+.btn-primary {
+  background-color: $brand-primary;
+  border-color: $brand-primary;
+  color: $cgiar-white;
+
+  // override default blue hover
+  // TODO: make some visual indication of hover state
+  @include hover {
+    background-color: $brand-primary;
+    border-color: $brand-primary;
+    color: $cgiar-white;
+  }
+}
