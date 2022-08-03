@@ -55,8 +55,8 @@ a.page-link {
   }
 }
 
-// buttons
-.btn-primary {
+// override Bootstrap primary buttons default states
+.btn-primary:not(:disabled):not(.disabled), .btn-primary:not(:disabled):not(.disabled) {
   background-color: $brand-primary;
   border-color: $brand-primary;
   color: $cgiar-white;
@@ -70,18 +70,59 @@ a.page-link {
   }
 }
 
-.btn-outline-primary, .btn-outline-secondary {
+// override Bootstrap primary button active states
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
+  background-color: $brand-primary;
+  border-color: $brand-primary;
+  color: $cgiar-white;
+}
+
+// override Bootstrap secondary button default states
+.btn-secondary:not(:disabled):not(.disabled), .btn-secondary:not(:disabled):not(.disabled) {
+  background-color: $cgiar-white;
+  border-color: $brand-primary;
+  color: $brand-primary;
+
+  // override default blue hover
+  @include hover {
+    border-color: $brand-primary;
+    color: $brand-secondary;
+  }
+}
+
+// override Bootstrap secondary button active states
+.btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .show > .btn-secondary.dropdown-toggle {
+  background-color: $brand-primary;
+  border-color: $brand-primary;
+  color: $cgiar-white;
+}
+
+// Override Bootstrap button outline
+.btn-outline-secondary:not(:disabled):not(.disabled), .btn-outline-primary:not(:disabled):not(.disabled), .show > .btn-outline-primary.dropdown-toggle,
+.btn-outline-secondary:not(:disabled):not(.disabled), .btn-outline-secondary:not(:disabled):not(.disabled), .show > .btn-outline-secondary.dropdown-toggle {
   background-color: $brand-primary;
   border-color: $brand-primary;
   color: $cgiar-white;
 
   // override default blue hover
-  // TODO: fix active/clicked state
   @include hover {
     background-color: darken($brand-primary, 10%);
     border-color: $brand-primary;
     color: $cgiar-white;
   }
+}
+
+// Override Bootstrap button outline secondary active state
+.btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active, .show > .btn-outline-secondary.dropdown-toggle {
+  background-color: $brand-primary;
+  border-color: $brand-primary;
+  color: $cgiar-white;
+}
+
+.list-group-item.active {
+  background-color: $brand-primary;
+  border-color: $brand-primary;
+  color: $cgiar-white;
 }
 
 // temporary hack to reset the `lead` class on community/collection/item list.
