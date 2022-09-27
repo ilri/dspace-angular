@@ -54,4 +54,18 @@ a.navbar-brand img {
   ::ng-deep a.nav-link:hover {
     color: var(--ds-navbar-link-color-hover);
   }
+
+  // Set background color of dropdown menus in the navbar
+  ::ng-deep ul {
+    background-color: var(--ds-breadcrumb-bg);
+  }
+
+  ::ng-deep ul a.nav-link {
+    color: var(--ds-home-news-link-color);
+  }
+
+  ::ng-deep ul a.nav-link:hover {
+    color: var(--ds-home-news-link-hover-color);
+    text-decoration: underline;
+  }
 }
