@@ -14,7 +14,7 @@
   }
 
   .badge-secondary {
-    background-color: var($brand-primary);
+    background-color: var(--bs-primary);
   }
 
   h5 {
@@ -23,8 +23,7 @@
 }
 
 header {
-  li > .navbar-section,
-  li > .expandable-navbar-section {
+  .navbar-navigation > li {
     display: flex;
     flex-direction: column;
     justify-content: center;
