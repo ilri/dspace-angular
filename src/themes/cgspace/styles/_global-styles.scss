@@ -118,6 +118,15 @@ a.page-link {
   color: $cgiar-white;
 }
 
+.btn-link {
+  color: $brand-primary;
+
+  // override default blue hover
+  @include hover {
+    color: darken($brand-primary, 10%);
+  }
+}
+
 .list-group-item.active {
   background-color: $brand-primary;
   border-color: $brand-primary;
