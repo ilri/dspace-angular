@@ -20,11 +20,6 @@
     color: $brand-primary;
   }
 
-  // Override badge color for facet counts
-  .badge-secondary {
-    background-color: $brand-primary;
-  }
-
   h5 {
     font-size: 1.1rem
   }
@@ -167,4 +162,9 @@ a {
   background-color: $brand-primary;
   border-color: $brand-primary;
   color: $cgiar-white;
+}
+
+// Override badge colors
+.badge-primary, .badge-secondary {
+  background-color: $brand-primary;
 }
