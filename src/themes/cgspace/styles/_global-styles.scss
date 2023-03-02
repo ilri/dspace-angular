@@ -13,8 +13,16 @@
     padding-bottom: 0.5rem !important;
   }
 
+  // Override link color in facet filter boxes (others are overridden in the
+  // search-text-filter.component and we might need to copy that into this
+  // theme so we can override it again.
+  a {
+    color: $brand-primary;
+  }
+
+  // Override badge color for facet counts
   .badge-secondary {
-    background-color: var(--bs-primary);
+    background-color: $brand-primary;
   }
 
   h5 {
