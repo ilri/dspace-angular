@@ -168,3 +168,13 @@ a {
 .badge-primary, .badge-secondary {
   background-color: $brand-primary;
 }
+
+.dropdown-item.active {
+  color: $cgiar-white;
+  background-color: $brand-primary;
+}
+
+.dropdown-item:hover {
+  color: $cgiar-white;
+  background-color: $brand-secondary;
+}
