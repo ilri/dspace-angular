@@ -72,6 +72,13 @@ a.page-link {
   }
 }
 
+// override Bootstrap primary button disabled colors (they are still reduced
+// opacity, but we use CGIAR colors).
+.btn-primary.disabled, .btn-primary:disabled {
+  background-color: $brand-primary;
+  border-color: $brand-primary;
+}
+
 // override Bootstrap primary button active states
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
   background-color: $brand-primary;
