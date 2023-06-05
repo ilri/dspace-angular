@@ -1,4 +1,12 @@
+// 2023-06-05: Override base component because it is not currently themeable.
+// This is from the cgspace theme's _global-styles.scss, but we have to use
+// CSS variables because the SCSS ones aren't defined by the time this runs.
 .export-button {
-    background: var(--ds-admin-sidebar-bg);
-    border-color: var(--ds-admin-sidebar-bg);
+    background-color: var(--brand-primary);
+    border-color: var(--brand-primary);
+    color: var(--cgiar-white);
+
+    &:hover {
+        background-color: var(--brand-primary-darker);
+    }
 }
