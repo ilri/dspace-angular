@@ -9,12 +9,18 @@ import { HeaderNavbarWrapperComponent } from './app/header-nav-wrapper/header-na
 import { SearchModule } from '../../app/shared/search/search.module';
 import { RootModule } from '../../app/root.module';
 import { NavbarModule } from '../../app/navbar/navbar.module';
+import { ItemPageModule } from '../../app/item-page/item-page.module';
+import { UntypedItemComponent } from './app/item-page/simple/item-types/untyped-item/untyped-item.component';
+import { ItemSharedModule } from '../../app/item-page/item-shared.module';
+import { ResultsBackButtonModule } from '../../app/shared/results-back-button/results-back-button.module';
+import { DsoPageModule } from '../../app/shared/dso-page/dso-page.module';
 
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
  * This will ensure that decorator gets picked up when the app loads
  */
 const ENTRY_COMPONENTS = [
+  UntypedItemComponent,
 ];
 
 const DECLARATIONS = [
@@ -33,6 +39,10 @@ const DECLARATIONS = [
     FormsModule,
     RootModule,
     NavbarModule,
+    ResultsBackButtonModule,
+    ItemPageModule,
+    ItemSharedModule,
+    DsoPageModule,
   ],
   declarations: DECLARATIONS,
   providers: [
