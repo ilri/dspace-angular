@@ -61,9 +61,11 @@ import { SharedBrowseByModule } from '../../app/shared/browse-by/shared-browse-b
 import { ItemVersionsModule } from '../../app/item-page/versions/item-versions.module';
 import { ItemSharedModule } from 'src/app/item-page/item-shared.module';
 import { ItemPageComponent } from './app/item-page/simple/item-page.component';
+import { ThumbnailComponent } from './app/thumbnail/thumbnail.component';
 
 const DECLARATIONS = [
   ItemPageComponent,
+  ThumbnailComponent,
 ];
 
 @NgModule({
