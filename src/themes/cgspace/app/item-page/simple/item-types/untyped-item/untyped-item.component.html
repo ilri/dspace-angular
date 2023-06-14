@@ -93,6 +93,25 @@
       [label]="'item.page.subject'">
     </ds-generic-item-page-field>
     <ds-generic-item-page-field [item]="object"
+      [fields]="['cg.subject.alliancebiovciat',
+                'cg.subject.bioversity',
+                'cg.subject.ccafs',
+                'cg.subject.ciat',
+                'cg.subject.cifor',
+                'cg.subject.cip',
+                'cg.subject.cpwf',
+                'cg.subject.cta',
+                'cg.subject.drylands',
+                'cg.subject.humidtropics',
+                'cg.subject.icarda',
+                'cg.subject.iita',
+                'cg.subject.ilri',
+                'cg.subject.system',
+                'cg.subject.wle']"
+      [separator]="'; '"
+      [label]="'item.page.subjects'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object"
       [fields]="['cg.contributor.affiliation']"
       [separator]="'; '"
       [label]="'item.page.affiliation'">
