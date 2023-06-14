@@ -6,6 +6,7 @@
   --ds-banner-background-gradient-width: 300px;
   --ds-home-news-link-color: #{$brand-primary};
   --ds-home-news-link-hover-color: #{darken($brand-primary, 10%)};
+  --ds-thumbnail-max-width: 200px;
   // override DSpace navbar link colors (note the special variable syntax here)
   --ds-navbar-link-color: #{$cgiar-white};
   --ds-navbar-link-color-hover: #{$cgiar-white};
