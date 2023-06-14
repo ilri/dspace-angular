@@ -27,6 +27,7 @@
   // Simple item view
   "item.page.abstract": "Abstract/Description",
   "item.page.uri": "Permanent link to cite or share this item",
+  "item.page.url": "External link to download this item",
   "item.page.subject": "AGROVOC Keywords",
   "item.page.doi": "DOI",
   "item.page.issued": "Date Issued",
