@@ -1520,7 +1520,7 @@
 
   "dso-selector.set-scope.community.head": "Select a search scope",
 
-  "dso-selector.set-scope.community.button": "Search all of DSpace",
+  "dso-selector.set-scope.community.button": "Search all of CGSpace",
 
   "dso-selector.set-scope.community.or-divider": "or",
 
@@ -1902,7 +1902,7 @@
 
   "home.title": "Home",
 
-  "home.top-level-communities.head": "Communities in DSpace",
+  "home.top-level-communities.head": "Communities in CGSpace",
 
   "home.top-level-communities.help": "Select a community to browse its collections.",
 
@@ -1936,7 +1936,7 @@
 
   "info.feedback.title": "Feedback",
 
-  "info.feedback.info": "Thanks for sharing your feedback about the DSpace system. Your comments are appreciated!",
+  "info.feedback.info": "Thanks for sharing your feedback about CGSpace. Your comments are appreciated!",
 
   "info.feedback.email_help": "This address will be used to follow up on your feedback.",
 
@@ -2464,7 +2464,7 @@
 
   "workflow-item.search.result.list.element.supervised.remove-tooltip": "Remove supervision group",
 
-  "item.page.abstract": "Abstract",
+  "item.page.abstract": "Abstract/Description",
 
   "item.page.author": "Authors",
 
@@ -2516,9 +2516,9 @@
 
   "item.page.relationships.isOrgUnitOfProject": "Research Projects",
 
-  "item.page.subject": "Keywords",
+  "item.page.subject": "AGROVOC Keywords",
 
-  "item.page.uri": "URI",
+  "item.page.uri": "Permanent link to cite or share this item",
 
   "item.page.bitstreams.view-more": "Show more",
 
@@ -2868,7 +2868,7 @@
 
   "login.form.forgot-password": "Have you forgotten your password?",
 
-  "login.form.header": "Please log in to DSpace",
+  "login.form.header": "Please log in to CGSpace",
 
   "login.form.new-user": "New user? Click here to register.",
 
@@ -2886,7 +2886,7 @@
 
   "login.breadcrumbs": "Login",
 
-  "logout.form.header": "Log out from DSpace",
+  "logout.form.header": "Log out from CGSpace",
 
   "logout.form.submit": "Log out",
 
@@ -2920,7 +2920,7 @@
 
   "menu.section.browse_community_by_title": "By Title",
 
-  "menu.section.browse_global": "All of DSpace",
+  "menu.section.browse_global": "All of CGSpace",
 
   "menu.section.browse_global_by_author": "By Author",
 
@@ -3142,7 +3142,7 @@
 
   "nav.expandable-navbar-section-suffix": "(submenu)",
 
-  "nav.browse.header": "All of DSpace",
+  "nav.browse.header": "All of CGSpace",
 
   "nav.community-browse.header": "By Community",
 
@@ -3528,7 +3528,7 @@
 
   "register-page.registration.header": "New user registration",
 
-  "register-page.registration.info": "Register an account to subscribe to collections for email updates, and submit new items to DSpace.",
+  "register-page.registration.info": "Register an account to subscribe to collections for email updates, and submit new items to CGSpace.",
 
   "register-page.registration.email": "Email Address *",
 
@@ -3610,9 +3610,9 @@
 
   "repository.image.logo": "Repository logo",
 
-  "repository.title": "DSpace Repository",
+  "repository.title": "CGSpace",
 
-  "repository.title.prefix": "DSpace Repository :: ",
+  "repository.title.prefix": "CGSpace :: ",
 
   "resource-policies.add.button": "Add",
 
@@ -3968,7 +3968,7 @@
 
   "search.form.search_dspace": "All repository",
 
-  "search.form.scope.all": "All of DSpace",
+  "search.form.scope.all": "All of CGSpace",
 
   "search.results.head": "Search Results",
 
@@ -4118,7 +4118,7 @@
 
   "submission.import-external.title.none": "Import metadata from an external source",
 
-  "submission.import-external.page.hint": "Enter a query above to find items from the web to import in to DSpace.",
+  "submission.import-external.page.hint": "Enter a query above to find items from the web to import in to CGSpace.",
 
   "submission.import-external.back-to-my-dspace": "Back to MyDSpace",
 
@@ -5419,4 +5419,134 @@
   "live-region.ordering.dropped": "{{ itemName }}, dropped at position {{ index }} of {{ length }}.",
 
   "dynamic-form-array.sortable-list.label": "Sortable list",
+
+  "item.preview.dcterms.language": "Language:",
+
+  "item.preview.dcterms.subject": "Subjects:",
+
+  "item.preview.dcterms.type": "Type:",
+
+  "item.preview.cg.issue": "Issue",
+
+  "item.preview.cg.volume": "Volume",
+
+  "item.preview.cg.issn": "ISSN",
+
+  "item.preview.cg.isbn": "ISBN",
+
+  "item.preview.cg.journal": "Journal",
+
+  "item.preview.cg.identifier.doi": "DOI",
+
+  "item.page.url": "External link to download this item",
+
+  "item.page.subjects": "Subjects",
+
+  "item.page.doi": "DOI",
+
+  "item.page.issued": "Date Issued",
+
+  "item.page.available": "Date Online",
+
+  "item.page.language": "Language",
+
+  "item.page.type": "Type",
+
+  "item.page.accessRights": "Accessibility",
+
+  "item.page.license": "Usage Rights",
+
+  "item.page.affiliation": "Organizations Affiliated to the Authors",
+
+  "item.page.donor": "Investors/sponsors",
+
+  "search.filters.filter.region.head": "Region",
+
+  "search.filters.filter.region.placeholder": "Region name",
+
+  "search.filters.filter.region.label": "Search region name",
+
+  "search.filters.applied.f.region": "Region",
+
+  "search.filters.filter.country.head": "Country",
+
+  "search.filters.filter.country.placeholder": "Country name",
+
+  "search.filters.filter.country.label": "Search country name",
+
+  "search.filters.applied.f.country": "Country",
+
+  "search.filters.filter.accessRights.head": "Access rights",
+
+  "search.filters.filter.accessRights.placeholder": "Access rights",
+
+  "search.filters.filter.accessRights.label": "Search access rights",
+
+  "search.filters.applied.f.accessRights": "Access rights",
+
+  "search.filters.filter.usageRights.head": "Usage rights",
+
+  "search.filters.filter.usageRights.placeholder": "Usage rights",
+
+  "search.filters.filter.usageRights.label": "Search usage rights",
+
+  "search.filters.applied.f.usageRights": "Usage rights",
+
+  "search.filters.filter.affiliation.head": "Author affiliations",
+
+  "search.filters.filter.affiliation.placeholder": "Author affiliations",
+
+  "search.filters.filter.affiliation.label": "Search author affiliation",
+
+  "search.filters.applied.f.affiliation": "Author affiliation",
+
+  "search.filters.filter.initiative.head": "CGIAR Initiatives",
+
+  "search.filters.filter.initiative.placeholder": "CGIAR Initiative",
+
+  "search.filters.filter.initiative.label": "Search CGIAR Initiative",
+
+  "search.filters.applied.f.initiative": "CGIAR Initiative",
+
+  "search.filters.filter.crpsubject.head": "CGIAR Research Programs",
+
+  "search.filters.filter.crpsubject.placeholder": "CGIAR Research Program",
+
+  "search.filters.filter.crpsubject.label": "Search CGIAR Research Program",
+
+  "search.filters.applied.f.crpsubject": "CGIAR Research Program",
+
+  "search.filters.filter.actionarea.head": "CGIAR Action Area",
+
+  "search.filters.filter.actionarea.placeholder": "CGIAR Action Area",
+
+  "search.filters.filter.actionarea.label": "Search CGIAR Action Area",
+
+  "search.filters.applied.f.actionarea": "CGIAR Action Area",
+
+  "search.filters.filter.impactarea.head": "CGIAR Impact Area",
+
+  "search.filters.filter.impactarea.placeholder": "CGIAR Impact Area",
+
+  "search.filters.filter.impactarea.label": "Search CGIAR Impact Area",
+
+  "search.filters.applied.f.impactarea": "CGIAR Impact Area",
+
+  "search.filters.filter.sponsorship.head": "Investors",
+
+  "search.filters.filter.sponsorship.placeholder": "Investor",
+
+  "search.filters.filter.sponsorship.label": "Search investor",
+
+  "search.filters.applied.f.sponsorship": "Investor",
+
+  "search.filters.filter.sdg.head": "SDG contributions",
+
+  "search.filters.filter.sdg.placeholder": "SDG",
+
+  "search.filters.filter.sdg.label": "Search SDG",
+
+  "search.filters.applied.f.sdg": "SDG",
+
+  "submission.sections.submit.progressbar.describe.stepthree": "Describe",
 }
