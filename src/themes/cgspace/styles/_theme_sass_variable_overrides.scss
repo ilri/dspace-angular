@@ -2,10 +2,12 @@
 // variables to CSS equivalents (see src/styles/_bootstrap_variables_mapping.scss). However Bootstrap
 // still uses Sass variables internally. So if you want to override bootstrap (or other sass
 // variables) you can do so here. Their CSS counterparts will include the changes you make here
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-// Native font stack from Bootstrap 4.6
+// Use Source Sans Pro and fall back to the native font stack from Bootstrap 4.6
 // See: https://getbootstrap.com/docs/4.6/content/reboot/#native-font-stack
 $font-family-sans-serif:
+  'Source Sans 3',
   // Safari for macOS and iOS (San Francisco)
   -apple-system,
   // Chrome < 56 for macOS (San Francisco)
