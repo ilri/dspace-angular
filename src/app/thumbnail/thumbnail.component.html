@@ -7,7 +7,7 @@
     </div>
   </div>
   <!-- don't use *ngIf="!(isLoading$ | async)" so the thumbnail can load in while the animation is playing -->
-  <img *ngIf="(src$ | async) !== null" class="thumbnail-content img-fluid" [ngClass]="{'d-none': (isLoading$ | async)}"
+  <img *ngIf="(src$ | async) !== null" class="thumbnail-content img-thumbnail img-fluid" [ngClass]="{'d-none': (isLoading$ | async)}"
        [src]="(src$ | async) | dsSafeUrl" [alt]="alt | translate" (error)="errorHandler()" (load)="successHandler()">
   <div *ngIf="(src$ | async) === null && !(isLoading$ | async)" class="thumbnail-content outer">
     <div class="inner">
