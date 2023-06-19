@@ -5,13 +5,14 @@
   --ds-banner-text-background: $white;
   --ds-banner-background-gradient-width: 300px;
   --ds-home-news-link-color: #{$brand-primary};
-  --ds-home-news-link-hover-color: #{darken($brand-primary, 10%)};
+  --ds-home-news-link-hover-color: var(--brand-primary-darker);
   --ds-thumbnail-max-width: 200px;
   // override DSpace navbar link colors (note the special variable syntax here)
   --ds-navbar-link-color: #{$cgiar-white};
-  --ds-navbar-link-color-hover: #{$cgiar-white};
+  --ds-navbar-link-color-hover: #{$brand-secondary};
   // override DSpace search, language, and login colors
   --ds-header-icon-color: #{$cgiar-white};
+  --ds-header-icon-color-hover: #{$brand-secondary};
   // override DSpace header background color
   --ds-header-bg: #{$brand-primary};
   // override DSpace footer background color
