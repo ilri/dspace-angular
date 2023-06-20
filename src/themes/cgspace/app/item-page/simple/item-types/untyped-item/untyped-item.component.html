@@ -136,6 +136,16 @@
       [label]="'item.page.subjects'">
     </ds-generic-item-page-field>
     <ds-generic-item-page-field [item]="object"
+      [fields]="['cg.coverage.country']"
+      [separator]="'; '"
+      [label]="'item.page.country'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object"
+      [fields]="['cg.coverage.region']"
+      [separator]="'; '"
+      [label]="'item.page.region'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object"
       [fields]="['cg.contributor.affiliation']"
       [separator]="'; '"
       [label]="'item.page.affiliation'">
