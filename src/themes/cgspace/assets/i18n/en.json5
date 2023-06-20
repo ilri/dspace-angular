@@ -44,6 +44,8 @@
   "item.page.license": "Usage Rights",
   "item.page.affiliation": "Organizations Affiliated to the Authors",
   "item.page.donor": "Investors/sponsors",
+  "item.page.country": "Countries",
+  "item.page.region": "Regions",
 
   // Search filters
   "search.filters.filter.region.head": "Region",
