@@ -201,3 +201,8 @@ a {
 .simple-view-element-header {
   font-size: 1.1rem;
 }
+
+// Override date facet link color from search-text-filter.component
+.filter-value {
+  color: $brand-primary;
+}
