@@ -5539,4 +5539,20 @@
   "search.filters.applied.f.sdg": "SDG",
 
   "submission.sections.submit.progressbar.describe.stepthree": "Describe",
+
+  "item.page.subjects": "Subjects",
+
+  "item.page.orcid": "CGIAR Author ORCID identifiers",
+
+  "item.page.actionArea": "CGIAR Action Areas",
+
+  "item.page.impactArea": "CGIAR Impact Areas",
+
+  "item.page.initiative": "CGIAR Initiatives",
+
+  "item.page.sdg": "Contributes to SDGs",
+
+  "item.page.country": "Countries",
+
+  "item.page.region": "Regions",
 }
