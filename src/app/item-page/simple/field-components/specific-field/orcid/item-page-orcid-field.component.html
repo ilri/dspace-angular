@@ -1,0 +1,35 @@
+<div class="item-page-field">
+    <ds-metadata-field-wrapper>
+        <div class="simple-view-element">
+            <h5 class="simple-view-element-header">{{ label | translate }}</h5>
+            <div class="simple-view-element-body">
+                <!-- Iterate over metadata values and split them into a name 
+                     and an identifier. Note that this expects the values to
+                     be exactly in this format:
+
+                        Name: 0000-0000-0000-0000
+
+                     We then use those to build a link for the template. The
+                     code here is based on the metadata-values.component.
+                -->
+                <ng-container *ngFor="let mdValue of item?.allMetadata(fields); let last=last;">
+                    <ng-container *ngTemplateOutlet="orcidLink;
+                                                     context: {
+                                                        orcidName: mdValue.value.split(':')[0],
+                                                        orcidIdentifier: mdValue.value.split(':')[1].trim(),
+                                                        linkPrefix: 'https://orcid.org/'
+                                                      }">
+                    </ng-container>
+                    <span class="separator" *ngIf="!last" [innerHTML]="separator"></span>
+                </ng-container>
+            </div>
+        </div>
+    </ds-metadata-field-wrapper>
+</div>
+
+<!-- Render the ORCID identifier as a link. This is slightly verbose and there
+     may be a better way to do it -->
+<ng-template #orcidLink let-orcidName="orcidName" let-orcidIdentifier="orcidIdentifier" let-linkPrefix="linkPrefix">
+    {{ orcidName }} <i class="fa-brands fa-orcid">&nbsp;</i>
+    <a class="dont-break-out ds-simple-metadata-link" target="_blank" [href]="linkPrefix + orcidIdentifier">{{ linkPrefix + orcidIdentifier }}</a>
+</ng-template>
