@@ -1,4 +1,4 @@
-<div class="item-page-field">
+<div class="item-page-field" *ngIf="item?.allMetadata(fields).length">
     <ds-metadata-field-wrapper>
         <div class="simple-view-element">
             <h5 class="simple-view-element-header">{{ label | translate }}</h5>
