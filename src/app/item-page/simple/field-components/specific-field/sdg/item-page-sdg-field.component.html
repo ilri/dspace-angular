@@ -10,6 +10,7 @@
                                                         value: mdValue.value,
                                                         first: first,
                                                         last: last,
+                                                        length: item?.allMetadata(fields).length,
                                                      }">
                     </ng-container>
                 </ng-container>
@@ -21,7 +22,7 @@
 <!-- Render the UN SDG Goal icon.
      See: https://www.un.org/sustainabledevelopment/news/communications-material/
 -->
-<ng-template #sdgIcon let-value="value" let-first="first" let-last="last">
+<ng-template #sdgIcon let-value="value" let-first="first" let-last="last" let-length="length">
     <!-- TODO: more elegant if/else so I don't have to duplicate the img -->
     <!-- TODO: fix the layout on mobile -->
     <span class="pl-0 pr-1" *ngIf="first">
@@ -30,7 +31,8 @@
     <span class="px-1" *ngIf="!first && !last">
         <img src="assets/images/sdg-icons/E-WEB-Goal-{{ calculateSdgNumber(value) }}.webp" [alt]="value" class="sdg"/>
     </span>
-    <span class="pl-1 pr-0" *ngIf="last">
+    <!-- "last" only makes sense if there is more than one! -->
+    <span class="pl-1 pr-0" *ngIf="last && length > 1">
         <img src="assets/images/sdg-icons/E-WEB-Goal-{{ calculateSdgNumber(value) }}.webp" [alt]="value" class="sdg"/>
     </span>
 </ng-template>
