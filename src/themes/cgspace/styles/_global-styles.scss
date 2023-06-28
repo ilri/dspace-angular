@@ -171,7 +171,7 @@ a {
 }
 
 // Override badge colors
-.badge-primary, .badge-secondary {
+.badge-primary, .badge-secondary, .badge-dark {
   background-color: $brand-primary;
 }
 
@@ -208,6 +208,16 @@ a {
 }
 
 i.fa-orcid {
+  color: $brand-secondary;
+}
+
+// "Unsaved" icon at the bottom of the submission form
+ds-submission-form-footer i.fa-exclamation-circle {
+  color: var(--warning);
+}
+
+// "Saved" icon at the bottom of the submission form
+ds-submission-form-footer i.fa-check-circle {
   color: $brand-secondary;
 }
 
