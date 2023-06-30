@@ -8,7 +8,7 @@ import { ItemPageFieldComponent } from '../item-page-field.component';
   templateUrl: './item-page-sdg-field.component.html'
 })
 /**
- * This component renders an ORCID identifier as a name, icon, and link.
+ * This component renders a UN SDG icon.
  * It expects 4 parameters: The item, a separator, the metadata keys and an i18n key
  */
 export class ItemPageSdgFieldComponent extends ItemPageFieldComponent {
