@@ -26,13 +26,13 @@
     <!-- TODO: more elegant if/else so I don't have to duplicate the img -->
     <!-- TODO: fix the layout on mobile -->
     <span class="pl-0 pr-1" *ngIf="first">
-        <img src="assets/images/sdg-icons/E-WEB-Goal-{{ calculateSdgNumber(value) }}.webp" [alt]="value" class="sdg"/>
+        <img src="assets/images/sdg-icons/E-WEB-Goal-{{ calculateSdgNumber(value) }}.webp" [alt]="value" [title]="value" class="sdg"/>
     </span>
     <span class="px-1" *ngIf="!first && !last">
-        <img src="assets/images/sdg-icons/E-WEB-Goal-{{ calculateSdgNumber(value) }}.webp" [alt]="value" class="sdg"/>
+        <img src="assets/images/sdg-icons/E-WEB-Goal-{{ calculateSdgNumber(value) }}.webp" [alt]="value" [title]="value" class="sdg"/>
     </span>
     <!-- "last" only makes sense if there is more than one! -->
     <span class="pl-1 pr-0" *ngIf="last && length > 1">
-        <img src="assets/images/sdg-icons/E-WEB-Goal-{{ calculateSdgNumber(value) }}.webp" [alt]="value" class="sdg"/>
+        <img src="assets/images/sdg-icons/E-WEB-Goal-{{ calculateSdgNumber(value) }}.webp" [alt]="value" [title]="value" class="sdg"/>
     </span>
 </ng-template>
