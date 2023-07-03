@@ -1,0 +1,32 @@
+<div class="item-page-field" *ngIf="item?.allMetadata(fields).length">
+    <ds-metadata-field-wrapper>
+        <div class="simple-view-element">
+            <h5 class="simple-view-element-header">{{ label | translate }}</h5>
+            <div class="simple-view-element-body">
+                <!-- Iterate over metadata values and send them to the correct template -->
+                <ng-container *ngFor="let mdValue of item?.allMetadata(fields)">
+                    <ng-container *ngIf="mdValue.value.startsWith('CC')"
+                                  [ngTemplateOutlet]="ccIcon"
+                                  [ngTemplateOutletContext]="{value: mdValue.value}">
+                    </ng-container>
+                    <ng-container *ngIf="!mdValue.value.startsWith('CC')"
+                                  [ngTemplateOutlet]="license"
+                                  [ngTemplateOutletContext]="{value: mdValue.value}">
+                    </ng-container>
+                </ng-container>
+            </div>
+        </div>
+    </ds-metadata-field-wrapper>
+</div>
+
+<!-- Render the Creative Commons license icon.
+     See: https://creativecommons.org/about/downloads/
+-->
+<ng-template #ccIcon let-value="value">
+    <img src="assets/images/cc-icons/{{ parseLicense(value) }}" [alt]="value" [title]="value" class="cc-icon"/>
+</ng-template>
+
+<!-- Just show the license text. -->
+<ng-template #license let-value="value">
+    {{ value }}
+</ng-template>
