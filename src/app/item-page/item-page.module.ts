@@ -18,7 +18,6 @@ import {
 import { ItemPageUriFieldComponent } from './simple/field-components/specific-field/uri/item-page-uri-field.component';
 import { ItemPageOrcidFieldComponent } from './simple/field-components/specific-field/orcid/item-page-orcid-field.component';
 import { ItemPageSdgFieldComponent } from './simple/field-components/specific-field/sdg/item-page-sdg-field.component';
-import { ItemPageImpactAreaFieldComponent } from './simple/field-components/specific-field/impact-area/item-page-impact-area-field.component';
 import { ItemPageLicenseFieldComponent } from './simple/field-components/specific-field/license/item-page-license-field.component';
 import { ItemPageFieldComponent } from './simple/field-components/specific-field/item-page-field.component';
 import { CollectionsComponent } from './field-components/collections/collections.component';
@@ -85,7 +84,6 @@ const DECLARATIONS = [
   ItemPageUriFieldComponent,
   ItemPageOrcidFieldComponent,
   ItemPageSdgFieldComponent,
-  ItemPageImpactAreaFieldComponent,
   ItemPageLicenseFieldComponent,
   ItemPageFieldComponent,
   CollectionsComponent,
