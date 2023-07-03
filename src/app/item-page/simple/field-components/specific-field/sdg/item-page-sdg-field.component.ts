@@ -40,7 +40,7 @@ export class ItemPageSdgFieldComponent extends ItemPageFieldComponent {
    * will return "02" (because our SDG icon assets are zero padded).
    * @type {string}
    */
-  calculateSdgNumber(sdg) {
+  calculateSdgNumber(sdg: string) {
     return sdg.match(/[0-9]+/)[0].padStart(2, "0");
   }
 }
