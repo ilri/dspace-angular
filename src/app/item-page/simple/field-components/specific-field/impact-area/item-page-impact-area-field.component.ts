@@ -43,28 +43,28 @@ export class ItemPageImpactAreaFieldComponent extends ItemPageFieldComponent {
    */
     parseImpactArea(impactArea: string) {
       // Climate adaptation and mitigation
-      if (impactArea.match(/\(climate|adaptation|mitigation\)/gi) != null) {
+      if (impactArea.match(/(climate|adaptation|mitigation)/gi) != null) {
         return "icon-circle-climate-change.svg";
       }
       // Environmental health and biodiversity
-      else if (impactArea.match(/\(environmental|biodiversity\)/gi) != null) {
+      else if (impactArea.match(/(environmental|biodiversity)/gi) != null) {
         return "icon-circle-environmental-health-biodiversity.svg";
       }
       // Gender equality, youth and social inclusion
-      else if (impactArea.match(/\(gender|equality|youth|social|inclusion\)/gi) != null) {
+      else if (impactArea.match(/(gender|equality|youth|social|inclusion)/gi) != null) {
         return "icon-circle-gender-equality-youth-inclusion.svg";
       }
       // Nutrition, health and food security
-      else if (impactArea.match(/\(nutrition|food|security\)/gi) != null) {
+      else if (impactArea.match(/(nutrition|food|security)/gi) != null) {
         return "icon-circle-food-security.svg";
       }
       // Poverty reduction, livelihoods and jobs
-      else if (impactArea.match(/\(poverty|reduction|livelihoods|jobs\)/gi) != null) {
+      else if (impactArea.match(/(poverty|reduction|livelihoods|jobs)/gi) != null) {
         return "icon-circle-poverty-reduction.svg";
       }
       // Should never get here, we will see. ;)
       else {
-        return "";
+        return "boo";
       }
     }
 }
