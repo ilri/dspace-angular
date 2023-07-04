@@ -1,0 +1,39 @@
+<ng-container *ngVar="(bitstreams$ | async) as bitstreams">
+  <ds-metadata-field-wrapper *ngIf="bitstreams?.length > 0" [label]="label | translate">
+    <div class="file-section">
+      <ds-themed-file-download-link *ngFor="let file of bitstreams; let last=last;" [bitstream]="file" [item]="item">
+        <ng-container *ngIf="file?.firstMetadataValue('dc.description')"
+          [ngTemplateOutlet]="fileWithDescription"
+          [ngTemplateOutletContext]="{file: file}">
+        </ng-container>
+        <ng-container *ngIf="!file?.firstMetadataValue('dc.description')"
+        [ngTemplateOutlet]="fileWithoutDescription"
+        [ngTemplateOutletContext]="{file: file}">
+      </ng-container>
+      </ds-themed-file-download-link>
+      <ds-themed-loading *ngIf="isLoading" message="{{'loading.default' | translate}}" [showMessage]="false"></ds-themed-loading>
+      <div *ngIf="!isLastPage" class="mt-1" id="view-more">
+        <button class="bitstream-view-more btn btn-outline-secondary btn-sm" (click)="getNextPage()">{{'item.page.bitstreams.view-more' | translate}}</button>
+      </div>
+      <div *ngIf="isLastPage && currentPage != 1" class="mt-1" id="collapse">
+        <button class="bitstream-collapse btn btn-outline-secondary btn-sm" (click)="currentPage = undefined; getNextPage();">{{'item.page.bitstreams.collapse' | translate}}</button>
+      </div>
+    </div>
+  </ds-metadata-field-wrapper>
+</ng-container>
+
+<!-- If the file has a description then we should show that instead of the file
+     name. But we will include the file's extension as a cue to the user. -->
+<ng-template #fileWithDescription let-file="file" let-last="last" >
+  <span>{{ file?.firstMetadataValue("dc.description") ? file?.firstMetadataValue("dc.description") : dsoNameService.getName(file) }}</span>
+  <span> ({{(file?.sizeBytes) | dsFileSize }}, {{ getFileExtension(dsoNameService.getName(file)) | lowercase }})</span>
+  <span *ngIf="!last" innerHTML="{{separator}}"></span>
+</ng-template>
+
+<!-- If the file does not have a description then we should show the default
+     file section (see: src/app/item-page/simple/field-components/file-section/file-section.component.html)-->
+<ng-template #fileWithoutDescription let-file="file" let-last="last" >
+  <span>{{ dsoNameService.getName(file) }}</span>
+  <span> ({{(file?.sizeBytes) | dsFileSize }})</span>
+  <span *ngIf="!last" innerHTML="{{separator}}"></span>
+</ng-template>
