@@ -41,6 +41,6 @@ export class ItemPageSdgFieldComponent extends ItemPageFieldComponent {
    * @type {string}
    */
   calculateSdgNumber(sdg: string) {
-    return sdg.match(/[0-9]+/)[0].padStart(2, "0");
+    return sdg.match(/[0-9]+/)[0].padStart(2, '0');
   }
 }
