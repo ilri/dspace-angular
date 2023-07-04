@@ -49,9 +49,8 @@ export class ItemPageLicenseFieldComponent extends ItemPageFieldComponent {
       return 'by-nc-nd.svg';
     } else if (license.match(/CC0-1.0/) != null) {
       return 'cc-zero.svg';
-    }
-    // Should never get here, we will see. ;)
-    else {
+    } else {
+      // Should never get here, we will see. ;)
       return 'boo';
     }
   }
