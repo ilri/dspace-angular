@@ -1,0 +1,37 @@
+<div class="item-page-field">
+    <ds-metadata-field-wrapper>
+        <div class="simple-view-element">
+            <h5 class="simple-view-element-header">Share</h5>
+            <div class="simple-view-element-body">
+                <!-- Fetch the title and Handle metadata values directly to keep
+                     this component simple. -->
+                <ng-container [ngTemplateOutlet]="shareIcons"
+                              [ngTemplateOutletContext]="{
+                                                    itemTitle: item?.firstMetadataValue('dc.title'),
+                                                    itemUri: item?.firstMetadataValue('dc.identifier.uri'),
+                                                  }">
+                </ng-container>
+            </div>
+        </div>
+    </ds-metadata-field-wrapper>
+</div>
+
+<ng-template #shareIcons let-itemTitle="itemTitle" let-itemUri="itemUri">
+    <!-- Note that we don't use [href] here so that we can access the variables
+         via the {{ }} Angular expression binding syntax. -->
+    <a href="https://twitter.com/intent/tweet?url={{ itemUri }}&text={{ itemTitle }}" title="Tweet this" target="_blank">
+        <i class="fa-brands fa-square-twitter fa-xl pr-1"></i>
+    </a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ itemUri }}" title="Share on Facebook" target="_blank">
+        <i class="fa-brands fa-square-facebook fa-xl pr-1"></i>
+    </a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ itemUri }}" title="Share on Facebook" target="_blank">
+        <i class="fa-brands fa-linkedin fa-xl pr-1"></i>
+    </a>
+    <a href="https://www.mendeley.com/import/?url={{ itemUri }}" title="Add this article to your Mendeley library" target="_blank">
+        <i class="fa-brands fa-mendeley fa-xl pr-1"></i>
+    </a>
+    <a href="mailto:?&body={{ itemUri }}&media=&subject={{ itemTitle }}" title="Share via e-mail" target="_blank">
+        <i class="fa-solid fa-envelope fa-xl"></i>
+    </a>
+</ng-template>
