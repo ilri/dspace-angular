@@ -36,29 +36,23 @@ export class ItemPageLicenseFieldComponent extends ItemPageFieldComponent {
    */
   parseLicense(license: string) {
     if (license.match(/CC-BY-[1234]/i) != null) {
-      return "by.svg";
-    }
-    else if (license.match(/CC-BY-SA-[1234]/) != null) {
-      return "by-sa.svg";
-    }
-    else if (license.match(/CC-BY-ND-[1234]/) != null) {
-      return "by-nd.svg";
-    }
-    else if (license.match(/CC-BY-NC-[1234]/) != null) {
-      return "by-nc.svg";
-    }
-    else if (license.match(/CC-BY-NC-SA-[1234]/) != null) {
-      return "by-nc-sa.svg";
-    }
-    else if (license.match(/CC-BY-NC-ND-[1234]/) != null) {
-      return "by-nc-nd.svg";
-    }
-    else if (license.match(/CC0-1.0/) != null) {
-      return "cc-zero.svg";
+      return 'by.svg';
+    } else if (license.match(/CC-BY-SA-[1234]/) != null) {
+      return 'by-sa.svg';
+    } else if (license.match(/CC-BY-ND-[1234]/) != null) {
+      return 'by-nd.svg';
+    } else if (license.match(/CC-BY-NC-[1234]/) != null) {
+      return 'by-nc.svg';
+    } else if (license.match(/CC-BY-NC-SA-[1234]/) != null) {
+      return 'by-nc-sa.svg';
+    } else if (license.match(/CC-BY-NC-ND-[1234]/) != null) {
+      return 'by-nc-nd.svg';
+    } else if (license.match(/CC0-1.0/) != null) {
+      return 'cc-zero.svg';
     }
     // Should never get here, we will see. ;)
     else {
-      return "boo";
+      return 'boo';
     }
   }
 }
