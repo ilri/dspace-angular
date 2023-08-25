@@ -1,0 +1,15 @@
+// Note that we only add styles we want to override from the cgspace theme here.
+// We do not use the SASS "!default" here because we want to set the values no
+// matter whether they are already defined or not.
+
+// dark ILRI red background
+$brand-primary: #702D3E;
+
+// ILRI light red
+$brand-secondary: #E3D7D7;
+
+// ILRI gray
+$cgiar-gray: #333;
+
+// ILRI white
+$cgiar-white: #fcfcfc;
