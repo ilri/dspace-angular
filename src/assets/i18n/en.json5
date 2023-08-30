@@ -5558,4 +5558,36 @@
 
   // CGSpace theme
   "sorting.dcterms.issued.DESC": "Date Issued Descending",
+
+  "menu.section.browse_global_by_region": "By Region",
+
+  "menu.section.browse_global_by_country": "By Country",
+
+  "menu.section.browse_global_by_subregion": "By Subregion",
+
+  "menu.section.browse_global_by_itemtype": "By Item Type",
+
+  "browse.comcol.by.region": "By Region",
+
+  "browse.comcol.by.country": "By Country",
+
+  "browse.comcol.by.subregion": "By Subregion",
+
+  "browse.comcol.by.itemtype": "By Item Type",
+
+  "browse.metadata.region": "Region",
+
+  "browse.metadata.country": "Country",
+
+  "browse.metadata.subregion": "Subregion",
+
+  "browse.metadata.itemtype": "Item Type",
+
+  "browse.metadata.region.breadcrumbs": "Browse by Region",
+
+  "browse.metadata.country.breadcrumbs": "Browse by Country",
+
+  "browse.metadata.subregion.breadcrumbs": "Browse by Subregion",
+
+  "browse.metadata.itemtype.breadcrumbs": "Browse by Item Type",
 }
