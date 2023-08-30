@@ -23,10 +23,10 @@
             [innerHTML]="dsoTitle"></span>
       <span class="text-muted">
         <ds-truncatable-part [id]="dso.id" [minLines]="1">
-          <ng-container *ngIf="firstMetadataValue('dc.publisher') || firstMetadataValue('dc.date.issued')">
-            (<span *ngIf="firstMetadataValue('dc.publisher') as publisher" class="item-list-publisher" [innerHTML]="publisher"></span>
-            <span *ngIf="firstMetadataValue('dc.publisher') && firstMetadataValue('dc.date.issued')">, </span>
-          <span *ngIf="firstMetadataValue('dc.date.issued') as dateIssued" class="item-list-date" [innerHTML]="dateIssued"></span>)
+          <ng-container *ngIf="firstMetadataValue('dcterms.publisher') || firstMetadataValue('dcterms.issued')">
+            (<span *ngIf="firstMetadataValue('dcterms.publisher') as publisher" class="item-list-publisher" [innerHTML]="publisher"></span>
+            <span *ngIf="firstMetadataValue('dcterms.publisher') && firstMetadataValue('dcterms.issued')">, </span>
+          <span *ngIf="firstMetadataValue('dcterms.issued') as dateIssued" class="item-list-date" [innerHTML]="dateIssued"></span>)
           </ng-container>
           <span *ngIf="allMetadataValues(['dc.contributor.author', 'dc.creator', 'dc.contributor.*'], undefined).length > 0" class="item-list-authors">
             <span *ngFor="let author of allMetadataValues(['dc.contributor.author', 'dc.creator', 'dc.contributor.*'], true); let last=last;">
@@ -36,7 +36,7 @@
           </span>
         </ds-truncatable-part>
       </span>
-      <div *ngIf="firstMetadataValue('dc.description.abstract') as abstract" class="item-list-abstract">
+      <div *ngIf="firstMetadataValue('dcterms.abstract') as abstract" class="item-list-abstract">
         <ds-truncatable-part [id]="dso.id" [minLines]="3"><span
           [innerHTML]="abstract"></span>
         </ds-truncatable-part>
