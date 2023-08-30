@@ -5565,4 +5565,7 @@
   "item.page.country": "Countries",
 
   "item.page.region": "Regions",
+
+  // CGSpace theme
+  "sorting.dcterms.issued.DESC": "Date Issued Descending",
 }
