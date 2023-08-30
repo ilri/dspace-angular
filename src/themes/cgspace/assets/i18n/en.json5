@@ -49,6 +49,9 @@
   "item.page.reviewStatus": "Review Status",
 
   // Search filters
+  "search.filters.filter.dateIssued.head": "Date issued",
+  "search.filters.filter.itemtype.head": "Output type",
+  "search.filters.applied.f.itemtype": "Output type",
   "search.filters.filter.region.head": "Region",
   "search.filters.filter.region.placeholder": "Region name",
   "search.filters.filter.region.label": "Search region name",
