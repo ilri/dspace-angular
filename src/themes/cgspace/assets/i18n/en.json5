@@ -46,6 +46,7 @@
   "item.page.donor": "Investors/sponsors",
   "item.page.country": "Countries",
   "item.page.region": "Regions",
+  "item.page.reviewStatus": "Review Status",
 
   // Search filters
   "search.filters.filter.region.head": "Region",
