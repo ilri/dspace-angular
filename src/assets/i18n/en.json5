@@ -4433,7 +4433,7 @@
 
   "search.filters.applied.f.original_bundle_descriptions": "File description",
 
-  "search.filters.applied.f.itemtype": "Type",
+  "search.filters.applied.f.itemtype": "Output type",
 
   "search.filters.applied.f.namedresourcetype": "Status",
 
@@ -4513,7 +4513,7 @@
 
   "search.filters.filter.creativeWorkPublisher.label": "Search publisher",
 
-  "search.filters.filter.dateIssued.head": "Date",
+  "search.filters.filter.dateIssued.head": "Date issued",
 
   "search.filters.filter.dateIssued.max.placeholder": "Maximum Date",
 
@@ -4555,7 +4555,7 @@
 
   "search.filters.filter.original_bundle_descriptions.label": "Search File description",
 
-  "search.filters.filter.itemtype.head": "Type",
+  "search.filters.filter.itemtype.head": "Output type",
 
   "search.filters.filter.itemtype.placeholder": "Type",
 
