@@ -5492,15 +5492,15 @@
 
   "search.filters.applied.f.usageRights": "Usage rights",
 
-  "search.filters.filter.affiliation.head": "Author affiliations",
+  "search.filters.filter.affiliation.head": "Author affiliation",
 
-  "search.filters.filter.affiliation.placeholder": "Author affiliations",
+  "search.filters.filter.affiliation.placeholder": "Author affiliation",
 
   "search.filters.filter.affiliation.label": "Search author affiliation",
 
   "search.filters.applied.f.affiliation": "Author affiliation",
 
-  "search.filters.filter.initiative.head": "CGIAR Initiatives",
+  "search.filters.filter.initiative.head": "CGIAR Initiative",
 
   "search.filters.filter.initiative.placeholder": "CGIAR Initiative",
 
@@ -5508,7 +5508,7 @@
 
   "search.filters.applied.f.initiative": "CGIAR Initiative",
 
-  "search.filters.filter.crpsubject.head": "CGIAR Research Programs",
+  "search.filters.filter.crpsubject.head": "CGIAR Research Program",
 
   "search.filters.filter.crpsubject.placeholder": "CGIAR Research Program",
 
@@ -5532,7 +5532,7 @@
 
   "search.filters.applied.f.impactarea": "CGIAR Impact Area",
 
-  "search.filters.filter.sponsorship.head": "Investors",
+  "search.filters.filter.sponsorship.head": "Investor",
 
   "search.filters.filter.sponsorship.placeholder": "Investor",
 
@@ -5540,7 +5540,7 @@
 
   "search.filters.applied.f.sponsorship": "Investor",
 
-  "search.filters.filter.sdg.head": "SDG contributions",
+  "search.filters.filter.sdg.head": "SDG contribution",
 
   "search.filters.filter.sdg.placeholder": "SDG",
 
