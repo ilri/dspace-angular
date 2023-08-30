@@ -93,21 +93,6 @@
       [separator]="'<br/>'"
       [label]="'item.page.orcid'">
     </ds-item-page-orcid-field>
-    <ds-generic-item-page-field [item]="object"
-      [fields]="['cg.subject.actionArea']"
-      [separator]="'; '"
-      [label]="'item.page.actionArea'">
-    </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object"
-      [fields]="['cg.subject.impactArea']"
-      [separator]="'; '"
-      [label]="'item.page.impactArea'">
-    </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object"
-      [fields]="['cg.contributor.initiative']"
-      [separator]="'; '"
-      [label]="'item.page.initiative'">
-    </ds-generic-item-page-field>
     <ds-item-page-sdg-field [item]="object"
       [fields]="['cg.subject.sdg']"
       [label]="'item.page.sdg'">
@@ -155,6 +140,21 @@
       [fields]="['cg.contributor.donor']"
       [separator]="'; '"
       [label]="'item.page.donor'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object"
+      [fields]="['cg.subject.actionArea']"
+      [separator]="'; '"
+      [label]="'item.page.actionArea'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object"
+      [fields]="['cg.subject.impactArea']"
+      [separator]="'; '"
+      [label]="'item.page.impactArea'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object"
+      [fields]="['cg.contributor.initiative']"
+      [separator]="'; '"
+      [label]="'item.page.initiative'">
     </ds-generic-item-page-field>
     <ds-item-page-collections [item]="object"></ds-item-page-collections>
   </div>
