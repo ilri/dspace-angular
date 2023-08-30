@@ -95,4 +95,6 @@
 
   // CGSpace third submission step
   "submission.sections.submit.progressbar.describe.stepthree": "Describe",
+
+  "sorting.dcterms.issued.DESC": "Date Issued Descending",
 }
