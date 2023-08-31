@@ -44,10 +44,11 @@
       [separator]="'; '"
       [label]="'item.page.language'">
     </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object"
+    <ds-item-page-metadata-search-link [item]="object"
       [fields]="['dcterms.type']"
-      [label]="'item.page.type'">
-    </ds-generic-item-page-field>
+      [label]="'item.page.type'"
+      [index]="'itemtype'">
+    </ds-item-page-metadata-search-link>
     <ds-generic-item-page-field [item]="object"
       [fields]="['cg.reviewStatus']"
       [label]="'item.page.reviewStatus'">
@@ -101,11 +102,12 @@
       [fields]="['cg.subject.sdg']"
       [label]="'item.page.sdg'">
     </ds-item-page-sdg-field>
-    <ds-generic-item-page-field [item]="object"
+    <ds-item-page-metadata-search-link [item]="object"
       [fields]="['dcterms.subject']"
       [separator]="'; '"
-      [label]="'item.page.subject'">
-    </ds-generic-item-page-field>
+      [label]="'item.page.subject'"
+      [index]="'subject'">
+    </ds-item-page-metadata-search-link>
     <ds-generic-item-page-field [item]="object"
       [fields]="['cg.subject.alliancebiovciat',
                 'cg.subject.bioversity',
@@ -125,26 +127,30 @@
       [separator]="'; '"
       [label]="'item.page.subjects'">
     </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object"
+    <ds-item-page-metadata-search-link [item]="object"
       [fields]="['cg.coverage.country']"
       [separator]="'; '"
-      [label]="'item.page.country'">
-    </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object"
+      [label]="'item.page.country'"
+      [index]="'country'">
+    </ds-item-page-metadata-search-link>
+    <ds-item-page-metadata-search-link [item]="object"
       [fields]="['cg.coverage.region']"
       [separator]="'; '"
-      [label]="'item.page.region'">
-    </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object"
+      [label]="'item.page.region'"
+      [index]="'region'">
+    </ds-item-page-metadata-search-link>
+    <ds-item-page-metadata-search-link [item]="object"
       [fields]="['cg.contributor.affiliation']"
       [separator]="'; '"
-      [label]="'item.page.affiliation'">
-    </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object"
+      [label]="'item.page.affiliation'"
+      [index]="'affiliation'">
+    </ds-item-page-metadata-search-link>
+    <ds-item-page-metadata-search-link [item]="object"
       [fields]="['cg.contributor.donor']"
       [separator]="'; '"
-      [label]="'item.page.donor'">
-    </ds-generic-item-page-field>
+      [label]="'item.page.donor'"
+      [index]="'sponsorship'">
+    </ds-item-page-metadata-search-link>
     <ds-generic-item-page-field [item]="object"
       [fields]="['cg.subject.actionArea']"
       [separator]="'; '"
