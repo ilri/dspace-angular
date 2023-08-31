@@ -175,6 +175,14 @@ a {
   background-color: $brand-primary;
 }
 
+a.badge-primary, a.badge-secondary, a.badge-dark {
+  background-color: $brand-primary;
+
+  @include hover {
+    background-color: $brand-secondary;
+  }
+}
+
 .dropdown-item.active {
   color: $cgiar-white;
   background-color: $brand-primary;
