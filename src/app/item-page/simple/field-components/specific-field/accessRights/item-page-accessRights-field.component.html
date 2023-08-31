@@ -1,0 +1,32 @@
+<div class="item-page-field" *ngIf="item?.allMetadata(fields).length">
+    <ds-metadata-field-wrapper>
+        <div class="simple-view-element">
+            <h5 class="simple-view-element-header">{{ label | translate }}</h5>
+            <div class="simple-view-element-body">
+                <!-- Iterate over metadata values and send them to the correct template -->
+                <ng-container *ngFor="let mdValue of item?.allMetadata(fields)">
+                    <ng-container *ngIf="mdValue.value == 'Open Access'"
+                                  [ngTemplateOutlet]="openAccess"
+                                  [ngTemplateOutletContext]="{value: mdValue.value}">
+                    </ng-container>
+                    <ng-container *ngIf="mdValue.value == 'Limited Access'"
+                                  [ngTemplateOutlet]="limitedAccess"
+                                  [ngTemplateOutletContext]="{value: mdValue.value}">
+                    </ng-container>
+                </ng-container>
+            </div>
+        </div>
+    </ds-metadata-field-wrapper>
+</div>
+
+<!-- Images CCO-1.0 from Wikipedia.
+     See: https://commons.wikimedia.org/wiki/File:Open_Access_logo_PLoS_transparent.svg
+     See: https://commons.wikimedia.org/wiki/File:Closed_Access_logo_transparent.svg
+-->
+<ng-template #openAccess let-value="value">
+    <img src="assets/images/Open_Access_logo_PLoS_transparent.svg" [alt]="value" [title]="value" class="access-icon"/> {{ value }}
+</ng-template>
+
+<ng-template #limitedAccess let-value="value">
+    <img src="assets/images/Closed_Access_logo_transparent.svg" [alt]="value" [title]="value" class="access-icon"/> {{ value }}
+</ng-template>
