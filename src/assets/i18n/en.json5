@@ -5592,4 +5592,12 @@
   "browse.metadata.itemtype.breadcrumbs": "Browse by Item Type",
 
   "item.page.reviewStatus": "Review Status",
+
+  "search.filters.filter.publisher.head": "Publisher",
+
+  "search.filters.filter.publisher.placeholder": "Publisher",
+
+  "search.filters.filter.publisher.label": "Search publisher",
+
+  "search.filters.applied.f.publisher": "Publisher",
 }
