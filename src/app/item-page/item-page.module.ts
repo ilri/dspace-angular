@@ -22,6 +22,8 @@ import { ItemPageLicenseFieldComponent } from './simple/field-components/specifi
 import { ItemPageShareFieldComponent } from './simple/field-components/specific-field/share/item-page-share-field.component';
 import { ItemPageAccessRightsFieldComponent } from './simple/field-components/specific-field/accessRights/item-page-accessRights-field.component';
 import { ItemPageMetadataSearchLinkFieldComponent } from './simple/field-components/specific-field/metadata-search-link/item-page-metadata-search-link-field.component';
+import { ItemPageAltmetricFieldComponent } from './simple/field-components/specific-field/altmetric/item-page-altmetric-field.component';
+import { ItemPageDimensionsFieldComponent } from './simple/field-components/specific-field/dimensions/item-page-dimensions-field.component';
 import { ItemPageFieldComponent } from './simple/field-components/specific-field/item-page-field.component';
 import { CollectionsComponent } from './field-components/collections/collections.component';
 import { FullItemPageComponent } from './full/full-item-page.component';
@@ -91,6 +93,8 @@ const DECLARATIONS = [
   ItemPageShareFieldComponent,
   ItemPageAccessRightsFieldComponent,
   ItemPageMetadataSearchLinkFieldComponent,
+  ItemPageAltmetricFieldComponent,
+  ItemPageDimensionsFieldComponent,
   ItemPageFieldComponent,
   CollectionsComponent,
   FullFileSectionComponent,

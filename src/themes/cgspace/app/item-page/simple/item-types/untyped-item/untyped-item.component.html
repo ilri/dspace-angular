@@ -71,8 +71,21 @@
     </ds-metadata-field-wrapper>
   </div>
   <div class="col-xs-12 col-md-6">
-    <ds-item-page-share-field [item]="object">
-    </ds-item-page-share-field>
+    <div class="row">
+        <!-- TODO: check the stacking on mobile -->
+        <div class="col-xs-12 col-md-4">
+            <ds-item-page-share-field [item]="object">
+            </ds-item-page-share-field>
+        </div>
+        <div class="col-xs-6 col-md-4" style="text-align: center;">
+            <ds-item-page-altmetric-field [item]="object">
+            </ds-item-page-altmetric-field>
+        </div>
+        <div class="col-xs-6 col-md-4">
+            <ds-item-page-dimensions-field [item]="object">
+            </ds-item-page-dimensions-field>
+        </div>
+    </div>
     <ds-generic-item-page-field [item]="object"
       [fields]="['dcterms.bibliographicCitation']"
       [label]="'item.page.citation'">
