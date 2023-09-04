@@ -5602,4 +5602,20 @@
   "search.filters.applied.f.publisher": "Publisher",
 
   "item.page.impactPlatform": "CGIAR Impact Platform",
+
+  "search.filters.filter.actionArea.head": "CGIAR Action Area",
+
+  "search.filters.filter.actionArea.placeholder": "CGIAR Action Area",
+
+  "search.filters.filter.actionArea.label": "Search CGIAR Action Area",
+
+  "search.filters.applied.f.actionArea": "CGIAR Action Area",
+
+  "search.filters.filter.impactArea.head": "CGIAR Impact Area",
+
+  "search.filters.filter.impactArea.placeholder": "CGIAR Impact Area",
+
+  "search.filters.filter.impactArea.label": "Search CGIAR Impact Area",
+
+  "search.filters.applied.f.impactArea": "CGIAR Impact Area",
 }
