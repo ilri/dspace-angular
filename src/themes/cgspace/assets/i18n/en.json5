@@ -5,6 +5,7 @@
   "dso-selector.set-scope.community.button": "Search all of CGSpace",
   "home.top-level-communities.head": "Communities in CGSpace",
   "info.feedback.info": "Thanks for sharing your feedback about CGSpace. Your comments are appreciated!",
+  "login.form.email": "Username or email address",
   "login.form.header": "Please log in to CGSpace",
   "logout.form.header": "Log out from CGSpace",
   "menu.section.browse_global": "All of CGSpace",
