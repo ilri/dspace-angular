@@ -2,11 +2,18 @@
     <ds-metadata-field-wrapper [hideIfNoTextContent]="false">
         <div class="simple-view-element">
             <div class="simple-view-element-body">
-                <ng-container [ngTemplateOutlet]="altmetricBadge"
+                <ng-container [ngTemplateOutlet]="altmetricBadgeDoi"
                               [ngTemplateOutletContext]="{
                                                     itemDoi: item?.firstMetadataValue('cg.identifier.doi'),
+                                                  }"
+                              *ngIf="item?.firstMetadataValue('cg.identifier.doi')">
+                </ng-container>
+                <!-- This should be safe because all DSpace items have a handle -->
+                <ng-container [ngTemplateOutlet]="altmetricBadgeHandle"
+                              [ngTemplateOutletContext]="{
                                                     itemHandle: item?.firstMetadataValue('dc.identifier.uri'),
-                                                  }">
+                                                  }"
+                              *ngIf="!item?.firstMetadataValue('cg.identifier.doi')">
                 </ng-container>
             </div>
         </div>
@@ -14,9 +21,11 @@
 </div>
 
 <!-- See: https://badge-docs.altmetric.com/getting-started.html -->
-<ng-template #altmetricBadge let-itemDoi="itemDoi" let-itemHandle="itemHandle">
-    <!-- Prefer using the Altmetric score for the DOI if it is present -->
-    <div *ngIf="itemDoi.length" class="altmetric-embed" data-hide-no-mentions="true" data-badge-type="donut" data-badge-popover="right" data-link-target="_blank" [attr.data-doi]=parseDoi(itemDoi)></div>
-    <!-- If not, check the score for the Handle -->
-    <div *ngIf="!itemDoi.length" class="altmetric-embed" data-hide-no-mentions="true" data-badge-type="donut" data-badge-popover="right" data-link-target="_blank" [attr.data-handle]=parseHandle(itemHandle)></div>
+<!-- Prefer using the Altmetric score for the DOI if it is present -->
+<ng-template #altmetricBadgeDoi let-itemDoi="itemDoi">
+    <div class="altmetric-embed" data-hide-no-mentions="true" data-badge-type="donut" data-badge-popover="right" data-link-target="_blank" [attr.data-doi]=parseDoi(itemDoi)></div>
+</ng-template>
+
+<ng-template #altmetricBadgeHandle let-itemHandle="itemHandle">
+    <div class="altmetric-embed" data-hide-no-mentions="true" data-badge-type="donut" data-badge-popover="right" data-link-target="_blank" [attr.data-handle]=parseHandle(itemHandle)></div>
 </ng-template>

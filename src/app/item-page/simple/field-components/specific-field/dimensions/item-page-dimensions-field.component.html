@@ -1,4 +1,4 @@
-<div class="item-page-field">
+<div class="item-page-field" *ngIf="item?.firstMetadataValue('cg.identifier.doi')">
     <ds-metadata-field-wrapper [hideIfNoTextContent]="false">
         <div class="simple-view-element">
             <div class="simple-view-element-body">
@@ -14,5 +14,5 @@
 
 <!-- See: https://badges.dimensions.ai -->
 <ng-template #dimensionsBadge let-itemDoi="itemDoi">
-    <span *ngIf="itemDoi.length" class="__dimensions_badge_embed__" [attr.data-doi]=parseDoi(itemDoi) data-hide-zero-citations="true" data-style="small_circle"></span>
+    <span class="__dimensions_badge_embed__" [attr.data-doi]=parseDoi(itemDoi) data-hide-zero-citations="true" data-style="small_circle"></span>
 </ng-template>
