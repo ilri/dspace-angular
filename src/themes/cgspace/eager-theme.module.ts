@@ -10,6 +10,7 @@ import { SearchModule } from '../../app/shared/search/search.module';
 import { RootModule } from '../../app/root.module';
 import { NavbarModule } from '../../app/navbar/navbar.module';
 import { ItemPageModule } from '../../app/item-page/item-page.module';
+import { FooterComponent } from './app/footer/footer.component';
 import { UntypedItemComponent } from './app/item-page/simple/item-types/untyped-item/untyped-item.component';
 import { ItemSharedModule } from '../../app/item-page/item-shared.module';
 import { ResultsBackButtonModule } from '../../app/shared/results-back-button/results-back-button.module';
@@ -29,6 +30,7 @@ const DECLARATIONS = [
   HeaderComponent,
   HeaderNavbarWrapperComponent,
   NavbarComponent,
+  FooterComponent,
 ];
 
 @NgModule({
