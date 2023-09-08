@@ -1,0 +1,78 @@
+<ds-themed-home-news></ds-themed-home-news>
+<div class="container">
+  <ng-container *ngIf="(site$ | async) as site">
+    <ds-view-tracker [object]="site"></ds-view-tracker>
+  </ng-container>
+  <ds-themed-search-form [inPlaceSearch]="false" [searchPlaceholder]="'home.search-form.placeholder' | translate"></ds-themed-search-form>
+  <section class="cgiar-section mt-5 mb-3">
+    <h2>Our research collections</h2>
+    <div class="row">
+        <div class="col-12 col-sm-6 col-lg-4 mb-4">
+            <a routerLink="/communities/c222a914-ea31-4dc9-92c5-e76b57dac187">
+                <div class="card h-100">
+                    <img class="card-img-top" src="/assets/cgspace/images/33589140465_28d0dc6b83_o.webp">
+                    <div class="card-body">
+                        <h5 class="h-100 d-flex align-content-center justify-content-center card-title text-center">CGIAR initiatives and platforms</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4 mb-4">
+            <a routerLink="/communities/d09bb391-a0ac-4c8b-86c8-10c28a128d7c">
+                <div class="card h-100">
+                    <img class="card-img-top" src="/assets/cgspace/images/33675621256_c37b72042d_o.webp">
+                    <div class="card-body">
+                        <h5 class="h-100 d-flex align-content-center justify-content-center card-title text-center">CGIAR research centers</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4 mb-4">
+            <a routerLink="/community-list">
+                <div class="card h-100">
+                    <img class="card-img-top" src="/assets/cgspace/images/33861289301_0af69fa780_o.webp">
+                    <div class="card-body">
+                        <h5 class="h-100 d-flex align-content-center justify-content-center card-title text-center">All content</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <h3 class="mb-6">Research themes</h3>
+    <div class="row justify-content-center">
+        <!-- Responsive: two columns on mobile to medium, six on large -->
+        <div class="col-6 col-sm-6 col-lg-2 mb-4">
+            <a routerLink="/search" [queryParams]="{ 'f.impactArea': 'Climate adaptation and mitigation,equals' }">
+                <!-- Make image 100% width of parent so the heading stacks and centers below it -->
+                <img class="w-100 mb-2" src="/assets/images/impact-area-icons/climate_adaptation_hp.svg">
+                <h5 class="d-flex align-content-center justify-content-center text-center">Climate adaptation and mitigation</h5>
+            </a>
+        </div>
+        <div class="col-6 col-sm-6 col-lg-2 mb-4">
+            <a routerLink="/search" [queryParams]="{ 'f.impactArea': 'Environmental health and biodiversity,equals' }">
+                <img class="w-100 mb-2" src="/assets/images/impact-area-icons/environmental_hp.svg">
+                <h5 class="d-flex align-content-center justify-content-center text-center">Environmental health and biodiversity</h5>
+            </a>
+        </div>
+        <div class="col-6 col-sm-6 col-lg-2 mb-4">
+            <a routerLink="/search" [queryParams]="{ 'f.impactArea': 'Gender equality, youth and social inclusion,equals' }">
+                <img class="w-100 mb-2" src="/assets/images/impact-area-icons/gender_hp.svg">
+                <h5 class="d-flex align-content-center justify-content-center text-center">Gender equality, youth and social inclusion</h5>
+            </a>
+        </div>
+        <div class="col-6 col-sm-6 col-lg-2 mb-4">
+            <a routerLink="/search" [queryParams]="{ 'f.impactArea': 'Nutrition, health and food security,equals' }">
+                <img class="w-100 mb-2" src="/assets/images/impact-area-icons/nutrition_hp.svg">
+                <h5 class="d-flex align-content-center justify-content-center text-center">Nutrition, health and food security</h5>
+            </a>
+        </div>
+        <div class="col-6 col-sm-6 col-lg-2 mb-4">
+            <a routerLink="/search" [queryParams]="{ 'f.impactArea': 'Poverty reduction, livelihoods and jobs,equals' }">
+                <img class="w-100 mb-2" src="/assets/images/impact-area-icons/pverty_hp.svg">
+                <h5 class="d-flex align-content-center justify-content-center text-center">Poverty reduction, livelihoods and jobs</h5>
+            </a>
+        </div>
+    </div>
+  </section>
+  <ds-recent-item-list *ngIf="recentSubmissionspageSize>0"></ds-recent-item-list>
+</div>
