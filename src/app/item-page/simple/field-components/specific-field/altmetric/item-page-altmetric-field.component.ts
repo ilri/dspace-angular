@@ -17,6 +17,7 @@ export class ItemPageAltmetricFieldComponent extends ItemPageFieldComponent impl
   ngAfterViewInit() {
     // Altmetric embed.js
     import('./embed.js');
+    window['_altmetric_embed_init']();
   }
 
   /**
