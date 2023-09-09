@@ -3,17 +3,16 @@
         <div class="simple-view-element">
             <h5 class="simple-view-element-header">{{ label | translate }}</h5>
             <div class="simple-view-element-body">
-                <!-- Iterate over metadata values and send them to the sdgIcon template -->
-                <ng-container *ngFor="let mdValue of item?.allMetadata(fields); let first=first; let last=last;">
-                    <ng-container *ngTemplateOutlet="sdgIcon;
-                                                     context: {
-                                                        value: mdValue.value,
-                                                        first: first,
-                                                        last: last,
-                                                        length: item?.allMetadata(fields).length,
-                                                     }">
+                <div class="row">
+                    <!-- Iterate over metadata values and send them to the sdgIcon template -->
+                    <ng-container *ngFor="let mdValue of item?.allMetadata(fields)">
+                        <ng-container *ngTemplateOutlet="sdgIcon;
+                                                        context: {
+                                                            value: mdValue.value
+                                                        }">
+                        </ng-container>
                     </ng-container>
-                </ng-container>
+                </div>
             </div>
         </div>
     </ds-metadata-field-wrapper>
@@ -22,23 +21,11 @@
 <!-- Render the UN SDG Goal icon.
      See: https://www.un.org/sustainabledevelopment/news/communications-material/
 -->
-<ng-template #sdgIcon let-value="value" let-first="first" let-last="last" let-length="length">
-    <!-- TODO: more elegant if/else so I don't have to duplicate the img -->
-    <!-- TODO: fix the layout on mobile -->
-    <span class="pl-0 pr-1" *ngIf="first">
+<ng-template #sdgIcon let-value="value">
+    <!-- Three icons per row on mobile, four on medium, six on larger screens. -->
+    <div class="col-4 col-md-3 col-lg-2 mb-2">
         <a href="/search?query=&f.sdg={{ value }},equals&spc.page=1">
             <img src="assets/images/sdg-icons/E-WEB-Goal-{{ calculateSdgNumber(value) }}.webp" [alt]="value" [title]="value" class="sdg"/>
         </a>
-    </span>
-    <span class="px-1" *ngIf="!first && !last">
-        <a href="/search?query=&f.sdg={{ value }},equals&spc.page=1">
-            <img src="assets/images/sdg-icons/E-WEB-Goal-{{ calculateSdgNumber(value) }}.webp" [alt]="value" [title]="value" class="sdg"/>
-        </a>
-    </span>
-    <!-- "last" only makes sense if there is more than one! -->
-    <span class="pl-1 pr-0" *ngIf="last && length > 1">
-        <a href="/search?query=&f.sdg={{ value }},equals&spc.page=1">
-            <img src="assets/images/sdg-icons/E-WEB-Goal-{{ calculateSdgNumber(value) }}.webp" [alt]="value" [title]="value" class="sdg"/>
-        </a>
-    </span>
+    </div>
 </ng-template>
