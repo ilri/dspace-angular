@@ -5618,4 +5618,12 @@
   "search.filters.filter.impactArea.label": "Search CGIAR Impact Area",
 
   "search.filters.applied.f.impactArea": "CGIAR Impact Area",
+
+  "search.filters.filter.impactPlatform.head": "CGIAR Impact Platform",
+
+  "search.filters.filter.impactPlatform.placeholder": "CGIAR Impact Platform",
+
+  "search.filters.filter.impactPlatform.label": "Search CGIAR Impact Platform",
+
+  "search.filters.applied.f.impactPlatform": "CGIAR Impact Platform",
 }
