@@ -3770,7 +3770,7 @@
 
   "search.filters.applied.f.namedresourcetype": "Status",
 
-  "search.filters.applied.f.subject": "AGROVOC keyword",
+  "search.filters.applied.f.subject": "AGROVOC subject keyword",
 
   "search.filters.applied.f.submitter": "Submitter",
 
@@ -3910,11 +3910,11 @@
 
   "search.filters.filter.show-more": "Show more",
 
-  "search.filters.filter.subject.head": "AGROVOC keyword",
+  "search.filters.filter.subject.head": "AGROVOC subject keyword",
 
   "search.filters.filter.subject.placeholder": "AGROVOC keyword",
 
-  "search.filters.filter.subject.label": "Search AGROVOC keyword",
+  "search.filters.filter.subject.label": "Search AGROVOC subject keyword",
 
   "search.filters.filter.submitter.head": "Submitter",
 
