@@ -68,6 +68,11 @@
                 "input": "src/themes/ilri/styles/theme.scss",
                 "inject": false,
                 "bundleName": "ilri-theme"
+              },
+              {
+                "input": "src/themes/cip/styles/theme.scss",
+                "inject": false,
+                "bundleName": "cip-theme"
               }
             ],
             "scripts": [],
