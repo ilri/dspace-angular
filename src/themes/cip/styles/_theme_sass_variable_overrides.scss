@@ -1,0 +1,11 @@
+// Note that we only add styles we want to override from the cgspace theme here.
+// We do not use the SASS "!default" here because we want to set the values no
+// matter whether they are already defined or not.
+
+// See: https://cipotato.org/site/logo/pdf/BrandingGuidelines.PDF
+
+// CIP orange
+$brand-primary: #EE7203;
+
+// CIP brown
+$brand-secondary: #5D2E00;
