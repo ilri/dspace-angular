@@ -5,7 +5,7 @@
             <div class="simple-view-element-body">
                 <!-- Iterate over metadata values and generate search links -->
                 <ng-container *ngFor="let mdValue of item?.allMetadata(fields); let last=last;">
-                    <a href="{{ generateSearchLink(mdValue.value, index) }}">{{ mdValue.value }}</a>
+                    <a routerLink="/search" [queryParams]="generateSearchParams(mdValue.value, index)">{{ mdValue.value }}</a>
                     <span class="separator" *ngIf="!last" [innerHTML]="separator"></span>
                 </ng-container>
             </div>
