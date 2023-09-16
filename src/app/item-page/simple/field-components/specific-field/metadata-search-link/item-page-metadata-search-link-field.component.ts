@@ -40,14 +40,17 @@ export class ItemPageMetadataSearchLinkFieldComponent extends ItemPageFieldCompo
   @Input() index: string;
 
   /**
-   * Helper function to generate a search link for the metadata value using its
+   * Helper function to generate search params for the metadata value using its
    * Discovery index.
    * @type {string}
    */
-  generateSearchLink(metadataValue: string, discoveryIndex: string) {
-      // Construct the search link, URI encoding the metadata value to handle
-      // values like "Bill & Melinda Gates Foundation" that contain URI compo-
-      // nents.
-      return '/search?query=&f.' + discoveryIndex + '=' + encodeURIComponent(metadataValue) + ',equals&spc.page=1';
+  generateSearchParams(metadataValue: string, discoveryIndex: string) {
+      const searchFilter = 'f.' + discoveryIndex;
+      const searchValue = metadataValue + ',equals';
+
+      // Note the special syntax for searchFilter, since we want to use the
+      // string value of the searchFilter variable as the object key, not a
+      // literal "searchFilter".
+      return { [searchFilter]: searchValue };
   }
 }
