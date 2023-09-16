@@ -26,6 +26,7 @@ import { MyDspaceSearchModule } from '../../app/my-dspace-page/my-dspace-search.
 import { MenuModule } from '../../app/shared/menu/menu.module';
 import { NavbarModule } from '../../app/navbar/navbar.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PrivacyComponent } from './app/info/privacy/privacy.component';
 import { ProfilePageModule } from '../../app/profile-page/profile-page.module';
 import { RegisterEmailFormModule } from '../../app/register-email-form/register-email-form.module';
 import {
@@ -66,6 +67,7 @@ import { ItemPageComponent } from './app/item-page/simple/item-page.component';
 const DECLARATIONS = [
   ItemPageComponent,
   FileSectionComponent,
+  PrivacyComponent,
 ];
 
 @NgModule({
