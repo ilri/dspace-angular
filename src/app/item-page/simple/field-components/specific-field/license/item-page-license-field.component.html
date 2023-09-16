@@ -23,12 +23,12 @@
      See: https://creativecommons.org/about/downloads/
 -->
 <ng-template #ccIcon let-value="value">
-    <a href="/search?query=&f.usageRights={{ value }},equals&spc.page=1">
+    <a routerLink="/search" [queryParams]="{ 'f.usageRights': value + ',equals' }">
         <img src="assets/images/cc-icons/{{ parseLicense(value) }}" [alt]="value" [title]="value" class="cc-icon"/>
     </a>
 </ng-template>
 
 <!-- Just show the license text. -->
 <ng-template #license let-value="value">
-    <a href="/search?query=&f.usageRights={{ value }},equals&spc.page=1">{{ value }}</a>
+    <a routerLink="/search" [queryParams]="{ 'f.usageRights': value + ',equals' }">{{ value }}</a>
 </ng-template>
