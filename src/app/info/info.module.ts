@@ -16,6 +16,8 @@ import { FeedbackGuard } from '../core/feedback/feedback.guard';
 import { AccessibilitySettingsComponent } from './accessibility-settings/accessibility-settings.component';
 import { UiSwitchModule } from 'ngx-ui-switch';
 
+import { AboutComponent } from './about/about.component';
+
 
 const DECLARATIONS = [
   EndUserAgreementComponent,
@@ -29,6 +31,7 @@ const DECLARATIONS = [
   ThemedFeedbackFormComponent,
   ThemedFeedbackComponent,
   AccessibilitySettingsComponent,
+  AboutComponent
 ];
 
 @NgModule({
