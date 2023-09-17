@@ -8,6 +8,9 @@ import { ThemedFeedbackComponent } from './feedback/themed-feedback.component';
 import { FeedbackGuard } from '../core/feedback/feedback.guard';
 import { environment } from '../../environments/environment';
 
+// CGSpace about page
+import { ABOUT_PATH } from './info-routing-paths';
+import { AboutComponent } from './about/about.component';
 
 const imports = [
   RouterModule.forChild([
@@ -43,6 +46,17 @@ const imports = [
         }
       ]));
   }
+
+  // CGSpace about page
+  imports.push(
+    RouterModule.forChild([
+      {
+        path: ABOUT_PATH,
+        component: AboutComponent,
+        resolve: { breadcrumb: I18nBreadcrumbResolver },
+        data: { title: 'info.privacy.title', breadcrumbKey: 'info.privacy' }
+      }
+    ]));
 
 @NgModule({
   imports: [
