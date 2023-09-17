@@ -6,6 +6,9 @@ export const FEEDBACK_PATH = 'feedback';
 export const COAR_NOTIFY_SUPPORT = 'coar-notify-support';
 export const ACCESSIBILITY_SETTINGS_PATH = 'accessibility';
 
+// CGSpace about page
+export const ABOUT_PATH = 'about';
+
 export function getEndUserAgreementPath() {
   return getSubPath(END_USER_AGREEMENT_PATH);
 }
@@ -24,6 +27,10 @@ export function getCOARNotifySupportPath(): string {
 
 export function getAccessibilitySettingsPath() {
   return getSubPath(ACCESSIBILITY_SETTINGS_PATH);
+}
+
+export function getAboutPath() {
+    return getSubPath(ABOUT_PATH);
 }
 
 function getSubPath(path: string) {
