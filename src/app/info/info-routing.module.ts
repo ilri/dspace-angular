@@ -54,7 +54,7 @@ const imports = [
         path: ABOUT_PATH,
         component: AboutComponent,
         resolve: { breadcrumb: I18nBreadcrumbResolver },
-        data: { title: 'info.privacy.title', breadcrumbKey: 'info.privacy' }
+        data: { title: 'info.about.title', breadcrumbKey: 'info.about' }
       }
     ]));
 
