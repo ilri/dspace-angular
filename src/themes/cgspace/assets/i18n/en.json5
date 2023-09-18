@@ -135,4 +135,7 @@
   "browse.metadata.country.breadcrumbs": "Browse by Country",
   "browse.metadata.subregion.breadcrumbs": "Browse by Subregion",
   "browse.metadata.itemtype.breadcrumbs": "Browse by Item Type",
+
+  "info.about.breadcrumbs": "About",
+  "info.about.title": "About",
 }
