@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { EagerThemeModule as CGSpaceEagerThemeModule } from './cgspace/eager-theme.module';
 import { EagerThemeModule as IlriEagerThemeModule } from './ilri/eager-theme.module';
 import { EagerThemeModule as CipEagerThemeModule } from './cip/eager-theme.module';
+import { EagerThemeModule as IitaEagerThemeModule } from './iita/eager-theme.module';
 
 /**
  * This module bundles the eager theme modules for all available themes.
@@ -19,6 +20,7 @@ import { EagerThemeModule as CipEagerThemeModule } from './cip/eager-theme.modul
     CGSpaceEagerThemeModule,
     IlriEagerThemeModule,
     CipEagerThemeModule,
+    IitaEagerThemeModule,
   ],
 })
 export class EagerThemesModule {

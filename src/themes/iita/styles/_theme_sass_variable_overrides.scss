@@ -1,0 +1,15 @@
+// Note that we only add styles we want to override from the cgspace theme here.
+// We do not use the SASS "!default" here because we want to set the values no
+// matter whether they are already defined or not.
+
+// See: IITA Branding Guidelines.pdf
+
+// IITA dark/house orange
+$brand-primary: #F26522;
+
+// IITA light orange
+$brand-secondary: #F7941D;
+
+// IITA brown, from the website since I can't find anything suitable in the
+// Branding Guidelines document.
+$iita-brown: #4B2E14;
