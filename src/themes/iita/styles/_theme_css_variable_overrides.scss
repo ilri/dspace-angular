@@ -1,0 +1,30 @@
+// Override or add CSS variables for your theme here
+
+:root {
+  --ds-header-logo-height: 40px;
+  --ds-banner-text-background: $white;
+  --ds-banner-background-gradient-width: 300px;
+  --ds-home-news-link-color: #{$brand-primary};
+  --ds-home-news-link-hover-color: var(--brand-primary-darker);
+  --ds-thumbnail-max-width: 200px;
+  // override DSpace navbar link colors (note the special variable syntax here)
+  --ds-navbar-link-color: #{$white};
+  --ds-navbar-link-color-hover: #{$iita-brown};
+  --ds-header-navbar-border-bottom-color: #{$brand-secondary};
+  // override DSpace search, language, and login colors
+  --ds-header-icon-color: #{$white};
+  --ds-header-icon-color-hover: #{$brand-secondary};
+  // override DSpace header background color
+  --ds-header-bg: #{$brand-primary};
+  // override DSpace footer background color
+  --ds-footer-bg: #{$brand-primary};
+  // override DSpace header trail text color
+  --ds-breadcrumb-link-color: #{$brand-primary};
+  //--ds-breadcrumb-link-active-color: #{$cgiar-gray};
+  --brand-primary: #{$brand-primary};
+  --brand-primary-darker: #{darken($brand-primary, 10%)};
+  --brand-secondary: #{$brand-secondary};
+  --cgiar-white: #{$cgiar-white};
+  --cgiar-gray: #{$cgiar-gray};
+}
+

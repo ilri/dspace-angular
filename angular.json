@@ -73,6 +73,11 @@
                 "input": "src/themes/cip/styles/theme.scss",
                 "inject": false,
                 "bundleName": "cip-theme"
+              },
+              {
+                "input": "src/themes/iita/styles/theme.scss",
+                "inject": false,
+                "bundleName": "iita-theme"
               }
             ],
             "scripts": [],
