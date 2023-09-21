@@ -139,6 +139,84 @@ export class MenuResolver implements Resolve<boolean> {
               } as TextMenuItemModel,
             }
           );
+          menuList.push({
+            id: `navigate_cgspace_link1`,
+            parentID: 'navigate_cgspace',
+            active: false,
+            visible: true,
+            model: {
+              type: MenuItemType.LINK,
+              text: 'CGIAR research initiatives and impact platforms',
+              link: `/communities/c222a914-ea31-4dc9-92c5-e76b57dac187`
+            } as LinkMenuItemModel
+          });
+          menuList.push({
+            id: `navigate_cgspace_link2`,
+            parentID: 'navigate_cgspace',
+            active: false,
+            visible: true,
+            model: {
+              type: MenuItemType.LINK,
+              text: 'CGIAR research centers',
+              link: `/communities/24f44747-44c3-47b6-bd09-50e462c21711`
+            } as LinkMenuItemModel
+          });
+          menuList.push({
+            id: `navigate_cgspace_link3`,
+            parentID: 'navigate_cgspace',
+            active: false,
+            visible: true,
+            model: {
+              type: MenuItemType.LINK,
+              text: 'AICCRA project',
+              link: `/communities/7b6da9fb-c1c3-408a-a134-26f31f848358`
+            } as LinkMenuItemModel
+          });
+          menuList.push({
+            id: `navigate_cgspace_link4`,
+            parentID: 'navigate_cgspace',
+            active: false,
+            visible: true,
+            model: {
+              type: MenuItemType.LINK,
+              text: 'CGIAR research programs and platforms (2011-2021)',
+              link: `/communities/d09e6100-df60-4280-9ff3-f3fea5ea4e6b`
+            } as LinkMenuItemModel
+          });
+          menuList.push({
+            id: `navigate_cgspace_link5`,
+            parentID: 'navigate_cgspace',
+            active: false,
+            visible: true,
+            model: {
+              type: MenuItemType.LINK,
+              text: 'CGIAR System Organization',
+              link: `/communities/a238fb09-8a40-4c20-8c59-52837b6cdd0e`
+            } as LinkMenuItemModel
+          });
+          menuList.push({
+            id: `navigate_cgspace_link6`,
+            parentID: 'navigate_cgspace',
+            active: false,
+            visible: true,
+            model: {
+              type: MenuItemType.LINK,
+              text: 'CGIAR Independent Advisory and Evaluation Service',
+              link: `/communities/533721b9-47da-4534-b0b6-c4317b572a56`
+            } as LinkMenuItemModel
+          });
+          menuList.push(
+            {
+              id: 'navigate_cgspace',
+              active: false,
+              visible: true,
+              index: 2,
+              model: {
+                type: MenuItemType.TEXT,
+                text: 'Navigate CGSpace'
+              } as TextMenuItemModel
+            }
+          );
         }
         menuList.forEach((menuSection) => this.menuService.addSection(MenuID.PUBLIC, Object.assign(menuSection, {
           shouldPersistOnRouteChange: true
