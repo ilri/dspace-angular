@@ -5,6 +5,7 @@ import { EagerThemeModule as CGSpaceEagerThemeModule } from './cgspace/eager-the
 import { EagerThemeModule as IlriEagerThemeModule } from './ilri/eager-theme.module';
 import { EagerThemeModule as CipEagerThemeModule } from './cip/eager-theme.module';
 import { EagerThemeModule as IitaEagerThemeModule } from './iita/eager-theme.module';
+import { EagerThemeModule as IwmiEagerThemeModule } from './iwmi/eager-theme.module';
 
 /**
  * This module bundles the eager theme modules for all available themes.
@@ -21,6 +22,7 @@ import { EagerThemeModule as IitaEagerThemeModule } from './iita/eager-theme.mod
     IlriEagerThemeModule,
     CipEagerThemeModule,
     IitaEagerThemeModule,
+    IwmiEagerThemeModule,
   ],
 })
 export class EagerThemesModule {

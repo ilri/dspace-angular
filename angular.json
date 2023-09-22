@@ -78,6 +78,11 @@
                 "input": "src/themes/iita/styles/theme.scss",
                 "inject": false,
                 "bundleName": "iita-theme"
+              },
+              {
+                "input": "src/themes/iwmi/styles/theme.scss",
+                "inject": false,
+                "bundleName": "iwmi-theme"
               }
             ],
             "scripts": [],
