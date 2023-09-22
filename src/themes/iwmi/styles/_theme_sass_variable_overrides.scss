@@ -1,0 +1,12 @@
+// Note that we only add styles we want to override from the cgspace theme here.
+// We do not use the SASS "!default" here because we want to set the values no
+// matter whether they are already defined or not.
+
+// See: https://branding.iwmi.org
+
+// IWMI dark blue
+$brand-primary: #28537D;
+
+// IWMI light blue
+$brand-secondary: #5088C6;
+
