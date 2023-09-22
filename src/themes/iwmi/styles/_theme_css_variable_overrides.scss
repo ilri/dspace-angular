@@ -23,7 +23,5 @@
   --brand-primary: #{$brand-primary};
   --brand-primary-darker: #{darken($brand-primary, 10%)};
   --brand-secondary: #{$brand-secondary};
-  // Must be here because it is used for the parent theme's dropdown menu bg
-  --cgiar-white: #{$cgiar-white};
 }
 
