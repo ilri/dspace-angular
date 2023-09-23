@@ -46,8 +46,9 @@ li.page-item.active a.page-link {
   color: $white;
 }
 
+// pagination links
 a.page-link {
-  color: $cgiar-gray;
+  color: $gray-800;
 
   @include hover {
     background-color: $brand-secondary;
