@@ -20,6 +20,7 @@
   --ds-footer-bg: #{$brand-primary};
   // override DSpace header trail text color
   --ds-breadcrumb-link-color: #{$brand-primary};
+  --ds-breadcrumb-link-active-color: #{$gray-800};
   --brand-primary: #{$brand-primary};
   --brand-primary-darker: #{darken($brand-primary, 10%)};
   --brand-secondary: #{$brand-secondary};
