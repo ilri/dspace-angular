@@ -239,3 +239,13 @@ img.sdg {
 img.access-icon {
   width: 15px;
 }
+
+// The community/collection logo is huge on big screens, so limit it to 50% of
+// the ds-comcol-page-logo element on medium/tablet 768px and up.
+@media screen and (min-width: 768px) {
+  ds-comcol-page-logo {
+    img.img-fluid {
+      max-width: 50%;
+    }
+  }
+}
