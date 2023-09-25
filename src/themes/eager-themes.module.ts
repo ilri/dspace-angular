@@ -6,6 +6,7 @@ import { EagerThemeModule as IlriEagerThemeModule } from './ilri/eager-theme.mod
 import { EagerThemeModule as CipEagerThemeModule } from './cip/eager-theme.module';
 import { EagerThemeModule as IitaEagerThemeModule } from './iita/eager-theme.module';
 import { EagerThemeModule as IwmiEagerThemeModule } from './iwmi/eager-theme.module';
+import { EagerThemeModule as AllianceEagerThemeModule } from './alliance/eager-theme.module';
 
 /**
  * This module bundles the eager theme modules for all available themes.
@@ -23,6 +24,7 @@ import { EagerThemeModule as IwmiEagerThemeModule } from './iwmi/eager-theme.mod
     CipEagerThemeModule,
     IitaEagerThemeModule,
     IwmiEagerThemeModule,
+    AllianceEagerThemeModule,
   ],
 })
 export class EagerThemesModule {
