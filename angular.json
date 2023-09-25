@@ -83,7 +83,12 @@
                 "input": "src/themes/iwmi/styles/theme.scss",
                 "inject": false,
                 "bundleName": "iwmi-theme"
-              }
+              },
+              {
+                "input": "src/themes/alliance/styles/theme.scss",
+                "inject": false,
+                "bundleName": "alliance-theme"
+              },
             ],
             "scripts": [],
             "baseHref": "/"
