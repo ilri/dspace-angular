@@ -1,5 +1,9 @@
 <ds-themed-loading *ngIf="(loading | async) || (isAuthenticated | async)" class="m-5"></ds-themed-loading>
 <div *ngIf="!(loading | async) && !(isAuthenticated | async)" class="px-4 py-3 mx-auto login-container">
+  <div class="alert alert-success" role="alert">
+    <p>Note: CGIAR users should log in with their Active Directory username and password.</p>
+    <p>For example, if your email is j.smith@cgiar.org, you would use <em>jsmith</em> here.</p>
+  </div>
   <ng-container *ngFor="let authMethod of (authMethods | async); let last = last">
     <ds-log-in-container [authMethod]="authMethod" [isStandalonePage]="isStandalonePage"></ds-log-in-container>
     <div *ngIf="!last" class="dropdown-divider my-2"></div>
