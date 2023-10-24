@@ -161,7 +161,7 @@ export class MenuResolverService  {
             model: {
               type: MenuItemType.LINK,
               text: 'CGIAR research centers',
-              link: `/communities/d09bb391-a0ac-4c8b-86c8-10c28a128d7c`
+              link: `/communities/acfcea32-c1a5-4b07-970e-48d947389b00`
             } as LinkMenuItemModel
           });
           menuList.push({
