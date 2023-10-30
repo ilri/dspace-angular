@@ -205,6 +205,17 @@ export class MenuResolver implements Resolve<boolean> {
               link: `/communities/533721b9-47da-4534-b0b6-c4317b572a56`
             } as LinkMenuItemModel
           });
+          menuList.push({
+            id: `navigate_cgspace_link7`,
+            parentID: 'navigate_cgspace',
+            active: false,
+            visible: true,
+            model: {
+              type: MenuItemType.LINK,
+              text: 'Search all content',
+              link: `/search`
+            } as LinkMenuItemModel
+          });
           menuList.push(
             {
               id: 'navigate_cgspace',
