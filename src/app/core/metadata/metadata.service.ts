@@ -199,7 +199,7 @@ export class MetadataService {
    */
   private setDescriptionTag(): void {
     // TODO: truncate abstract
-    const value = this.getMetaTagValue('dc.description.abstract');
+    const value = this.getMetaTagValue('dcterms.abstract');
     this.addMetaTag('description', value);
   }
 
@@ -223,7 +223,7 @@ export class MetadataService {
    * Add <meta name="citation_publication_date" ... >  to the <head>
    */
   private setCitationPublicationDateTag(): void {
-    const value = this.getFirstMetaTagValue(['dc.date.copyright', 'dc.date.issued', 'dc.date.available', 'dc.date.accessioned']);
+    const value = this.getFirstMetaTagValue(['dc.date.copyright', 'dcterms.issued', 'dcterms.available', 'dc.date.accessioned']);
     this.addMetaTag('citation_publication_date', value);
   }
 
@@ -231,7 +231,7 @@ export class MetadataService {
    * Add <meta name="citation_issn" ... >  to the <head>
    */
   private setCitationISSNTag(): void {
-    const value = this.getMetaTagValue('dc.identifier.issn');
+    const value = this.getMetaTagValue('cg.issn');
     this.addMetaTag('citation_issn', value);
   }
 
@@ -239,7 +239,7 @@ export class MetadataService {
    * Add <meta name="citation_isbn" ... >  to the <head>
    */
   private setCitationISBNTag(): void {
-    const value = this.getMetaTagValue('dc.identifier.isbn');
+    const value = this.getMetaTagValue('cg.isbn');
     this.addMetaTag('citation_isbn', value);
   }
 
@@ -247,7 +247,7 @@ export class MetadataService {
    * Add <meta name="citation_language" ... >  to the <head>
    */
   private setCitationLanguageTag(): void {
-    const value = this.getFirstMetaTagValue(['dc.language', 'dc.language.iso']);
+    const value = this.getFirstMetaTagValue(['dcterms.language', 'dc.language.iso']);
     this.addMetaTag('citation_language', value);
   }
 
@@ -263,7 +263,7 @@ export class MetadataService {
    * Add dc.publisher to the <head>. The tag name depends on the item type.
    */
   private setCitationPublisherTag(): void {
-    const value = this.getMetaTagValue('dc.publisher');
+    const value = this.getMetaTagValue('dcterms.publisher');
     if (this.isDissertation()) {
       this.addMetaTag('citation_dissertation_institution', value);
     } else if (this.isTechReport()) {
@@ -277,7 +277,7 @@ export class MetadataService {
    * Add <meta name="citation_keywords" ... >  to the <head>
    */
   private setCitationKeywordsTag(): void {
-    const value = this.getMetaTagValuesAndCombine('dc.subject');
+    const value = this.getMetaTagValuesAndCombine('dcterms.subject');
     this.addMetaTag('citation_keywords', value);
   }
 
@@ -431,7 +431,7 @@ export class MetadataService {
   }
 
   private hasType(value: string): boolean {
-    return this.currentObject.value.hasMetadata('dc.type', { value: value, ignoreCase: true });
+    return this.currentObject.value.hasMetadata('dcterms.type', { value: value, ignoreCase: true });
   }
 
   /**
