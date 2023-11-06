@@ -114,6 +114,7 @@
   // CGSpace third submission step
   "submission.sections.submit.progressbar.describe.stepthree": "Describe",
 
+  "sorting.dcterms.issued.ASC": "Date Issued Ascending",
   "sorting.dcterms.issued.DESC": "Date Issued Descending",
 
   "menu.section.browse_global_by_region": "By Region",
