@@ -10,6 +10,7 @@
   // override DSpace navbar link colors (note the special variable syntax here)
   --ds-navbar-link-color: #{$white};
   --ds-navbar-link-color-hover: #{$brand-secondary};
+  --ds-header-navbar-border-top-color: #{$brand-primary};
   --ds-header-navbar-border-bottom-color: #{$brand-secondary};
   // override DSpace search, language, and login colors
   --ds-header-icon-color: #{$white};
