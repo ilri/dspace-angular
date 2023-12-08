@@ -137,6 +137,17 @@ a.page-link {
   }
 }
 
+// Reduce vertical padding on "Add more" buttons on submission form
+ds-dynamic-form-array .ds-form-add-more {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+// Increase bottom margin of form rows on submission form
+ds-dynamic-form-group .form-row {
+    margin-bottom: .5rem;
+}
+
 .list-group-item.active {
   background-color: $brand-primary;
   border-color: $brand-primary;
