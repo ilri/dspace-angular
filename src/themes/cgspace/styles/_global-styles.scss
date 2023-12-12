@@ -217,11 +217,6 @@ a.badge-primary, a.badge-secondary, a.badge-dark {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba($brand-primary, 0.25);
 }
 
-// Override Bootstrap h5 font-size of 1.25rem
-.simple-view-element-header {
-  font-size: 1.1rem;
-}
-
 // Override date facet link color from search-text-filter.component
 .filter-value {
   color: $brand-primary;
