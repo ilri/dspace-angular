@@ -224,7 +224,7 @@ export class MenuResolver implements Resolve<boolean> {
               index: 2,
               model: {
                 type: MenuItemType.TEXT,
-                text: 'Navigate CGSpace'
+                text: 'Navigate'
               } as TextMenuItemModel
             }
           );
