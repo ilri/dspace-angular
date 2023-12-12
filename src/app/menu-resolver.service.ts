@@ -227,7 +227,7 @@ export class MenuResolverService  {
               index: 2,
               model: {
                 type: MenuItemType.TEXT,
-                text: 'Navigate CGSpace'
+                text: 'Navigate'
               } as TextMenuItemModel
             }
           );
