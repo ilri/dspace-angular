@@ -147,7 +147,7 @@ export class MenuResolver implements Resolve<boolean> {
             model: {
               type: MenuItemType.LINK,
               text: 'CGIAR research initiatives and impact platforms',
-              link: `/communities/c222a914-ea31-4dc9-92c5-e76b57dac187`
+              link: '/communities/c222a914-ea31-4dc9-92c5-e76b57dac187'
             } as LinkMenuItemModel
           });
           menuList.push({
@@ -158,7 +158,7 @@ export class MenuResolver implements Resolve<boolean> {
             model: {
               type: MenuItemType.LINK,
               text: 'CGIAR research centers',
-              link: `/communities/83eb0db0-78fa-4ab3-b4c5-26bef3437a57`
+              link: '/communities/83eb0db0-78fa-4ab3-b4c5-26bef3437a57'
             } as LinkMenuItemModel
           });
           menuList.push({
@@ -169,7 +169,7 @@ export class MenuResolver implements Resolve<boolean> {
             model: {
               type: MenuItemType.LINK,
               text: 'AICCRA project',
-              link: `/communities/7b6da9fb-c1c3-408a-a134-26f31f848358`
+              link: '/communities/7b6da9fb-c1c3-408a-a134-26f31f848358'
             } as LinkMenuItemModel
           });
           menuList.push({
@@ -180,7 +180,7 @@ export class MenuResolver implements Resolve<boolean> {
             model: {
               type: MenuItemType.LINK,
               text: 'CGIAR research programs and platforms (2011-2021)',
-              link: `/communities/d09e6100-df60-4280-9ff3-f3fea5ea4e6b`
+              link: '/communities/d09e6100-df60-4280-9ff3-f3fea5ea4e6b'
             } as LinkMenuItemModel
           });
           menuList.push({
@@ -191,7 +191,7 @@ export class MenuResolver implements Resolve<boolean> {
             model: {
               type: MenuItemType.LINK,
               text: 'CGIAR System Organization',
-              link: `/communities/a238fb09-8a40-4c20-8c59-52837b6cdd0e`
+              link: '/communities/a238fb09-8a40-4c20-8c59-52837b6cdd0e'
             } as LinkMenuItemModel
           });
           menuList.push({
@@ -202,7 +202,7 @@ export class MenuResolver implements Resolve<boolean> {
             model: {
               type: MenuItemType.LINK,
               text: 'CGIAR Independent Advisory and Evaluation Service',
-              link: `/communities/533721b9-47da-4534-b0b6-c4317b572a56`
+              link: '/communities/533721b9-47da-4534-b0b6-c4317b572a56'
             } as LinkMenuItemModel
           });
           menuList.push({
@@ -213,7 +213,7 @@ export class MenuResolver implements Resolve<boolean> {
             model: {
               type: MenuItemType.LINK,
               text: 'Search all content',
-              link: `/search`
+              link: '/search'
             } as LinkMenuItemModel
           });
           menuList.push(
