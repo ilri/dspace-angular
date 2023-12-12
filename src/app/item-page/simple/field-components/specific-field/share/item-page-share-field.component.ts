@@ -5,6 +5,7 @@ import { ItemPageFieldComponent } from '../item-page-field.component';
 
 @Component({
   selector: 'ds-item-page-share-field',
+  styleUrls: ['./item-page-share-field.component.scss'],
   templateUrl: './item-page-share-field.component.html'
 })
 /**
