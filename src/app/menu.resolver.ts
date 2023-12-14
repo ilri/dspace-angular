@@ -158,7 +158,7 @@ export class MenuResolver implements Resolve<boolean> {
             model: {
               type: MenuItemType.LINK,
               text: 'CGIAR research centers',
-              link: '/communities/83eb0db0-78fa-4ab3-b4c5-26bef3437a57'
+              link: '/communities/9e873f16-cdb1-498a-9793-eb3bfe31dd0e'
             } as LinkMenuItemModel
           });
           menuList.push({
