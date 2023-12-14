@@ -228,6 +228,152 @@ export class MenuResolver implements Resolve<boolean> {
               } as TextMenuItemModel
             }
           );
+          menuList.push({
+            id: `cgiar_centers_link1`,
+            parentID: 'cgiar_centers',
+            active: false,
+            visible: true,
+            model: {
+              type: MenuItemType.LINK,
+              text: 'AfricaRice',
+              link: '/communities/ae60fa80-f63a-4406-8b7a-4da18ee9e2f9'
+            } as LinkMenuItemModel
+          });
+          menuList.push({
+            id: `cgiar_centers_link2`,
+            parentID: 'cgiar_centers',
+            active: false,
+            visible: true,
+            model: {
+              type: MenuItemType.LINK,
+              text: 'Alliance of Bioversity International and CIAT',
+              link: '/communities/b38ea726-475f-4247-a961-0d0b76e67f85'
+            } as LinkMenuItemModel
+          });
+          menuList.push({
+            id: `cgiar_centers_link3`,
+            parentID: 'cgiar_centers',
+            active: false,
+            visible: true,
+            model: {
+              type: MenuItemType.LINK,
+              text: 'Center for International Forestry Research',
+              link: '/communities/2d6214fe-191f-4362-872b-ba1c43d080f7'
+            } as LinkMenuItemModel
+          });
+          menuList.push({
+            id: `cgiar_centers_link4`,
+            parentID: 'cgiar_centers',
+            active: false,
+            visible: true,
+            model: {
+              type: MenuItemType.LINK,
+              text: 'International Center for Agricultural Research in the Dry Areas',
+              link: '/communities/0af71267-7f37-47ab-864c-755dd0fead59'
+            } as LinkMenuItemModel
+          });
+          menuList.push({
+            id: `cgiar_centers_link5`,
+            parentID: 'cgiar_centers',
+            active: false,
+            visible: true,
+            model: {
+              type: MenuItemType.LINK,
+              text: 'International Food Policy Research Institute',
+              link: '/communities/8f1e9650-fe87-4e6e-889a-1cacfb747408'
+            } as LinkMenuItemModel
+          });
+          menuList.push({
+            id: `cgiar_centers_link6`,
+            parentID: 'cgiar_centers',
+            active: false,
+            visible: true,
+            model: {
+              type: MenuItemType.LINK,
+              text: 'International Institute of Tropical Agriculture',
+              link: '/communities/0074d1e1-d1a0-4fa2-ae90-f9bfbd09ea7d'
+            } as LinkMenuItemModel
+          });
+          menuList.push({
+            id: `cgiar_centers_link7`,
+            parentID: 'cgiar_centers',
+            active: false,
+            visible: true,
+            model: {
+              type: MenuItemType.LINK,
+              text: 'International Livestock Research Institute',
+              link: '/communities/bde7139c-d321-46bb-aef6-ae70799e5edb'
+            } as LinkMenuItemModel
+          });
+          menuList.push({
+            id: `cgiar_centers_link8`,
+            parentID: 'cgiar_centers',
+            active: false,
+            visible: true,
+            model: {
+              type: MenuItemType.LINK,
+              text: 'International Maize and Wheat Improvement Center',
+              link: '/communities/116933b2-dac9-4663-9b7a-9e91b814946e'
+            } as LinkMenuItemModel
+          });
+          menuList.push({
+            id: `cgiar_centers_link9`,
+            parentID: 'cgiar_centers',
+            active: false,
+            visible: true,
+            model: {
+              type: MenuItemType.LINK,
+              text: 'International Potato Center',
+              link: '/communities/86511537-bf7d-4fa3-90e8-7d0d5d2a7f41'
+            } as LinkMenuItemModel
+          });
+          menuList.push({
+            id: `cgiar_centers_link10`,
+            parentID: 'cgiar_centers',
+            active: false,
+            visible: true,
+            model: {
+              type: MenuItemType.LINK,
+              text: 'International Rice Research Institute',
+              link: '/communities/45ea91cb-8e8b-4ed4-9278-d4a82ec5bfaa'
+            } as LinkMenuItemModel
+          });
+          menuList.push({
+            id: `cgiar_centers_link11`,
+            parentID: 'cgiar_centers',
+            active: false,
+            visible: true,
+            model: {
+              type: MenuItemType.LINK,
+              text: 'International Water Management Institute',
+              link: '/communities/e9af9bd8-aca9-4efa-8bd8-1edb5fe1ac4c'
+            } as LinkMenuItemModel
+          });
+          menuList.push({
+            id: `cgiar_centers_link12`,
+            parentID: 'cgiar_centers',
+            active: false,
+            visible: true,
+            model: {
+              type: MenuItemType.LINK,
+              text: 'WorldFish',
+              link: '/communities/b6a30a69-f509-4239-a943-c023703f9069'
+            } as LinkMenuItemModel
+          });
+          // Note: we have two menus with index 2 because statistics seems to
+          // be hard coded at 3.
+          menuList.push(
+            {
+              id: 'cgiar_centers',
+              active: false,
+              visible: true,
+              index: 2,
+              model: {
+                type: MenuItemType.TEXT,
+                text: 'CGIAR Centers'
+              } as TextMenuItemModel
+            }
+          );
         }
         menuList.forEach((menuSection) => this.menuService.addSection(MenuID.PUBLIC, Object.assign(menuSection, {
           shouldPersistOnRouteChange: true
