@@ -10,7 +10,7 @@ import { ItemPageFieldComponent } from '../item-page-field.component';
 })
 /**
  * This component renders a UN SDG icon.
- * It expects 4 parameters: The item, a separator, the metadata keys and an i18n key
+ * It expects 3 parameters: The item, the metadata keys and an i18n key
  */
 export class ItemPageSdgFieldComponent extends ItemPageFieldComponent {
 
@@ -18,12 +18,6 @@ export class ItemPageSdgFieldComponent extends ItemPageFieldComponent {
    * The item to display metadata for
    */
   @Input() item: Item;
-
-  /**
-   * Separator string between multiple values of the metadata fields defined
-   * @type {string}
-   */
-  @Input() separator: string;
 
   /**
    * Fields (schema.element.qualifier) used to render their values.
