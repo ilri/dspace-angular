@@ -5,6 +5,7 @@ import { ItemPageFieldComponent } from '../item-page-field.component';
 
 @Component({
   selector: 'ds-item-page-sdg-field',
+  styleUrls: ['./item-page-sdg-field.component.scss'],
   templateUrl: './item-page-sdg-field.component.html'
 })
 /**
