@@ -9,8 +9,8 @@ import { ItemPageFieldComponent } from '../item-page-field.component';
   templateUrl: './item-page-share-field.component.html'
 })
 /**
- * This component renders an ORCID identifier as a name, icon, and link.
- * It expects 4 parameters: The item, a separator, the metadata keys and an i18n key
+ * This component renders share icons.
+ * It expects 1 parameters: The item
  */
 export class ItemPageShareFieldComponent extends ItemPageFieldComponent {
 
