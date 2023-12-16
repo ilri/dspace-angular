@@ -1,22 +1,20 @@
 <div class="item-page-field" *ngIf="item?.allMetadata(fields).length">
-    <ds-metadata-field-wrapper>
-        <div class="simple-view-element">
-            <h5 class="simple-view-element-header">{{ label | translate }}</h5>
-            <div class="simple-view-element-body">
-                <!-- Iterate over metadata values and send them to the correct template -->
-                <ng-container *ngFor="let mdValue of item?.allMetadata(fields)">
-                    <ng-container *ngIf="mdValue.value == 'Open Access'"
-                                  [ngTemplateOutlet]="openAccess"
-                                  [ngTemplateOutletContext]="{value: mdValue.value}">
-                    </ng-container>
-                    <ng-container *ngIf="mdValue.value == 'Limited Access'"
-                                  [ngTemplateOutlet]="limitedAccess"
-                                  [ngTemplateOutletContext]="{value: mdValue.value}">
-                    </ng-container>
+    <div class="simple-view-element">
+        <h2 class="simple-view-element-header">{{ label | translate }}</h2>
+        <div class="simple-view-element-body">
+            <!-- Iterate over metadata values and send them to the correct template -->
+            <ng-container *ngFor="let mdValue of item?.allMetadata(fields)">
+                <ng-container *ngIf="mdValue.value == 'Open Access'"
+                              [ngTemplateOutlet]="openAccess"
+                              [ngTemplateOutletContext]="{value: mdValue.value}">
                 </ng-container>
-            </div>
+                <ng-container *ngIf="mdValue.value == 'Limited Access'"
+                              [ngTemplateOutlet]="limitedAccess"
+                              [ngTemplateOutletContext]="{value: mdValue.value}">
+                </ng-container>
+            </ng-container>
         </div>
-    </ds-metadata-field-wrapper>
+    </div>
 </div>
 
 <!-- Images CCO-1.0 from Wikipedia.
