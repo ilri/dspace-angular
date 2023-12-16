@@ -1,0 +1,10 @@
+// Mimic metadata-field-wrapper style since we can't use it here
+// See: src/app/shared/metadata-field-wrapper/metadata-field-wrapper.component.scss
+:host {
+  .simple-view-element {
+    margin-bottom: 15px;
+  }
+  .simple-view-element-header {
+    font-size: 1.25rem;
+  }
+}
