@@ -5,6 +5,8 @@ import { ItemPageFieldComponent } from '../item-page-field.component';
 
 @Component({
   selector: 'ds-item-page-orcid-field',
+  // Mimic style from metadata-field-wrapper component since we can't use it here
+  styleUrls: ['../../../../../shared/metadata-field-wrapper/metadata-field-wrapper.component.scss'],
   templateUrl: './item-page-orcid-field.component.html'
 })
 /**
