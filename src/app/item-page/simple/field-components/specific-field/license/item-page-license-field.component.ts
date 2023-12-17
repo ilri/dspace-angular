@@ -11,7 +11,7 @@ import { ItemPageFieldComponent } from '../item-page-field.component';
 })
 /**
  * This component renders the license section.
- * It expects 4 parameters: The item, a separator, the metadata keys and an i18n key
+ * It expects 3 parameters: The item, the metadata fields and an i18n key
  */
 export class ItemPageLicenseFieldComponent extends ItemPageFieldComponent {
 
