@@ -1,18 +1,1 @@
-@import '../../../dspace/app/navbar/navbar.component.scss';
-
-nav.navbar {
-  // Override this style from the dspace theme because it creates a white gap
-  // on mobile.
-  border-top: none;
-}
-
-.navbar-nav {
-  ::ng-deep ul a.nav-link {
-    color: var(--ds-home-news-link-color);
-  }
-
-  ::ng-deep ul a.nav-link:hover {
-    color: var(--ds-home-news-link-hover-color);
-    text-decoration: underline;
-  }
-}
+@import '../../../dspace/app/navbar/navbar.component';
