@@ -162,12 +162,6 @@ a.lead {
   font-size: inherit;
 }
 
-// temporary hack until I can figure out how to override the entire footer and
-// remove the text-white class
-footer div.text-white {
-  color: $white;
-}
-
 a {
   color: $brand-primary;
 
@@ -222,11 +216,6 @@ a.badge-primary, a.badge-secondary, a.badge-dark {
   color: $brand-primary;
 }
 
-// https://info.orcid.org/brand-guidelines/
-i.fa-orcid {
-  color: #A6CE39;
-}
-
 // "Unsaved" icon at the bottom of the submission form
 ds-submission-form-footer i.fa-exclamation-circle {
   color: var(--warning);
@@ -235,13 +224,4 @@ ds-submission-form-footer i.fa-exclamation-circle {
 // "Saved" icon at the bottom of the submission form
 ds-submission-form-footer i.fa-check-circle {
   color: $brand-secondary;
-}
-
-img.sdg {
-  width: 80px;
-  height: 80px;
-}
-
-img.access-icon {
-  width: 15px;
 }
