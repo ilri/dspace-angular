@@ -1,0 +1,7 @@
+@import '../../../../app/footer/footer.component.scss';
+
+// temporary hack until I can figure out how to override the entire footer and
+// remove the text-white class
+footer div.text-white {
+  color: $white;
+}
