@@ -13,8 +13,8 @@
         <div>
           <span class="text-muted">
             <ds-truncatable-part [id]="item.id" [minLines]="1">
-              (<span *ngIf="item.hasMetadata('dcterms.publisher')" class="item-list-publisher"
-                [innerHTML]="item.firstMetadataValue('dcterms.publisher', undefined, true) + ', '"></span>
+              (<span *ngIf="item.hasMetadata('dcterms.type')" class="item-list-publisher"
+                [innerHTML]="item.firstMetadataValue('dcterms.type', undefined, true) + ', '"></span>
               <span class="item-list-date"
                 [innerHTML]="item.firstMetadataValue('dcate.issued', undefined, true) || ('mydspace.results.no-date' | translate)"></span>)
               <span *ngIf="item.hasMetadata(['dc.contributor.author', 'dc.creator', 'dc.contributor.*']);"
