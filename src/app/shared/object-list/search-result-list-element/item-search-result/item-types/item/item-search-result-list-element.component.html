@@ -23,9 +23,9 @@
             [innerHTML]="dsoTitle"></span>
       <span class="text-muted">
         <ds-truncatable-part [id]="dso.id" [minLines]="1">
-          <ng-container *ngIf="firstMetadataValue('dcterms.publisher') || firstMetadataValue('dcterms.issued')">
-            (<span *ngIf="firstMetadataValue('dcterms.publisher') as publisher" class="item-list-publisher" [innerHTML]="publisher"></span>
-            <span *ngIf="firstMetadataValue('dcterms.publisher') && firstMetadataValue('dcterms.issued')">, </span>
+          <ng-container *ngIf="firstMetadataValue('dcterms.type') || firstMetadataValue('dcterms.issued')">
+            (<span *ngIf="firstMetadataValue('dcterms.type') as publisher" class="item-list-publisher" [innerHTML]="publisher"></span>
+            <span *ngIf="firstMetadataValue('dcterms.type') && firstMetadataValue('dcterms.issued')">, </span>
           <span *ngIf="firstMetadataValue('dcterms.issued') as dateIssued" class="item-list-date" [innerHTML]="dateIssued"></span>)
           </ng-container>
           <span *ngIf="allMetadataValues(['dc.contributor.author', 'dc.creator', 'dc.contributor.*'], undefined).length > 0" class="item-list-authors">
