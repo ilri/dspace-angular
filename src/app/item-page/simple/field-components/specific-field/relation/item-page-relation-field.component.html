@@ -1,0 +1,48 @@
+<div class="item-page-field" *ngIf="item.hasMetadata(['dcterms.relation', 'cg.link.citation', 'cg.identifier.dataurl'])">
+    <div class="simple-view-element">
+        <h5>Related Material</h5>
+        <div class="simple-view-element-body">
+            <div class="ml-3">
+                <ng-container *ngIf="item.hasMetadata('dcterms.relation')">
+                    <div class="mb-2">Related reference:
+                        <ng-container *ngFor="let mdValue of item?.allMetadata('dcterms.relation'); let last=last;">
+                            <ng-container [ngTemplateOutlet]="relatedLink"
+                                          [ngTemplateOutletContext]="{value: mdValue.value}">
+                            </ng-container>
+                            <span *ngIf="!last">; </span>
+                        </ng-container>
+                    </div>
+                </ng-container>
+
+                <ng-container *ngIf="item.hasMetadata('cg.identifier.dataurl')">
+                    <div class="mb-2">Related dataset:
+                        <ng-container *ngFor="let mdValue of item?.allMetadata('cg.identifier.dataurl'); let last=last;">
+                            <ng-container [ngTemplateOutlet]="relatedLink"
+                                          [ngTemplateOutletContext]="{value: mdValue.value}">
+                            </ng-container>
+                            <span *ngIf="!last">; </span>
+                        </ng-container>
+                    </div>
+                </ng-container>
+
+                <ng-container *ngIf="item.hasMetadata('cg.link.citation')">
+                    <ng-container *ngFor="let mdValue of item?.allMetadata('cg.link.citation')"
+                                  [ngTemplateOutlet]="relatedCitation"
+                                  [ngTemplateOutletContext]="{value: mdValue.value}">
+                    </ng-container>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Template for related links we want to show -->
+<ng-template #relatedLink let-value="value">
+    <a [href]=value target="_blank" [innerHTML]="value"></a>
+</ng-template>
+
+<!-- Template for related citations -->
+<ng-template #relatedCitation let-value="value">
+    <h5>Related Citation</h5>
+    <div class="mb-2" [innerHTML]="value"></div>
+</ng-template>
