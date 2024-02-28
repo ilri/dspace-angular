@@ -89,7 +89,8 @@
     </div>
     <ds-generic-item-page-field [item]="object"
       [fields]="['dcterms.bibliographicCitation']"
-      [label]="'item.page.citation'">
+      [label]="'item.page.citation'"
+      [enableMarkdown]="true">
     </ds-generic-item-page-field>
     <ds-item-page-uri-field [item]="object"
       [fields]="['dc.identifier.uri']"
@@ -105,7 +106,8 @@
     </ds-item-page-uri-field>
     <ds-generic-item-page-field [item]="object"
       [fields]="['dcterms.abstract']"
-      [label]="'item.page.abstract'">
+      [label]="'item.page.abstract'"
+      [enableMarkdown]="true">
     </ds-generic-item-page-field>
     <ds-item-page-orcid-field [item]="object"
       [fields]="['cg.creator.identifier']"
