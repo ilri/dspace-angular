@@ -139,4 +139,8 @@
 
   "info.about.breadcrumbs": "About",
   "info.about.title": "About",
+
+  // CGSpace curation tasks
+  "curation-task.task.countrycodetagger.label": "Country code tagger",
+  "curation-task.task.countrycodetagger.force.label": "Country code tagger (force)",
 }
