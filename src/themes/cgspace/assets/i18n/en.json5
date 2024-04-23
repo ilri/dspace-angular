@@ -143,4 +143,5 @@
   // CGSpace curation tasks
   "curation-task.task.countrycodetagger.label": "Country code tagger",
   "curation-task.task.countrycodetagger.force.label": "Country code tagger (force)",
+  "curation-task.task.normalizedois.label": "Normalize DOIs",
 }
