@@ -1,4 +1,4 @@
-<div class="item-page-field" *ngIf="item.hasMetadata(['dcterms.relation', 'cg.link.citation', 'cg.identifier.dataurl'])">
+<div class="item-page-field" *ngIf="item.hasMetadata(['dcterms.relation', 'cg.link.citation', 'cg.link.video', 'cg.identifier.dataurl'])">
     <div class="simple-view-element">
         <h5>Related Material</h5>
         <div class="simple-view-element-body">
@@ -17,6 +17,17 @@
                 <ng-container *ngIf="item.hasMetadata('cg.identifier.dataurl')">
                     <div class="mb-2">Related dataset:
                         <ng-container *ngFor="let mdValue of item?.allMetadata('cg.identifier.dataurl'); let last=last;">
+                            <ng-container [ngTemplateOutlet]="relatedLink"
+                                          [ngTemplateOutletContext]="{value: mdValue.value}">
+                            </ng-container>
+                            <span *ngIf="!last">; </span>
+                        </ng-container>
+                    </div>
+                </ng-container>
+
+                <ng-container *ngIf="item.hasMetadata('cg.link.video')">
+                    <div class="mb-2">Related video:
+                        <ng-container *ngFor="let mdValue of item?.allMetadata('cg.link.video'); let last=last;">
                             <ng-container [ngTemplateOutlet]="relatedLink"
                                           [ngTemplateOutletContext]="{value: mdValue.value}">
                             </ng-container>
