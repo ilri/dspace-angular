@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { SharedModule } from '../../app/shared/shared.module';
-import { SearchModule } from '../../app/shared/search/search.module';
 import { RootModule } from '../../app/root.module';
 import { NavbarModule } from '../../app/navbar/navbar.module';
 import { ItemPageModule } from '../../app/item-page/item-page.module';
@@ -14,8 +12,7 @@ import { DsoPageModule } from '../../app/shared/dso-page/dso-page.module';
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
  * This will ensure that decorator gets picked up when the app loads
  */
-const ENTRY_COMPONENTS = [
-];
+const ENTRY_COMPONENTS = [];
 
 const DECLARATIONS = [
   ...ENTRY_COMPONENTS,
@@ -25,8 +22,6 @@ const DECLARATIONS = [
   imports: [
     CommonModule,
     SharedModule,
-    SearchModule,
-    FormsModule,
     RootModule,
     NavbarModule,
     ResultsBackButtonModule,
@@ -36,7 +31,7 @@ const DECLARATIONS = [
   ],
   declarations: DECLARATIONS,
   providers: [
-    ...ENTRY_COMPONENTS.map((component) => ({ provide: component }))
+    ...ENTRY_COMPONENTS.map((component) => ({provide: component}))
   ],
 })
 /**
