@@ -1,28 +1,48 @@
 // Override or add CSS variables for your theme here
 
 :root {
-  --ds-header-logo-height: 40px;
-  --ds-banner-text-background: $white;
+
+  @include media-breakpoint-up(md) {
+    --ds-header-logo-height: 40px;
+    --ds-header-height: 80px;
+  }
+  @include media-breakpoint-down(sm) {
+    --ds-header-logo-height: 50px;
+    --ds-header-height: 90px;
+  }
+
+  --ds-banner-text-background: rgba(0, 0, 0, 0.45);
   --ds-banner-background-gradient-width: 300px;
-  --ds-home-news-link-color: #{$brand-primary};
-  --ds-home-news-link-hover-color: var(--brand-primary-darker);
+
+  --ds-header-navbar-border-bottom-height: 5px;
+
+  /* set the next two properties as `--ds-header-navbar-border-bottom-*`
+  in order to keep the bottom border of the header when navbar is expanded */
+  --ds-expandable-navbar-border-top-color: #{$white};
+  --ds-expandable-navbar-border-top-height: 0;
+  --ds-expandable-navbar-padding-top: 0;
+
+  --ds-navbar-bg: #{$ds-navbar-bg};
+  --ds-navbar-dropdown-bg: #{$ds-navbar-dropdown-bg};
+  --ds-expandable-navbar-bg: #{$ds-expandable-navbar-bg};
+
+  --ds-home-news-link-color: #{$primary};
+  --ds-home-news-link-hover-color: var(--primary-darker);
   --ds-thumbnail-max-width: 200px;
   // override DSpace navbar link colors (note the special variable syntax here)
   --ds-navbar-link-color: #{$white};
-  --ds-navbar-link-color-hover: #{$brand-secondary};
-  --ds-header-navbar-border-top-color: #{$brand-primary};
-  --ds-header-navbar-border-bottom-color: #{$brand-secondary};
+  --ds-navbar-link-color-hover: #{$secondary};
+  --ds-header-navbar-border-top-color: #{$primary};
+  --ds-header-navbar-border-bottom-color: #{$secondary};
   // override DSpace search, language, and login colors
   --ds-header-icon-color: #{$white};
-  --ds-header-icon-color-hover: #{$brand-secondary};
+  --ds-header-icon-color-hover: #{$secondary};
   // override DSpace header background color
-  --ds-header-bg: #{$brand-primary};
+  --ds-header-bg: #{$ds-header-bg};
   // override DSpace footer background color
-  --ds-footer-bg: #{$brand-primary};
+  --ds-footer-bg: #{$primary};
   // override DSpace header trail text color
-  --ds-breadcrumb-link-color: #{$brand-primary};
+  --ds-breadcrumb-link-color: #{$primary};
   --ds-breadcrumb-link-active-color: #{$gray-800};
-  --brand-primary: #{$brand-primary};
-  --brand-primary-darker: #{darken($brand-primary, 10%)};
+  --primary-darker: #{darken($primary, 10%)};
 }
-
