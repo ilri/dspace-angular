@@ -2,11 +2,11 @@
 // This is from the cgspace theme's _global-styles.scss, but we have to use
 // CSS variables because the SCSS ones aren't defined by the time this runs.
 .export-button {
-    background-color: var(--brand-primary);
-    border-color: var(--brand-primary);
+    background-color: var(--primary);
+    border-color: var(--primary);
     color: var(--bs-white);
 
     &:hover {
-        background-color: var(--brand-primary-darker);
+        background-color: var(--primary-darker);
     }
 }
