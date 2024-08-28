@@ -17,7 +17,7 @@
   // search-text-filter.component and we might need to copy that into this
   // theme so we can override it again.
   a {
-    color: $brand-primary;
+    color: $primary;
   }
 
   h4 {
@@ -32,8 +32,8 @@ body {
 }
 
 li.page-item.active a.page-link {
-  background-color: $brand-primary;
-  border-color: $brand-primary;
+  background-color: $primary;
+  border-color: $primary;
   color: $white;
 }
 
@@ -42,23 +42,23 @@ a.page-link {
   color: $gray-800;
 
   @include hover {
-    background-color: $brand-secondary;
-    border-color: $brand-secondary;
+    background-color: $secondary;
+    border-color: $secondary;
     color: $white;
   }
 }
 
 // override Bootstrap primary buttons default states
 .btn-primary:not(:disabled):not(.disabled), .btn-primary:not(:disabled):not(.disabled) {
-  background-color: $brand-primary;
-  border-color: $brand-primary;
+  background-color: $primary;
+  border-color: $primary;
   color: $white;
 
   // override default blue hover
   // TODO: fix active/clicked state
   @include hover {
-    background-color: darken($brand-primary, 10%);
-    border-color: $brand-primary;
+    background-color: darken($primary, 10%);
+    border-color: $primary;
     color: $white;
   }
 }
@@ -66,65 +66,65 @@ a.page-link {
 // override Bootstrap primary button disabled colors (they are still reduced
 // opacity, but we use CGIAR colors).
 .btn-primary.disabled, .btn-primary:disabled {
-  background-color: $brand-primary;
-  border-color: $brand-primary;
+  background-color: $primary;
+  border-color: $primary;
 }
 
 // override Bootstrap primary button active states
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
-  background-color: $brand-primary;
-  border-color: $brand-primary;
+  background-color: $primary;
+  border-color: $primary;
   color: $white;
 }
 
 // override Bootstrap secondary button default states
 .btn-secondary:not(:disabled):not(.disabled), .btn-secondary:not(:disabled):not(.disabled) {
   background-color: $white;
-  border-color: $brand-primary;
-  color: $brand-primary;
+  border-color: $primary;
+  color: $primary;
 
   // override default blue hover
   @include hover {
-    border-color: $brand-primary;
-    color: $brand-secondary;
+    border-color: $primary;
+    color: $secondary;
   }
 }
 
 // override Bootstrap secondary button active states
 .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .show > .btn-secondary.dropdown-toggle {
-  background-color: $brand-primary;
-  border-color: $brand-primary;
+  background-color: $primary;
+  border-color: $primary;
   color: $white;
 }
 
 // Override Bootstrap button outline
 .btn-outline-secondary:not(:disabled):not(.disabled), .btn-outline-primary:not(:disabled):not(.disabled), .show > .btn-outline-primary.dropdown-toggle,
 .btn-outline-secondary:not(:disabled):not(.disabled), .btn-outline-secondary:not(:disabled):not(.disabled), .show > .btn-outline-secondary.dropdown-toggle {
-  background-color: $brand-primary;
-  border-color: $brand-primary;
+  background-color: $primary;
+  border-color: $primary;
   color: $white;
 
   // override default blue hover
   @include hover {
-    background-color: darken($brand-primary, 10%);
-    border-color: $brand-primary;
+    background-color: darken($primary, 10%);
+    border-color: $primary;
     color: $white;
   }
 }
 
 // Override Bootstrap button outline secondary active state
 .btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active, .show > .btn-outline-secondary.dropdown-toggle {
-  background-color: $brand-primary;
-  border-color: $brand-primary;
+  background-color: $primary;
+  border-color: $primary;
   color: $white;
 }
 
 .btn-link {
-  color: $brand-primary;
+  color: $primary;
 
   // override default blue hover
   @include hover {
-    color: darken($brand-primary, 10%);
+    color: darken($primary, 10%);
   }
 }
 
@@ -140,8 +140,8 @@ ds-dynamic-form-group .form-row {
 }
 
 .list-group-item.active {
-  background-color: $brand-primary;
-  border-color: $brand-primary;
+  background-color: $primary;
+  border-color: $primary;
   color: $white;
 }
 
@@ -154,57 +154,58 @@ a.lead {
 }
 
 a {
-  color: $brand-primary;
+  color: $primary;
 
   @include hover {
-    color: darken($brand-primary, 10%);
+    color: darken($primary, 10%);
   }
 }
 
 .badge-info {
-  background-color: $brand-primary;
-  border-color: $brand-primary;
+  background-color: $primary;
+  border-color: $primary;
   color: $white;
 }
 
 // Override badge colors
 .badge-primary, .badge-secondary, .badge-dark {
-  background-color: $brand-primary;
+  color: $white;
+  background-color: $primary;
 }
 
 a.badge-primary, a.badge-secondary, a.badge-dark {
-  background-color: $brand-primary;
+  background-color: $primary;
 
   @include hover {
-    background-color: $brand-secondary;
+    background-color: $secondary;
   }
 }
 
 .dropdown-item.active {
   color: $white;
-  background-color: $brand-primary;
+  background-color: $primary;
 }
 
 .dropdown-item:hover {
   color: $white;
-  background-color: $brand-secondary;
+  background-color: $secondary;
 }
 
 // Override Bootstrap alert box to be more subtle and use CGIAR colors
 .alert-info {
   background-color: $white;
-  color: $brand-primary;
-  border-color: $brand-secondary;
+  color: $primary;
+  border-color: $secondary;
 }
 
 // Override Bootstrap focus hover effect
 .form-control:focus {
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba($brand-primary, 0.25);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba($primary, 0.25);
 }
 
 // Override date facet link color from search-text-filter.component
 .filter-value {
-  color: $brand-primary;
+  color: $primary;
 }
 
 // "Unsaved" icon at the bottom of the submission form
@@ -214,5 +215,5 @@ ds-submission-form-footer i.fa-exclamation-circle {
 
 // "Saved" icon at the bottom of the submission form
 ds-submission-form-footer i.fa-check-circle {
-  color: $brand-secondary;
+  color: $secondary;
 }
