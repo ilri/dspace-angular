@@ -17,6 +17,12 @@ export class ItemPageDimensionsFieldComponent extends ItemPageFieldComponent imp
   ngAfterViewInit() {
     // Dimensions badge.js
     import('./badge.js');
+
+    try {
+      window['__dimensions_embed'].addBadges();
+    } catch {
+
+    }
   }
 
   /**
