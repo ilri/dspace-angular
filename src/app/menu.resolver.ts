@@ -190,7 +190,7 @@ export class MenuResolver implements Resolve<boolean> {
             visible: true,
             model: {
               type: MenuItemType.LINK,
-              text: 'CGIAR research programs and platforms (2011-2021)',
+              text: 'CGIAR research programs and platforms (2011–2021)',
               link: '/communities/d09e6100-df60-4280-9ff3-f3fea5ea4e6b'
             } as LinkMenuItemModel
           });
