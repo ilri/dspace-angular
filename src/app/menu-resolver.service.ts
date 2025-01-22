@@ -149,8 +149,8 @@ export class MenuResolverService  {
             visible: true,
             model: {
               type: MenuItemType.LINK,
-              text: 'CGIAR research initiatives and impact platforms',
-              link: '/communities/c222a914-ea31-4dc9-92c5-e76b57dac187'
+              text: 'CGIAR programs and accelerators',
+              link: '/communities/7c96bc2a-f581-4b57-a8a5-7813c50ceae7'
             } as LinkMenuItemModel
           });
           menuList.push({
@@ -182,12 +182,23 @@ export class MenuResolverService  {
             visible: true,
             model: {
               type: MenuItemType.LINK,
+              text: 'CGIAR research initiatives and impact platforms (2022–2024)',
+              link: '/communities/c222a914-ea31-4dc9-92c5-e76b57dac187'
+            } as LinkMenuItemModel
+          });
+          menuList.push({
+            id: `navigate_cgspace_link5`,
+            parentID: 'navigate_cgspace',
+            active: false,
+            visible: true,
+            model: {
+              type: MenuItemType.LINK,
               text: 'CGIAR research programs and platforms (2011-2021)',
               link: '/communities/d09e6100-df60-4280-9ff3-f3fea5ea4e6b'
             } as LinkMenuItemModel
           });
           menuList.push({
-            id: `navigate_cgspace_link5`,
+            id: `navigate_cgspace_link6`,
             parentID: 'navigate_cgspace',
             active: false,
             visible: true,
@@ -198,7 +209,7 @@ export class MenuResolverService  {
             } as LinkMenuItemModel
           });
           menuList.push({
-            id: `navigate_cgspace_link6`,
+            id: `navigate_cgspace_link7`,
             parentID: 'navigate_cgspace',
             active: false,
             visible: true,
@@ -209,7 +220,7 @@ export class MenuResolverService  {
             } as LinkMenuItemModel
           });
           menuList.push({
-            id: `navigate_cgspace_link7`,
+            id: `navigate_cgspace_link8`,
             parentID: 'navigate_cgspace',
             active: false,
             visible: true,
