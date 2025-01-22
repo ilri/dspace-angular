@@ -183,7 +183,7 @@ export class MenuResolverService  {
             model: {
               type: MenuItemType.LINK,
               text: 'CGIAR research initiatives and impact platforms (2022–2024)',
-              link: '/communities/c222a914-ea31-4dc9-92c5-e76b57dac187'
+              link: '/communities/6ae8f13c-7138-4f08-97c7-9be27c9194dc'
             } as LinkMenuItemModel
           });
           menuList.push({
