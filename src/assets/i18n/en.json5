@@ -5646,4 +5646,14 @@
   "curation-task.task.countrycodetagger.force.label": "Country code tagger (force)",
 
   "curation-task.task.normalizedois.label": "Normalize DOIs",
+
+  "item.page.programAccelerator": "CGIAR Programs and Accelerators",
+
+  "search.filters.filter.programAccelerator.head": "CGIAR Program and Accelerator",
+
+  "search.filters.filter.programAccelerator.placeholder": "CGIAR Program and Accelerator",
+
+  "search.filters.filter.programAccelerator.label": "Search CGIAR Program and Accelerator",
+
+  "search.filters.applied.f.programAccelerator": "CGIAR Program and Accelerator",
 }
