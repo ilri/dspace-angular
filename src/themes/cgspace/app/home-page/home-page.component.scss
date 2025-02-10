@@ -12,3 +12,20 @@ h2::after, h3::after {
     width: 40px;
     height: 4px;
 }
+
+figure {
+    position: relative;
+    margin: 0; /* remove margins form figure element */
+}
+
+figure img {
+    display: block; /* setting the display to block removes the gap under the image */
+}
+
+.figure-caption {
+    color: $gray-400;
+    position: absolute;
+    padding: 2px 4px;
+    bottom: 0;
+    right: 0;
+}
