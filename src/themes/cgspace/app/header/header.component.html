@@ -8,6 +8,9 @@
       <a class="d-block my-2 my-md-0" routerLink="/home" [attr.aria-label]="'home.title' | translate">
         <img id="header-logo" src="assets/cgspace/images/CGIAR-logo-white.png" [attr.alt]="'menu.header.image.logo' | translate"/>
       </a>
+      <a class="d-block my-2 my-md-0" href="https://agris.fao.org/search/en?filters={%22providers%22:[{%22operator%22:%22all%22,%22values%22:[%22123818%22]}]}" target="_blank">
+        <img src="https://assets.agris.fao.org/public/images/2024-10/ADP_cert_2025.png" alt="KE3 – FAO AGRIS data provider 2025" title="Seal of recognition for active AGRIS Data Providers 2025" id="header-logo-2">
+      </a>
       <nav *ngIf="!(isMobile$ | async)" class="navbar navbar-expand p-0 align-items-stretch align-self-stretch" id="desktop-navbar" [attr.aria-label]="'nav.main.description' | translate">
         <ds-themed-navbar></ds-themed-navbar>
       </nav>
