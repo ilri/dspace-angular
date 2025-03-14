@@ -293,12 +293,23 @@ export class MenuResolverService  {
             visible: true,
             model: {
               type: MenuItemType.LINK,
+              text: 'International Crops Research Institute for the Semi-Arid Tropics',
+              link: '/communities/d37f3cfc-f60c-42b4-97e4-68b7cf466b8a'
+            } as LinkMenuItemModel
+          });
+          menuList.push({
+            id: `cgiar_centers_link6`,
+            parentID: 'cgiar_centers',
+            active: false,
+            visible: true,
+            model: {
+              type: MenuItemType.LINK,
               text: 'International Food Policy Research Institute',
               link: '/communities/8f1e9650-fe87-4e6e-889a-1cacfb747408'
             } as LinkMenuItemModel
           });
           menuList.push({
-            id: `cgiar_centers_link6`,
+            id: `cgiar_centers_link7`,
             parentID: 'cgiar_centers',
             active: false,
             visible: true,
@@ -309,7 +320,7 @@ export class MenuResolverService  {
             } as LinkMenuItemModel
           });
           menuList.push({
-            id: `cgiar_centers_link7`,
+            id: `cgiar_centers_link8`,
             parentID: 'cgiar_centers',
             active: false,
             visible: true,
@@ -320,7 +331,7 @@ export class MenuResolverService  {
             } as LinkMenuItemModel
           });
           menuList.push({
-            id: `cgiar_centers_link8`,
+            id: `cgiar_centers_link9`,
             parentID: 'cgiar_centers',
             active: false,
             visible: true,
@@ -331,7 +342,7 @@ export class MenuResolverService  {
             } as LinkMenuItemModel
           });
           menuList.push({
-            id: `cgiar_centers_link9`,
+            id: `cgiar_centers_link10`,
             parentID: 'cgiar_centers',
             active: false,
             visible: true,
@@ -342,7 +353,7 @@ export class MenuResolverService  {
             } as LinkMenuItemModel
           });
           menuList.push({
-            id: `cgiar_centers_link10`,
+            id: `cgiar_centers_link11`,
             parentID: 'cgiar_centers',
             active: false,
             visible: true,
@@ -353,7 +364,7 @@ export class MenuResolverService  {
             } as LinkMenuItemModel
           });
           menuList.push({
-            id: `cgiar_centers_link11`,
+            id: `cgiar_centers_link12`,
             parentID: 'cgiar_centers',
             active: false,
             visible: true,
@@ -364,7 +375,7 @@ export class MenuResolverService  {
             } as LinkMenuItemModel
           });
           menuList.push({
-            id: `cgiar_centers_link12`,
+            id: `cgiar_centers_link13`,
             parentID: 'cgiar_centers',
             active: false,
             visible: true,
