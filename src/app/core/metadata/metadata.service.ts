@@ -310,7 +310,7 @@ export class MetadataService {
    */
   private setCitationDoiTag(): void {
     if (this.currentObject.value instanceof Item) {
-      let doi = this.getMetaTagValue('dc.identifier.doi');
+      let doi = this.getMetaTagValue('cg.identifier.doi');
       if (hasValue(doi)) {
         this.addMetaTag('citation_doi', doi);
       }
