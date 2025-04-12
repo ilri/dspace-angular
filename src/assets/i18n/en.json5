@@ -7129,4 +7129,10 @@
   "search.filters.filter.programAccelerator.label": "Search CGIAR Program and Accelerator",
 
   "search.filters.applied.f.programAccelerator": "CGIAR Program and Accelerator",
+
+  "item.preview.dcterms.available": "Date online",
+
+  "item.preview.dcterms.issued": "Date issued",
+
+  "item.preview.dcterms.publisher": "Publisher",
 }
