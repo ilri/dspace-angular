@@ -24,6 +24,9 @@
   "item.preview.cg.isbn": "ISBN",
   "item.preview.cg.journal": "Journal",
   "item.preview.cg.identifier.doi": "DOI",
+  "item.preview.dcterms.available": "Date online",
+  "item.preview.dcterms.issued": "Date issued",
+  "item.preview.dcterms.publisher": "Publisher",
 
   // Simple item view
   "item.page.abstract": "Abstract/Description",
