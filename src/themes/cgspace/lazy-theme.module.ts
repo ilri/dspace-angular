@@ -65,11 +65,16 @@ import { ItemVersionsModule } from '../../app/item-page/versions/item-versions.m
 import { ItemSharedModule } from 'src/app/item-page/item-shared.module';
 import { ItemPageComponent } from './app/item-page/simple/item-page.component';
 
+import {
+  ItemPageTitleFieldComponent
+} from './app/item-page/simple/field-components/specific-field/title/item-page-title-field.component';
+
 const DECLARATIONS = [
   HomePageComponent,
   ItemPageComponent,
   FileSectionComponent,
   PrivacyComponent,
+  ItemPageTitleFieldComponent,
 ];
 
 @NgModule({
