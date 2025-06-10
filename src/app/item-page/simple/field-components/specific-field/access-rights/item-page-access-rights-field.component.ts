@@ -1,12 +1,22 @@
-import { Component, Input } from '@angular/core';
+import { NgTemplateOutlet } from '@angular/common';
+import {
+  Component,
+  Input,
+} from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { Item } from '../../../../../core/shared/item.model';
 import { ItemPageFieldComponent } from '../item-page-field.component';
 
 @Component({
-  selector: 'ds-item-page-accessRights-field',
-  styleUrls: ['./item-page-accessRights-field.component.scss'],
-  templateUrl: './item-page-accessRights-field.component.html'
+  selector: 'ds-item-page-access-rights-field',
+  styleUrls: ['./item-page-access-rights-field.component.scss'],
+  templateUrl: './item-page-access-rights-field.component.html',
+  standalone: true,
+  imports: [
+    TranslateModule,
+    NgTemplateOutlet,
+  ],
 })
 /**
  * This component renders the license section.
