@@ -17,6 +17,7 @@ import { CollectionPageConfig } from './collection-page-config.interface';
 import { CommunityListConfig } from './community-list-config.interface';
 import { CommunityPageConfig } from './community-page-config.interface';
 import { Config } from './config.interface';
+import { CustomMenusConfig } from './custom-menus-config.interface';
 import { DiscoverySortConfig } from './discovery-sort.config';
 import { FilterVocabularyConfig } from './filter-vocabulary-config';
 import { FormConfig } from './form-config.interfaces';
@@ -68,6 +69,7 @@ interface AppConfig extends Config {
   notifyMetrics: AdminNotifyMetricsRow[];
   liveRegion: LiveRegionConfig;
   accessibility: AccessibilitySettingsConfig;
+  customMenusConfig?: CustomMenusConfig[];
 }
 
 /**

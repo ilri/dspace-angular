@@ -1,4 +1,7 @@
-import { Injectable } from '@angular/core';
+import {
+  Inject,
+  Injectable,
+} from '@angular/core';
 import {
   ActivatedRouteSnapshot,
   RouterStateSnapshot,
@@ -18,6 +21,10 @@ import {
   take,
 } from 'rxjs/operators';
 
+import {
+  APP_CONFIG,
+  AppConfig,
+} from '../config/app-config.interface';
 import { PUBLICATION_CLAIMS_PATH } from './admin/admin-notifications/admin-notifications-routing-paths';
 import { AuthService } from './core/auth/auth.service';
 import { BrowseService } from './core/browse/browse.service';
@@ -66,6 +73,7 @@ export class MenuResolverService  {
     protected scriptDataService: ScriptDataService,
     protected configurationDataService: ConfigurationDataService,
     protected authService: AuthService,
+    @Inject(APP_CONFIG) protected appConfig: AppConfig,
   ) {
   }
 
@@ -142,263 +150,10 @@ export class MenuResolverService  {
               } as TextMenuItemModel,
             },
           );
-          menuList.push({
-            id: `navigate_cgspace_link1`,
-            parentID: 'navigate_cgspace',
-            active: false,
-            visible: true,
-            model: {
-              type: MenuItemType.LINK,
-              text: 'CGIAR programs and accelerators',
-              link: '/communities/7c96bc2a-f581-4b57-a8a5-7813c50ceae7'
-            } as LinkMenuItemModel
+
+          this.appConfig.customMenusConfig.map(menu => {
+            menuList.push(menu);
           });
-          menuList.push({
-            id: `navigate_cgspace_link2`,
-            parentID: 'navigate_cgspace',
-            active: false,
-            visible: true,
-            model: {
-              type: MenuItemType.LINK,
-              text: 'CGIAR research centers',
-              link: '/communities/40250cb0-09d3-4b22-b5c5-c39bc815f6ea'
-            } as LinkMenuItemModel
-          });
-          menuList.push({
-            id: `navigate_cgspace_link3`,
-            parentID: 'navigate_cgspace',
-            active: false,
-            visible: true,
-            model: {
-              type: MenuItemType.LINK,
-              text: 'AICCRA project',
-              link: '/communities/7b6da9fb-c1c3-408a-a134-26f31f848358'
-            } as LinkMenuItemModel
-          });
-          menuList.push({
-            id: `navigate_cgspace_link4`,
-            parentID: 'navigate_cgspace',
-            active: false,
-            visible: true,
-            model: {
-              type: MenuItemType.LINK,
-              text: 'CGIAR research initiatives and impact platforms (2022–2024)',
-              link: '/communities/6ae8f13c-7138-4f08-97c7-9be27c9194dc'
-            } as LinkMenuItemModel
-          });
-          menuList.push({
-            id: `navigate_cgspace_link5`,
-            parentID: 'navigate_cgspace',
-            active: false,
-            visible: true,
-            model: {
-              type: MenuItemType.LINK,
-              text: 'CGIAR research programs and platforms (2011–2021)',
-              link: '/communities/d09e6100-df60-4280-9ff3-f3fea5ea4e6b'
-            } as LinkMenuItemModel
-          });
-          menuList.push({
-            id: `navigate_cgspace_link6`,
-            parentID: 'navigate_cgspace',
-            active: false,
-            visible: true,
-            model: {
-              type: MenuItemType.LINK,
-              text: 'CGIAR System Organization',
-              link: '/communities/a238fb09-8a40-4c20-8c59-52837b6cdd0e'
-            } as LinkMenuItemModel
-          });
-          menuList.push({
-            id: `navigate_cgspace_link7`,
-            parentID: 'navigate_cgspace',
-            active: false,
-            visible: true,
-            model: {
-              type: MenuItemType.LINK,
-              text: 'CGIAR Independent Advisory and Evaluation Service',
-              link: '/communities/533721b9-47da-4534-b0b6-c4317b572a56'
-            } as LinkMenuItemModel
-          });
-          menuList.push({
-            id: `navigate_cgspace_link8`,
-            parentID: 'navigate_cgspace',
-            active: false,
-            visible: true,
-            model: {
-              type: MenuItemType.LINK,
-              text: 'Search all content',
-              link: '/search'
-            } as LinkMenuItemModel
-          });
-          menuList.push(
-            {
-              id: 'navigate_cgspace',
-              active: false,
-              visible: true,
-              index: 2,
-              model: {
-                type: MenuItemType.TEXT,
-                text: 'Navigate'
-              } as TextMenuItemModel
-            }
-          );
-          menuList.push({
-            id: `cgiar_centers_link1`,
-            parentID: 'cgiar_centers',
-            active: false,
-            visible: true,
-            model: {
-              type: MenuItemType.LINK,
-              text: 'AfricaRice',
-              link: '/communities/ae60fa80-f63a-4406-8b7a-4da18ee9e2f9'
-            } as LinkMenuItemModel
-          });
-          menuList.push({
-            id: `cgiar_centers_link2`,
-            parentID: 'cgiar_centers',
-            active: false,
-            visible: true,
-            model: {
-              type: MenuItemType.LINK,
-              text: 'Alliance of Bioversity International and CIAT',
-              link: '/communities/b38ea726-475f-4247-a961-0d0b76e67f85'
-            } as LinkMenuItemModel
-          });
-          menuList.push({
-            id: `cgiar_centers_link3`,
-            parentID: 'cgiar_centers',
-            active: false,
-            visible: true,
-            model: {
-              type: MenuItemType.LINK,
-              text: 'Center for International Forestry Research',
-              link: '/communities/2d6214fe-191f-4362-872b-ba1c43d080f7'
-            } as LinkMenuItemModel
-          });
-          menuList.push({
-            id: `cgiar_centers_link4`,
-            parentID: 'cgiar_centers',
-            active: false,
-            visible: true,
-            model: {
-              type: MenuItemType.LINK,
-              text: 'International Center for Agricultural Research in the Dry Areas',
-              link: '/communities/0af71267-7f37-47ab-864c-755dd0fead59'
-            } as LinkMenuItemModel
-          });
-          menuList.push({
-            id: `cgiar_centers_link5`,
-            parentID: 'cgiar_centers',
-            active: false,
-            visible: true,
-            model: {
-              type: MenuItemType.LINK,
-              text: 'International Crops Research Institute for the Semi-Arid Tropics',
-              link: '/communities/d37f3cfc-f60c-42b4-97e4-68b7cf466b8a'
-            } as LinkMenuItemModel
-          });
-          menuList.push({
-            id: `cgiar_centers_link6`,
-            parentID: 'cgiar_centers',
-            active: false,
-            visible: true,
-            model: {
-              type: MenuItemType.LINK,
-              text: 'International Food Policy Research Institute',
-              link: '/communities/8f1e9650-fe87-4e6e-889a-1cacfb747408'
-            } as LinkMenuItemModel
-          });
-          menuList.push({
-            id: `cgiar_centers_link7`,
-            parentID: 'cgiar_centers',
-            active: false,
-            visible: true,
-            model: {
-              type: MenuItemType.LINK,
-              text: 'International Institute of Tropical Agriculture',
-              link: '/communities/0074d1e1-d1a0-4fa2-ae90-f9bfbd09ea7d'
-            } as LinkMenuItemModel
-          });
-          menuList.push({
-            id: `cgiar_centers_link8`,
-            parentID: 'cgiar_centers',
-            active: false,
-            visible: true,
-            model: {
-              type: MenuItemType.LINK,
-              text: 'International Livestock Research Institute',
-              link: '/communities/bde7139c-d321-46bb-aef6-ae70799e5edb'
-            } as LinkMenuItemModel
-          });
-          menuList.push({
-            id: `cgiar_centers_link9`,
-            parentID: 'cgiar_centers',
-            active: false,
-            visible: true,
-            model: {
-              type: MenuItemType.LINK,
-              text: 'International Maize and Wheat Improvement Center',
-              link: '/communities/116933b2-dac9-4663-9b7a-9e91b814946e'
-            } as LinkMenuItemModel
-          });
-          menuList.push({
-            id: `cgiar_centers_link10`,
-            parentID: 'cgiar_centers',
-            active: false,
-            visible: true,
-            model: {
-              type: MenuItemType.LINK,
-              text: 'International Potato Center',
-              link: '/communities/86511537-bf7d-4fa3-90e8-7d0d5d2a7f41'
-            } as LinkMenuItemModel
-          });
-          menuList.push({
-            id: `cgiar_centers_link11`,
-            parentID: 'cgiar_centers',
-            active: false,
-            visible: true,
-            model: {
-              type: MenuItemType.LINK,
-              text: 'International Rice Research Institute',
-              link: '/communities/45ea91cb-8e8b-4ed4-9278-d4a82ec5bfaa'
-            } as LinkMenuItemModel
-          });
-          menuList.push({
-            id: `cgiar_centers_link12`,
-            parentID: 'cgiar_centers',
-            active: false,
-            visible: true,
-            model: {
-              type: MenuItemType.LINK,
-              text: 'International Water Management Institute',
-              link: '/communities/e9af9bd8-aca9-4efa-8bd8-1edb5fe1ac4c'
-            } as LinkMenuItemModel
-          });
-          menuList.push({
-            id: `cgiar_centers_link13`,
-            parentID: 'cgiar_centers',
-            active: false,
-            visible: true,
-            model: {
-              type: MenuItemType.LINK,
-              text: 'WorldFish',
-              link: '/communities/b6a30a69-f509-4239-a943-c023703f9069'
-            } as LinkMenuItemModel
-          });
-          // Note: we have two menus with index 2 because statistics seems to
-          // be hard coded at 3.
-          menuList.push(
-            {
-              id: 'cgiar_centers',
-              active: false,
-              visible: true,
-              index: 2,
-              model: {
-                type: MenuItemType.TEXT,
-                text: 'CGIAR Centers'
-              } as TextMenuItemModel
-            }
-          );
         }
         menuList.forEach((menuSection) => this.menuService.addSection(MenuID.PUBLIC, Object.assign(menuSection, {
           shouldPersistOnRouteChange: true,
