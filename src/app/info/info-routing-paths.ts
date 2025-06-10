@@ -30,7 +30,7 @@ export function getAccessibilitySettingsPath() {
 }
 
 export function getAboutPath() {
-    return getSubPath(ABOUT_PATH);
+  return getSubPath(ABOUT_PATH);
 }
 
 function getSubPath(path: string) {
