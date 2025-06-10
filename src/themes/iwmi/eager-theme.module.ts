@@ -1,37 +1,37 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { SharedModule } from '../../app/shared/shared.module';
+
 import { RootModule } from '../../app/root.module';
-import { NavbarModule } from '../../app/navbar/navbar.module';
-import { ItemPageModule } from '../../app/item-page/item-page.module';
-import { ItemSharedModule } from '../../app/item-page/item-shared.module';
-import { ResultsBackButtonModule } from '../../app/shared/results-back-button/results-back-button.module';
-import { DsoPageModule } from '../../app/shared/dso-page/dso-page.module';
+import { FooterComponent } from '../cgspace/app/footer/footer.component';
+import { HeaderComponent } from '../cgspace/app/header/header.component';
+import { HeaderNavbarWrapperComponent } from '../cgspace/app/header-nav-wrapper/header-navbar-wrapper.component';
+import { HomeNewsComponent } from '../cgspace/app/home-page/home-news/home-news.component';
+import { UntypedItemComponent } from '../cgspace/app/item-page/simple/item-types/untyped-item/untyped-item.component';
+import { NavbarComponent } from '../cgspace/app/navbar/navbar.component';
 
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
  * This will ensure that decorator gets picked up when the app loads
  */
-const ENTRY_COMPONENTS = [];
+const ENTRY_COMPONENTS = [
+  UntypedItemComponent,
+];
 
 const DECLARATIONS = [
   ...ENTRY_COMPONENTS,
+  HeaderComponent,
+  NavbarComponent,
+  HeaderNavbarWrapperComponent,
+  FooterComponent,
+  HomeNewsComponent,
 ];
 
 @NgModule({
   imports: [
-    CommonModule,
-    SharedModule,
     RootModule,
-    NavbarModule,
-    ResultsBackButtonModule,
-    ItemPageModule,
-    ItemSharedModule,
-    DsoPageModule,
+    ...DECLARATIONS,
   ],
-  declarations: DECLARATIONS,
   providers: [
-    ...ENTRY_COMPONENTS.map((component) => ({provide: component}))
+    ...ENTRY_COMPONENTS.map((component) => ({ provide: component })),
   ],
 })
 /**
