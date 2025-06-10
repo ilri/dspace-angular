@@ -1,10 +1,24 @@
+import {
+  AsyncPipe,
+  DatePipe,
+} from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
+
 import { FooterComponent as BaseComponent } from '../../../../app/footer/footer.component';
 
 @Component({
-  selector: 'ds-footer',
+  selector: 'ds-themed-footer',
   styleUrls: ['./footer.component.scss'],
-  templateUrl: './footer.component.html'
+  templateUrl: './footer.component.html',
+  standalone: true,
+  imports: [
+    TranslateModule,
+    DatePipe,
+    RouterLink,
+    AsyncPipe,
+  ],
 })
 export class FooterComponent extends BaseComponent {
 }

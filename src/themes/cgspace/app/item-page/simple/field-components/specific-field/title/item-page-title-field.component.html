@@ -1,19 +1,20 @@
 <h1 class="item-page-title-field">
-  <div *ngIf="item.firstMetadataValue('dspace.entity.type') as type" class="d-inline">
-    {{ type.toLowerCase() + '.page.titleprefix' | translate }}
-  </div>
+  @if (item.firstMetadataValue('dspace.entity.type')) {
+    <div class="d-inline">
+      {{ item.firstMetadataValue('dspace.entity.type').toLowerCase() + '.page.titleprefix' | translate }}
+    </div>
+  }
   <span class="dont-break-out">{{ dsoNameService.getName(item) }}</span>
 </h1>
 
-<ng-container *ngFor="let mdValue of item?.allMetadata('dcterms.alternative')">
-    <ng-container *ngTemplateOutlet="alternateTitle;
+@for (mdValue of item?.allMetadata('dcterms.alternative'); track $index) {
+  <ng-container *ngTemplateOutlet="alternateTitle;
                                       context: {
                                         alternateTitle: mdValue.value,
                                         alternateTitleLanguage: mdValue.language
                                       }">
-    </ng-container>
-</ng-container>
-
+  </ng-container>
+}
 <ng-template #alternateTitle let-title="alternateTitle" let-language="alternateTitleLanguage">
     <p><span class="dont-break-out text-muted h2" [lang]="language">{{ title }}</span></p>
 </ng-template>

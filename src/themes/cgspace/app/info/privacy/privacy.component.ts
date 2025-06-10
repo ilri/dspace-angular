@@ -1,10 +1,18 @@
 import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
+
 import { PrivacyComponent as BaseComponent } from '../../../../../app/info/privacy/privacy.component';
+import { PrivacyContentComponent } from '../../../../../app/info/privacy/privacy-content/privacy-content.component';
 
 @Component({
-  selector: 'ds-privacy',
+  selector: 'ds-themed-privacy',
   styleUrls: ['../../../../../app/info/privacy/privacy.component.scss'],
-  templateUrl: './privacy.component.html'
+  templateUrl: './privacy.component.html',
+  standalone: true,
+  imports: [
+    TranslateModule,
+    PrivacyContentComponent,
+  ],
 })
 
 /**

@@ -1,36 +1,42 @@
-<ds-themed-results-back-button *ngIf="showBackButton | async" [back]="back"></ds-themed-results-back-button>
-<div class="row" *ngIf="iiifEnabled">
-  <div class="col-12">
-    <ds-mirador-viewer id="iiif-viewer"
-                   [object]="object"
-                   [searchable]="iiifSearchEnabled"
-                   [query]="iiifQuery$ | async">
-    </ds-mirador-viewer>
+@if (showBackButton$ | async) {
+  <ds-results-back-button [back]="back"></ds-results-back-button>
+}
+@if (iiifEnabled) {
+  <div class="row">
+    <div class="col-12">
+      <ds-mirador-viewer id="iiif-viewer"
+        [object]="object"
+        [searchable]="iiifSearchEnabled"
+        [query]="iiifQuery$ | async">
+      </ds-mirador-viewer>
+    </div>
   </div>
-</div>
+}
 
 <div class="d-flex flex-row">
-  <ds-themed-item-page-title-field [item]="object" class="mr-auto">
-  </ds-themed-item-page-title-field>
+  <ds-item-page-title-field [item]="object" class="mr-auto">
+  </ds-item-page-title-field>
   <ds-dso-edit-menu></ds-dso-edit-menu>
 </div>
 <div class="row">
   <div class="col-xs-12 col-md-4">
-    <ng-container *ngIf="!(mediaViewer.image || mediaViewer.video)">
+    @if (!(mediaViewer.image || mediaViewer.video)) {
       <ds-metadata-field-wrapper [hideIfNoTextContent]="false">
-        <ds-themed-thumbnail [thumbnail]="object?.thumbnail | async"></ds-themed-thumbnail>
+        <ds-thumbnail [thumbnail]="object?.thumbnail | async"></ds-thumbnail>
       </ds-metadata-field-wrapper>
-    </ng-container>
-    <div *ngIf="mediaViewer.image || mediaViewer.video" class="mb-2">
-      <ds-themed-media-viewer [item]="object"></ds-themed-media-viewer>
-    </div>
-    <ds-themed-item-page-file-section [item]="object"></ds-themed-item-page-file-section>
-    <ds-themed-metadata-representation-list class="ds-item-page-mixed-author-field"
+    }
+    @if (mediaViewer.image || mediaViewer.video) {
+      <div class="mb-2">
+        <ds-media-viewer [item]="object"></ds-media-viewer>
+      </div>
+    }
+    <ds-item-page-file-section [item]="object"></ds-item-page-file-section>
+    <ds-metadata-representation-list class="ds-item-page-mixed-author-field"
       [parentItem]="object"
       [itemType]="'Person'"
       [metadataFields]="['dc.contributor.author', 'dc.creator']"
       [label]="'relationships.isAuthorOf' | translate">
-    </ds-themed-metadata-representation-list>
+    </ds-metadata-representation-list>
     <ds-generic-item-page-field [item]="object"
       [fields]="['dcterms.issued']"
       [label]="'item.page.issued'">
@@ -72,20 +78,20 @@
   </div>
   <div class="col-xs-12 col-md-6">
     <div class="row">
-        <!-- TODO: check the stacking on mobile -->
-        <div class="col-xs-12 col-md-6">
-            <ds-item-page-share-field [item]="object">
-            </ds-item-page-share-field>
-        </div>
-        <div class="col-xs-6 col-md-3">
-            <ds-item-page-altmetric-field [item]="object">
-            </ds-item-page-altmetric-field>
-        </div>
-        <!-- I know the math on the columns is strange here but oh well -->
-        <div class="col-xs-6 col-md-3">
-            <ds-item-page-dimensions-field [item]="object">
-            </ds-item-page-dimensions-field>
-        </div>
+      <!-- TODO: check the stacking on mobile -->
+      <div class="col-xs-12 col-md-6">
+        <ds-item-page-share-field [item]="object">
+        </ds-item-page-share-field>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <ds-item-page-altmetric-field [item]="object">
+        </ds-item-page-altmetric-field>
+      </div>
+      <!-- I know the math on the columns is strange here but oh well -->
+      <div class="col-xs-6 col-md-3">
+        <ds-item-page-dimensions-field [item]="object">
+        </ds-item-page-dimensions-field>
+      </div>
     </div>
     <ds-generic-item-page-field [item]="object"
       [fields]="['dcterms.bibliographicCitation']"
