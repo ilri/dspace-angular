@@ -577,3 +577,26 @@ liveRegion:
 accessibility:
   # The duration in days after which the accessibility settings cookie expires
   cookieExpirationDuration: 7
+
+
+# Additional menus to be added to the navbar
+customMenusConfig:
+  # Sub menu
+  - id: 'Menu ID'
+    parentID: 'Menu parent ID'
+    active: false
+    visible: true
+    model:
+      type: 1 # MenuItemType.LINK
+      text: 'Menu title'
+      link: 'Menu link'
+      disabled: false
+  # Main menu
+  - id: 'Menu ID'
+    active: false
+    visible: true
+    index: 2
+    model:
+      type: 0  # MenuItemType.TEXT
+      text: 'Menu title'
+      disabled: false
