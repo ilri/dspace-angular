@@ -4,11 +4,13 @@ import { RootModule } from '../../app/root.module';
 import { PrivacyComponent } from './app/info/privacy/privacy.component';
 import { FileSectionComponent } from './app/item-page/simple/field-components/file-section/file-section.component';
 import { ItemPageTitleFieldComponent } from './app/item-page/simple/field-components/specific-field/title/item-page-title-field.component';
+import { HomePageComponent } from './app/home-page/home-page.component';
 
 const DECLARATIONS = [
   FileSectionComponent,
   PrivacyComponent,
   ItemPageTitleFieldComponent,
+  HomePageComponent,
 ];
 
 @NgModule({
