@@ -1,4 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { NgTemplateOutlet } from '@angular/common';
+import {
+  Component,
+  Input,
+} from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { Item } from '../../../../../core/shared/item.model';
 import { ItemPageFieldComponent } from '../item-page-field.component';
@@ -7,7 +13,13 @@ import { ItemPageFieldComponent } from '../item-page-field.component';
   selector: 'ds-item-page-license-field',
   // Mimic style from metadata-field-wrapper component since we can't use it here
   styleUrls: ['../../../../../shared/metadata-field-wrapper/metadata-field-wrapper.component.scss'],
-  templateUrl: './item-page-license-field.component.html'
+  templateUrl: './item-page-license-field.component.html',
+  standalone: true,
+  imports: [
+    TranslateModule,
+    NgTemplateOutlet,
+    RouterLink,
+  ],
 })
 /**
  * This component renders the license section.
