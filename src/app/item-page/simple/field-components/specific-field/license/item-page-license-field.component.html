@@ -1,32 +1,38 @@
-<div class="item-page-field" *ngIf="item?.allMetadata(fields).length">
+@if (item?.allMetadata(fields).length) {
+  <div class="item-page-field">
     <div class="simple-view-element">
-        <h2 class="simple-view-element-header">{{ label | translate }}</h2>
-        <div class="simple-view-element-body">
-            <!-- Iterate over metadata values and send them to the correct template -->
-            <ng-container *ngFor="let mdValue of item?.allMetadata(fields)">
-                <ng-container *ngIf="mdValue.value.startsWith('CC')"
-                              [ngTemplateOutlet]="ccIcon"
-                              [ngTemplateOutletContext]="{value: mdValue.value}">
-                </ng-container>
-                <ng-container *ngIf="!mdValue.value.startsWith('CC')"
-                              [ngTemplateOutlet]="license"
-                              [ngTemplateOutletContext]="{value: mdValue.value}">
-                </ng-container>
+      <h2 class="simple-view-element-header">{{ label | translate }}</h2>
+      <div class="simple-view-element-body">
+        <!-- Iterate over metadata values and send them to the correct template -->
+        @for (mdValue of item?.allMetadata(fields); track mdValue) {
+          @if (mdValue.value.startsWith('CC')) {
+            <ng-container
+              [ngTemplateOutlet]="ccIcon"
+              [ngTemplateOutletContext]="{value: mdValue.value}">
             </ng-container>
-        </div>
+          }
+          @if (!mdValue.value.startsWith('CC')) {
+            <ng-container
+              [ngTemplateOutlet]="license"
+              [ngTemplateOutletContext]="{value: mdValue.value}">
+            </ng-container>
+          }
+        }
+      </div>
     </div>
-</div>
+  </div>
+}
 
 <!-- Render the Creative Commons license icon.
-     See: https://creativecommons.org/about/downloads/
+See: https://creativecommons.org/about/downloads/
 -->
 <ng-template #ccIcon let-value="value">
-    <a routerLink="/search" [queryParams]="{ 'f.usageRights': value + ',equals' }">
-        <img src="assets/images/cc-icons/{{ parseLicense(value) }}" [alt]="value" [title]="value" class="cc-icon"/>
-    </a>
+  <a routerLink="/search" [queryParams]="{ 'f.usageRights': value + ',equals' }">
+    <img src="assets/images/cc-icons/{{ parseLicense(value) }}" [alt]="value" [title]="value" class="cc-icon"/>
+  </a>
 </ng-template>
 
 <!-- Just show the license text. -->
 <ng-template #license let-value="value">
-    <a routerLink="/search" [queryParams]="{ 'f.usageRights': value + ',equals' }">{{ value }}</a>
+  <a routerLink="/search" [queryParams]="{ 'f.usageRights': value + ',equals' }">{{ value }}</a>
 </ng-template>
