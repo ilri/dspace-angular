@@ -1,11 +1,23 @@
-import { Component, Input } from '@angular/core';
+import {
+  Component,
+  Input,
+} from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { Item } from '../../../../../core/shared/item.model';
+import { MetadataFieldWrapperComponent } from '../../../../../shared/metadata-field-wrapper/metadata-field-wrapper.component';
 import { ItemPageFieldComponent } from '../item-page-field.component';
 
 @Component({
   selector: 'ds-item-page-metadata-search-link',
-  templateUrl: './item-page-metadata-search-link-field.component.html'
+  templateUrl: './item-page-metadata-search-link-field.component.html',
+  standalone: true,
+  imports: [
+    MetadataFieldWrapperComponent,
+    TranslateModule,
+    RouterLink,
+  ],
 })
 /**
  * This component renders a Discovery search link for a metadata value.
@@ -45,12 +57,12 @@ export class ItemPageMetadataSearchLinkFieldComponent extends ItemPageFieldCompo
    * @type {string}
    */
   generateSearchParams(metadataValue: string, discoveryIndex: string) {
-      const searchFilter = 'f.' + discoveryIndex;
-      const searchValue = metadataValue + ',equals';
+    const searchFilter = 'f.' + discoveryIndex;
+    const searchValue = metadataValue + ',equals';
 
-      // Note the special syntax for searchFilter, since we want to use the
-      // string value of the searchFilter variable as the object key, not a
-      // literal "searchFilter".
-      return { [searchFilter]: searchValue };
+    // Note the special syntax for searchFilter, since we want to use the
+    // string value of the searchFilter variable as the object key, not a
+    // literal "searchFilter".
+    return { [searchFilter]: searchValue };
   }
 }
