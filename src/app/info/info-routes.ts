@@ -9,10 +9,12 @@ import { notifyInfoGuard } from '../core/coar-notify/notify-info/notify-info.gua
 import { feedbackGuard } from '../core/feedback/feedback.guard';
 import { hasValue } from '../shared/empty.util';
 import { AccessibilitySettingsComponent } from './accessibility-settings/accessibility-settings.component';
+import { AboutComponent } from './about/about.component';
 import { ThemedEndUserAgreementComponent } from './end-user-agreement/themed-end-user-agreement.component';
 import { ThemedFeedbackComponent } from './feedback/themed-feedback.component';
 import {
   ACCESSIBILITY_SETTINGS_PATH,
+  ABOUT_PATH,
   COAR_NOTIFY_SUPPORT,
   END_USER_AGREEMENT_PATH,
   FEEDBACK_PATH,
@@ -60,4 +62,10 @@ export const ROUTES: Routes = [
       breadcrumbKey: 'info.coar-notify-support',
     },
   } : undefined,
+  {
+    path: ABOUT_PATH,
+    component: AboutComponent,
+    resolve: { breadcrumb: i18nBreadcrumbResolver },
+    data: { title: 'info.about.title', breadcrumbKey: 'info.about' },
+  },
 ].filter((route: Route) => hasValue(route));
