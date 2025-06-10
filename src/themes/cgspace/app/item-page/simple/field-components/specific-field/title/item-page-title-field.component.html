@@ -1,4 +1,4 @@
-<h1 class="item-page-title-field">
+<h1 class="item-page-title-field unicode-bidi-text">
   @if (item.firstMetadataValue('dspace.entity.type')) {
     <div class="d-inline">
       {{ item.firstMetadataValue('dspace.entity.type').toLowerCase() + '.page.titleprefix' | translate }}
@@ -16,5 +16,5 @@
   </ng-container>
 }
 <ng-template #alternateTitle let-title="alternateTitle" let-language="alternateTitleLanguage">
-    <p><span class="dont-break-out text-muted h2" [lang]="language">{{ title }}</span></p>
+    <p class="unicode-bidi-text"><span class="dont-break-out text-muted h2" [lang]="language">{{ title }}</span></p>
 </ng-template>

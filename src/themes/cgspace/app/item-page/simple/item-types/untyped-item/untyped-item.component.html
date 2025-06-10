@@ -14,7 +14,7 @@
 }
 
 <div class="d-flex flex-row">
-  <ds-item-page-title-field [item]="object" class="mr-auto">
+  <ds-item-page-title-field [item]="object" class="flex-grow-1">
   </ds-item-page-title-field>
   <ds-dso-edit-menu></ds-dso-edit-menu>
 </div>
@@ -110,7 +110,7 @@
       [fields]="['cg.identifier.doi']"
       [label]="'item.page.doi'">
     </ds-item-page-uri-field>
-    <ds-generic-item-page-field [item]="object"
+    <ds-generic-item-page-field [item]="object" class="unicode-bidi-text-parent"
       [fields]="['dcterms.abstract']"
       [label]="'item.page.abstract'"
       [enableMarkdown]="true">
