@@ -12,12 +12,19 @@
       <ul class="footer-info list-unstyled d-flex justify-content-center mb-0">
         <li>
           <a class="btn text-white"
-             routerLink="info/about">About</a>
+             routerLink="info/about" role="link" tabindex="0">About</a>
         </li>
+        @if (showCookieSettings) {
+          <li>
+            <button class="btn btn-link text-white" type="button" (click)="openCookieSettings()" role="button"
+                    tabindex="0">
+              {{ 'footer.link.cookies' | translate }}
+            </button>
+          </li>
+        }
         <li>
-          <button class="btn btn-link text-white" type="button" (click)="showCookieSettings()" role="button" tabindex="0">
-            {{ 'footer.link.cookies' | translate}}
-          </button>
+          <a class="btn text-white"
+             routerLink="info/accessibility" role="link" tabindex="0">{{ 'footer.link.accessibility' | translate }}</a>
         </li>
         @if (showPrivacyPolicy) {
           <li>
