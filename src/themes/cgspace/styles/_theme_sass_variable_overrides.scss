@@ -20,15 +20,16 @@ $font-family-sans-serif: 'Source Sans 3', -apple-system, BlinkMacSystemFont, "Se
 /*** SEMANTIC COLOR SCHEME ***/
 
 // Gray scale (uncomment the variables that you want to override or that you need to use in this file)
+// CGIAR Brand Guidelines version 1.0 (July 2025)
 //$white:    #fff;
-$gray-100: #f8f9fa;
-//$gray-200: #e9ecef;
-//$gray-300: #dee2e6;
-$gray-400: #ced4da;
-//$gray-500: #adb5bd;
-//$gray-600: #6c757d;
-//$gray-700: #495057;
-$gray-800: #343a40;
+$gray-100: #E2E0DF;
+$gray-200: #C6C4C3;
+$gray-300: #AAA8A7;
+$gray-400: #8E8C8C;
+$gray-500: #727070;
+$gray-600: #555554;
+$gray-700: #393939;
+$gray-800: #1D1D1D;
 //$gray-900: #212529;
 //$black:    #000;
 
@@ -48,14 +49,14 @@ $gray-800: #343a40;
 // ...
 
 // Override semantic colors here
-$primary:   #427730 !default;  // CGIAR dark green
-$secondary: #7AB800 !default;  // CGIAR light green
-$success:   $secondary !default;  // CGIAR light green
-$info:      #207698 !default;  // Light blue
+$primary:   #033529 !default;  // CGIAR primary green
+$secondary: #17F1BD !default;  // CGIAR accent green
+$success:   $secondary !default;
+$info:      #57FAD3 !default;  // CGIAR compliment highlight green
 $warning:   #ec9433 !default;  // Orange
 $danger:    #cf4444 !default;  // Red
-$light:     #f8f9fa !default;  // As Bootstrap $gray-100
-$dark:      #43515f !default;  // Gray
+$light:     #E2E0DF !default;  // CGIAR primary light
+$dark:      #010D09 !default;  // CGIAR primary dark
 
 // Add new semantic colors here (you don't need to add existing semantic colors)
 $theme-colors: (
