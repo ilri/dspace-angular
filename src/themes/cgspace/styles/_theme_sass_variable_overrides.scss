@@ -38,14 +38,14 @@ $container-max-widths: (
 // Gray scale (uncomment the variables that you want to override or that you need to use in this file)
 // CGIAR Brand Guidelines version 1.0 (July 2025)
 //$white:    #fff;
-$gray-100: #E2E0DF;
-$gray-200: #C6C4C3 !default; // allow cgspace child themes to override
-$gray-300: #AAA8A7;
-$gray-400: #8E8C8C;
-$gray-500: #727070;
-$gray-600: #555554;
-$gray-700: #393939;
-$gray-800: #1D1D1D;
+$gray-100: #E2E0DF !default;
+$gray-200: #C6C4C3 !default;
+$gray-300: #AAA8A7 !default;
+$gray-400: #8E8C8C !default;
+$gray-500: #727070 !default;
+$gray-600: #555554 !default;
+$gray-700: #393939 !default;
+$gray-800: #1D1D1D !default;
 //$gray-900: #212529;
 //$black:    #000;
 
