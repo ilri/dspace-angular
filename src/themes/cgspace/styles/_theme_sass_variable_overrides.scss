@@ -16,6 +16,22 @@
 
 $font-family-sans-serif: "Noto Sans", sans-serif !default;
 
+// Override Bootstrap grid, inspired by Dukespace
+// See: https://gitlab.oit.duke.edu/ddr/dspace-angular/-/blob/main/src/themes/dukespace/styles/_theme_sass_variable_overrides.scss
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+$container-max-widths: (
+  sm: 690px,
+  md: 930px,
+  lg: 1110px,
+  xl: 1360px
+) !default;
 
 /*** SEMANTIC COLOR SCHEME ***/
 
