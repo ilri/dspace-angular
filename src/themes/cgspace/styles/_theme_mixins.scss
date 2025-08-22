@@ -1,3 +1,7 @@
+@mixin font-weight-semibold {
+  font-weight: 600 !important;
+}
+
 /* Accessibility: for use in cases where inline linked text has   */
 /* insufficient contrast (< 3:1) with its surrounding text; links */
 /* must be distinguishable by more than color.                    */

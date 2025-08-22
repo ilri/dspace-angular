@@ -232,3 +232,19 @@ ds-home-news {
     @include underlined-link;
   }
 }
+
+/* Semibold for titles in search results and surface search hits a bit. */
+ds-community-search-result-list-element,
+ds-collection-search-result-list-element,
+ds-item-search-result-list-element {
+  a.lead {
+    @include font-weight-semibold;
+  }
+
+  /* Search term hit highlights */
+  em {
+    background-color: $info;
+    color: inherit;
+    padding: 0 0.15em;
+  }
+}
