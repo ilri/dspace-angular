@@ -39,7 +39,7 @@ $container-max-widths: (
 // CGIAR Brand Guidelines version 1.0 (July 2025)
 //$white:    #fff;
 $gray-100: #E2E0DF;
-$gray-200: #C6C4C3;
+$gray-200: #C6C4C3 !default; // allow cgspace child themes to override
 $gray-300: #AAA8A7;
 $gray-400: #8E8C8C;
 $gray-500: #727070;

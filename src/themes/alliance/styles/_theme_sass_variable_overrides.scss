@@ -35,3 +35,7 @@ $secondary: #358540;
 
 // Alliance black (Primary color)
 $gray-800: #231F20;
+
+// Use original Bootstrap gray-200 for breadcrumb-bg
+// See: node_modules/bootstrap/scss/_variables.scss
+$gray-200: #E9ECEF;

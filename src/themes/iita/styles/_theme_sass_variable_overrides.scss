@@ -13,3 +13,7 @@ $secondary: #F7941D;
 // IITA brown, from the website since I can't find anything suitable in the
 // Branding Guidelines document.
 $iita-brown: #4B2E14;
+
+// Use original Bootstrap gray-200 for breadcrumb-bg
+// See: node_modules/bootstrap/scss/_variables.scss
+$gray-200: #E9ECEF;
