@@ -220,3 +220,15 @@ ds-submission-form-footer i.fa-check-circle {
   unicode-bidi: plaintext;
   text-align: start;
 }
+
+/* Certain elements can be expected to have inline links */
+/* and those need to be distinguishable from surrounding */
+/* text using a property other than color for a11y.      */
+.simple-item-view-citation,
+ds-about,
+ds-comcol-page-content,
+ds-home-news {
+  a {
+    @include underlined-link;
+  }
+}
