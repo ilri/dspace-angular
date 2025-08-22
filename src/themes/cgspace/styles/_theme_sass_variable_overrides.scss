@@ -37,6 +37,8 @@ $container-max-widths: (
 
 // Gray scale (uncomment the variables that you want to override or that you need to use in this file)
 // CGIAR Brand Guidelines version 1.0 (July 2025)
+// We use !default because the SASS overrides are imported in child themes and
+// we want to be able to override these there.
 //$white:    #fff;
 $gray-100: #E2E0DF !default;
 $gray-200: #C6C4C3 !default;
