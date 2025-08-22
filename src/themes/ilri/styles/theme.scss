@@ -3,6 +3,7 @@
 // Define our theme's sass overrides first, then the cgspace theme's
 @import './_theme_sass_variable_overrides.scss';
 @import '../../cgspace/styles/_theme_sass_variable_overrides.scss';
+@import '../../cgspace/styles/_theme_mixins.scss';
 @import '../../../styles/_variables.scss';
 @import '../../../styles/_mixins.scss';
 @import '../../../styles/helpers/font_awesome_imports.scss';
