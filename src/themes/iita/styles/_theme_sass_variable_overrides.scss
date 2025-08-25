@@ -10,6 +10,9 @@ $primary: #F26522;
 // IITA light orange
 $secondary: #F7941D;
 
+// Override mouse selection and hit highlighting color
+$info: lighten($secondary, 17%);
+
 // IITA brown, from the website since I can't find anything suitable in the
 // Branding Guidelines document.
 $iita-brown: #4B2E14;
