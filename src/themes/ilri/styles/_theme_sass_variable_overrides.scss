@@ -8,6 +8,9 @@ $primary: #702D3E;
 // ILRI light red
 $secondary: #E3D7D7;
 
+// Override mouse selection and hit highlighting color
+$info: $secondary;
+
 // Use original Bootstrap gray-200 for breadcrumb-bg
 // See: node_modules/bootstrap/scss/_variables.scss
 $gray-200: #E9ECEF;

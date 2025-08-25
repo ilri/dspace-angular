@@ -10,6 +10,8 @@ $primary: #28537D;
 // IWMI light blue
 $secondary: #5088C6;
 
-// Use original Bootstrap gray-200 for breadcrumb-bg
+// Override mouse selection and hit highlighting color
+$info: $secondary;
+
 // See: node_modules/bootstrap/scss/_variables.scss
 $gray-200: #E9ECEF;

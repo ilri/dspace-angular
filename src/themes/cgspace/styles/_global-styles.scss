@@ -29,6 +29,10 @@ body {
   background-color: $white;
 }
 
+::selection {
+  background-color: $info;
+}
+
 li.page-item.active a.page-link {
   background-color: $primary;
   border-color: $primary;
