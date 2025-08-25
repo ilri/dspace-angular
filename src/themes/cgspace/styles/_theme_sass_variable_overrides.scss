@@ -51,6 +51,10 @@ $gray-800: #1D1D1D !default;
 //$gray-900: #212529;
 //$black:    #000;
 
+/* This is the lightest true gray that meets 4.5:1 contrast */
+/* vs. white (required by WCAG AA). */
+$text-muted: #767676;
+
 // Other colors (uncomment the variables that you want to override or that you need to use in this file)
 //$blue:    #007bff !default;
 //$indigo:  #6610f2 !default;
