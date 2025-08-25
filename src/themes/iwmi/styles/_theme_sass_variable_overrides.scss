@@ -13,5 +13,14 @@ $secondary: #5088C6;
 // Override mouse selection and hit highlighting color
 $info: $secondary;
 
+// Use IWMI light grey for gray-200, used for for breadcrumb-bg
 // See: node_modules/bootstrap/scss/_variables.scss
-$gray-200: #E9ECEF;
+$gray-200: #E8E7E7;
+
+// Other colors (uncomment the variables that you want to override or that you need to use in this file)
+// See: https://branding.iwmi.org/our-colours/
+$blue:    $secondary;
+$orange:  #E86933;
+$yellow:  #DD9103;
+$green:   #22AD7A;
+$teal:    #0297A6;
