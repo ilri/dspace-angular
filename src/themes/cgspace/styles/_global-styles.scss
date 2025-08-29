@@ -252,3 +252,18 @@ ds-item-search-result-list-element {
     padding: 0 0.15em;
   }
 }
+
+/* Override mobile hamburger menu. Note: we should be using the predefined
+ * ds-expandable-navbar-link-color and ds-expandable-navbar-link-color-hover
+ * variables like on the desktop menu (see header-nav-wrapper component), but
+ * that messes up the user-menu component in DSpace 7/8/9 because it also uses
+ * those variables.
+*/
+nav#collapsible-mobile-navbar #main-site-navigation {
+  .ds-menu-item, .toggle-menu-icon {
+    color: $white !important;
+    &:hover, &:focus {
+      color: $secondary !important;
+    }
+  }
+}
