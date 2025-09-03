@@ -147,14 +147,6 @@ ds-dynamic-form-group .form-row {
   color: $white;
 }
 
-// temporary hack to reset the `lead` class on community/collection/item list.
-// It would be better to override app/shared/object-list/community-list-element
-// and remove the lead class properly though...
-a.lead {
-  font-weight: 400;
-  font-size: inherit;
-}
-
 a {
   color: $primary;
 
@@ -227,13 +219,13 @@ ds-submission-form-footer i.fa-check-circle {
 
 // Stronger presentation of communities and collections
 ds-community-list cdk-tree {
-  a {
+  a.lead {
     @include font-weight-semibold;
   }
 }
 
 ds-community-list-element, ds-collection-list-element {
-  a {
+  a.lead {
     @include font-weight-semibold;
   }
 }
@@ -254,6 +246,9 @@ ds-home-news {
 ds-community-search-result-list-element,
 ds-collection-search-result-list-element,
 ds-item-search-result-list-element {
+  // temporary hack to reset the `lead` class on community/collection/item list.
+  // It would be better to override app/shared/object-list/community-list-element
+  // and remove the lead class properly though...
   a.lead {
     @include font-weight-semibold;
   }

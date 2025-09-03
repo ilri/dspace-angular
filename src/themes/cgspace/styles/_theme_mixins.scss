@@ -1,5 +1,6 @@
 @mixin font-weight-semibold {
   font-weight: 600 !important;
+  font-size: inherit;
 }
 
 /* Accessibility: for use in cases where inline linked text has   */
