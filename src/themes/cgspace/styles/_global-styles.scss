@@ -268,6 +268,10 @@ ds-item-search-result-list-element {
   }
 }
 
+.item-page-title-field {
+  margin-bottom: 1.5rem;
+}
+
 /* Override mobile hamburger menu. Note: we should be using the predefined
  * ds-expandable-navbar-link-color and ds-expandable-navbar-link-color-hover
  * variables like on the desktop menu (see header-nav-wrapper component), but
