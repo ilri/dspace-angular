@@ -259,6 +259,13 @@ ds-item-search-result-list-element {
     color: inherit;
     padding: 0 0.15em;
   }
+
+  /* 4.5:1 contrast ratio for a11y on highlights in lighter fields */
+  .item-list-authors, .abstract-text {
+    em {
+      color: var(--bs-body-color);
+    }
+  }
 }
 
 /* Override mobile hamburger menu. Note: we should be using the predefined
