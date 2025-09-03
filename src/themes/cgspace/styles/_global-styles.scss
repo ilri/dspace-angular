@@ -225,6 +225,19 @@ ds-submission-form-footer i.fa-check-circle {
   text-align: start;
 }
 
+// Stronger presentation of communities and collections
+ds-community-list cdk-tree {
+  a {
+    @include font-weight-semibold;
+  }
+}
+
+ds-community-list-element, ds-collection-list-element {
+  a {
+    @include font-weight-semibold;
+  }
+}
+
 /* Certain elements can be expected to have inline links */
 /* and those need to be distinguishable from surrounding */
 /* text using a property other than color for a11y.      */
