@@ -146,7 +146,7 @@ export class MenuResolver implements Resolve<boolean> {
             visible: true,
             model: {
               type: MenuItemType.LINK,
-              text: 'CGIAR programs and accelerators',
+              text: 'CGIAR programs and accelerators (2025–2030)',
               link: '/communities/7c96bc2a-f581-4b57-a8a5-7813c50ceae7'
             } as LinkMenuItemModel
           });
