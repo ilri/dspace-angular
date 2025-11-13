@@ -1,19 +1,14 @@
-<div class="item-page-field">
-    <!-- replicate metadata-field-wrapper functionality here -->
-    <div class="simple-view-element">
-        <h2 class="simple-view-element-header">Share</h2>
-        <div class="simple-view-element-body">
-            <!-- Fetch the title and Handle metadata values directly to keep
-                 this component simple. -->
-            <ng-container [ngTemplateOutlet]="shareIcons"
-                          [ngTemplateOutletContext]="{
-                                                itemTitle: item?.firstMetadataValue('dc.title'),
-                                                itemUri: item?.firstMetadataValue('dc.identifier.uri'),
-                                              }">
-            </ng-container>
-        </div>
-    </div>
-</div>
+<ds-metadata-field-wrapper [label]="'Share'" [hideIfNoTextContent]="false">
+    <!-- Fetch the title and Handle metadata values directly to keep
+            this component simple. -->
+    <ng-container [ngTemplateOutlet]="shareIcons"
+                    [ngTemplateOutletContext]="{
+                                        itemTitle: item?.firstMetadataValue('dc.title'),
+                                        itemUri: item?.firstMetadataValue('dc.identifier.uri'),
+                                        }">
+    </ng-container>
+</ds-metadata-field-wrapper>
+
 
 <ng-template #shareIcons let-itemTitle="itemTitle" let-itemUri="itemUri">
     <!-- Note that we don't use [href] here so that we can access the variables

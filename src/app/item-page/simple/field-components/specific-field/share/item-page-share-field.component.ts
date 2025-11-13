@@ -6,6 +6,7 @@ import {
 
 import { Item } from '../../../../../core/shared/item.model';
 import { ItemPageFieldComponent } from '../item-page-field.component';
+import { MetadataFieldWrapperComponent } from '../../../../../shared/metadata-field-wrapper/metadata-field-wrapper.component';
 
 @Component({
   selector: 'ds-item-page-share-field',
@@ -15,6 +16,7 @@ import { ItemPageFieldComponent } from '../item-page-field.component';
   standalone: true,
   imports: [
     NgTemplateOutlet,
+    MetadataFieldWrapperComponent,
   ],
 })
 /**
