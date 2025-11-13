@@ -19,7 +19,7 @@
   <ds-dso-edit-menu></ds-dso-edit-menu>
 </div>
 <div class="row">
-  <div class="col-xs-12 col-md-4 col-lg-3">
+  <div class="col-xs-12 col-md-3">
     @if (!(mediaViewer.image || mediaViewer.video)) {
       <ds-metadata-field-wrapper [hideIfNoTextContent]="false">
         <ds-thumbnail [thumbnail]="object?.thumbnail | async"></ds-thumbnail>
@@ -45,28 +45,6 @@
       [fields]="['dcterms.available']"
       [label]="'item.page.available'">
     </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object"
-      [fields]="['dcterms.language']"
-      [separator]="'; '"
-      [label]="'item.page.language'">
-    </ds-generic-item-page-field>
-    <ds-item-page-metadata-search-link [item]="object"
-      [fields]="['dcterms.type']"
-      [label]="'item.page.type'"
-      [index]="'itemtype'">
-    </ds-item-page-metadata-search-link>
-    <ds-generic-item-page-field [item]="object"
-      [fields]="['cg.reviewStatus']"
-      [label]="'item.page.reviewStatus'">
-    </ds-generic-item-page-field>
-    <ds-item-page-access-rights-field [item]="object"
-      [fields]="['dcterms.accessRights']"
-      [label]="'item.page.accessRights'">
-    </ds-item-page-access-rights-field>
-    <ds-item-page-license-field [item]="object"
-      [fields]="['dcterms.license']"
-      [label]="'item.page.license'">
-    </ds-item-page-license-field>
     <ds-metadata-field-wrapper>
       <div class="simple-view-element">
         <h5 class="simple-view-element-header">Metadata</h5>
@@ -76,23 +54,7 @@
       </div>
     </ds-metadata-field-wrapper>
   </div>
-  <div class="col-xs-12 col-md-8 col-lg-9">
-    <div class="row">
-      <!-- TODO: check the stacking on mobile -->
-      <div class="col-xs-12 col-md-6">
-        <ds-item-page-share-field [item]="object">
-        </ds-item-page-share-field>
-      </div>
-      <div class="col-xs-6 col-md-3">
-        <ds-item-page-altmetric-field [item]="object">
-        </ds-item-page-altmetric-field>
-      </div>
-      <!-- I know the math on the columns is strange here but oh well -->
-      <div class="col-xs-6 col-md-3">
-        <ds-item-page-dimensions-field [item]="object">
-        </ds-item-page-dimensions-field>
-      </div>
-    </div>
+  <div class="col-xs-12 col-md-6">
     <ds-generic-item-page-field [item]="object"
       [fields]="['dcterms.bibliographicCitation']"
       [label]="'item.page.citation'"
@@ -124,44 +86,6 @@
       [fields]="['cg.subject.sdg']"
       [label]="'item.page.sdg'">
     </ds-item-page-sdg-field>
-    <ds-item-page-metadata-search-link [item]="object"
-      [fields]="['dcterms.subject']"
-      [separator]="'; '"
-      [label]="'item.page.subject'"
-      [index]="'subject'">
-    </ds-item-page-metadata-search-link>
-    <ds-item-page-metadata-search-link [item]="object"
-      [fields]="['cg.subject.alliancebiovciat',
-                'cg.subject.bioversity',
-                'cg.subject.ccafs',
-                'cg.subject.ciat',
-                'cg.subject.cifor',
-                'cg.subject.cip',
-                'cg.subject.cpwf',
-                'cg.subject.cta',
-                'cg.subject.drylands',
-                'cg.subject.humidtropics',
-                'cg.subject.icarda',
-                'cg.subject.iita',
-                'cg.subject.ilri',
-                'cg.subject.system',
-                'cg.subject.wle']"
-      [separator]="'; '"
-      [label]="'item.page.subjects'"
-      [index]="'subjects'">
-    </ds-item-page-metadata-search-link>
-    <ds-item-page-metadata-search-link [item]="object"
-      [fields]="['cg.coverage.country']"
-      [separator]="'; '"
-      [label]="'item.page.country'"
-      [index]="'country'">
-    </ds-item-page-metadata-search-link>
-    <ds-item-page-metadata-search-link [item]="object"
-      [fields]="['cg.coverage.region']"
-      [separator]="'; '"
-      [label]="'item.page.region'"
-      [index]="'region'">
-    </ds-item-page-metadata-search-link>
     <ds-item-page-metadata-search-link [item]="object"
       [fields]="['cg.contributor.affiliation']"
       [separator]="'; '"
@@ -207,5 +131,78 @@
     <ds-item-page-relation-field [item]="object">
     </ds-item-page-relation-field>
     <ds-item-page-collections [item]="object"></ds-item-page-collections>
+  </div>
+  <div class="col-xs-12 col-md-3">
+    <ds-item-page-share-field [item]="object">
+    </ds-item-page-share-field>
+    <ds-item-page-metadata-search-link [item]="object"
+      [fields]="['dcterms.type']"
+      [label]="'item.page.type'"
+      [index]="'itemtype'">
+    </ds-item-page-metadata-search-link>
+    <ds-generic-item-page-field [item]="object"
+      [fields]="['cg.reviewStatus']"
+      [label]="'item.page.reviewStatus'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object"
+      [fields]="['dcterms.language']"
+      [separator]="'; '"
+      [label]="'item.page.language'">
+    </ds-generic-item-page-field>
+    <ds-item-page-metadata-search-link [item]="object"
+      [fields]="['dcterms.subject']"
+      [separator]="'; '"
+      [label]="'item.page.subject'"
+      [index]="'subject'">
+    </ds-item-page-metadata-search-link>
+    <ds-item-page-metadata-search-link [item]="object"
+      [fields]="['cg.subject.alliancebiovciat',
+                'cg.subject.bioversity',
+                'cg.subject.ccafs',
+                'cg.subject.ciat',
+                'cg.subject.cifor',
+                'cg.subject.cip',
+                'cg.subject.cpwf',
+                'cg.subject.cta',
+                'cg.subject.drylands',
+                'cg.subject.humidtropics',
+                'cg.subject.icarda',
+                'cg.subject.iita',
+                'cg.subject.ilri',
+                'cg.subject.system',
+                'cg.subject.wle']"
+      [separator]="'; '"
+      [label]="'item.page.subjects'"
+      [index]="'subjects'">
+    </ds-item-page-metadata-search-link>
+    <ds-item-page-metadata-search-link [item]="object"
+      [fields]="['cg.coverage.country']"
+      [separator]="'; '"
+      [label]="'item.page.country'"
+      [index]="'country'">
+    </ds-item-page-metadata-search-link>
+    <ds-item-page-metadata-search-link [item]="object"
+      [fields]="['cg.coverage.region']"
+      [separator]="'; '"
+      [label]="'item.page.region'"
+      [index]="'region'">
+    </ds-item-page-metadata-search-link>
+    <ds-item-page-access-rights-field [item]="object"
+      [fields]="['dcterms.accessRights']"
+      [label]="'item.page.accessRights'">
+    </ds-item-page-access-rights-field>
+    <ds-item-page-license-field [item]="object"
+      [fields]="['dcterms.license']"
+      [label]="'item.page.license'">
+    </ds-item-page-license-field>
+    <ds-metadata-field-wrapper id="attention" [hideIfNoTextContent]="false" [label]="'Attention'">
+      <div class="d-flex flex-wrap justify-content-start gap-3">
+        <div class="altmetric-embed" data-hide-no-mentions="true" data-badge-type="donut"
+          data-link-target="_blank" [attr.data-doi]="getDOI()"
+          [attr.data-handle]="getHandle()"></div>
+        <div class="__dimensions_badge_embed__" data-hide-zero-citations="true"
+          data-style="small_circle" [attr.data-doi]="getDOI()"></div>
+      </div>
+    </ds-metadata-field-wrapper>
   </div>
 </div>

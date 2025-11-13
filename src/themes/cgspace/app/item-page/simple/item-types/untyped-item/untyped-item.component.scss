@@ -1,0 +1,14 @@
+@import '../../../../../../../app/item-page/simple/item-types/untyped-item/untyped-item.component.scss';
+
+/* Hide the Altmetric div if there is no content so the Dimensions badge
+   doesn't have padding on the left. */
+div.altmetric-embed:empty {
+  display: none;
+}
+
+/* Hide the attention section entirely if both Altmetric and Dimensions have no
+   content. For reference, the `:has():has()` syntax is a logical AND in CSS
+   pseudo selectors. */
+ds-metadata-field-wrapper#attention:has(div.altmetric-embed:empty):has(div.__dimensions_badge_embed__:empty) {
+  display: none;
+}
