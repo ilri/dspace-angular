@@ -5,7 +5,7 @@
         <h2 class="simple-view-element-header">{{ label | translate }}</h2>
       }
       <div class="simple-view-element-body">
-        <div class="d-flex flex-wrap justify-content-start gap-1">
+        <div class="d-flex flex-wrap justify-content-start gap-2">
           <!-- Iterate over metadata values and send them to the sdgIcon template -->
           @for (mdValue of item?.allMetadata(fields); track mdValue) {
                     <ng-container *ngTemplateOutlet="sdgIcon;
