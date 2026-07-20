@@ -60,23 +60,23 @@
       [label]="'item.page.citation'"
       [enableMarkdown]="true">
     </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object" class="unicode-bidi-text-parent"
-      [fields]="['dcterms.abstract']"
-      [label]="'item.page.abstract'"
-      [enableMarkdown]="true">
-    </ds-generic-item-page-field>
     <ds-item-page-uri-field [item]="object"
       [fields]="['dc.identifier.uri']"
       [label]="'item.page.uri'">
     </ds-item-page-uri-field>
     <ds-item-page-uri-field [item]="object"
-      [fields]="['cg.identifier.url']"
-      [label]="'item.page.url'">
-    </ds-item-page-uri-field>
-    <ds-item-page-uri-field [item]="object"
       [fields]="['cg.identifier.doi']"
       [label]="'item.page.doi'">
     </ds-item-page-uri-field>
+    <ds-item-page-uri-field [item]="object"
+      [fields]="['cg.identifier.url']"
+      [label]="'item.page.url'">
+    </ds-item-page-uri-field>
+    <ds-generic-item-page-field [item]="object" class="unicode-bidi-text-parent"
+      [fields]="['dcterms.abstract']"
+      [label]="'item.page.abstract'"
+      [enableMarkdown]="true">
+    </ds-generic-item-page-field>
     <ds-item-page-orcid-field [item]="object"
       [fields]="['cg.creator.identifier']"
       [separator]="'<br/>'"
